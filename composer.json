@@ -1,0 +1,10 @@
+{
+    "name": "cleme/l.i.c.a",
+    "authors": [
+        {
+            "name": "Clément Haller",
+            "email": "clement.haller@hetic.net"
+        }
+    ],
+    "require": {}
+}
