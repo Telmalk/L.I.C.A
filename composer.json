@@ -2,9 +2,20 @@
     "name": "cleme/l.i.c.a",
     "authors": [
         {
-            "name": "Clément Haller, Alex Blandfort, Maël Allano, Marie Te, Geoffrey Girard, Fabien Marquez",
-            "email": "clement.haller@hetic.net, alex.blandfort@hetic.net, mael.allano@hetic.net, marie.te@hetic.net, geoffrey.girad@hetic.net, fabien.marquz@hetic.net"
+          "name": "Clément Haller, Alex Blandfort, Maël Allano, Marie Te, Geoffrey Girard, Fabien Marquez",
+          "email": "clement.haller@hetic.net"
         }
     ],
-    "require": {}
+    "require": {},
+  "autoload": {
+    "psr-4": {
+      "Controller\\": "src/Controller",
+      "View\\": "src/View",
+      "Model\\": "src/Model",
+      "Helper\\": "src/Helper"
+    },
+    "files": [
+      "init.php"
+    ]
+  }
 }
