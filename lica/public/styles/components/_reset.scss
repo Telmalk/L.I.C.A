@@ -1,10 +1,8 @@
-@font-face {
-  font-family: 'Oswald-Regular';
-  src: url("../../assets/fonts/Oswald-Regular.ttf"); }
 /* http://meyerweb.com/eric/tools/css/reset/
    v2.0 | 20110126
    License: none (public domain)
 */
+
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
   margin: 0;
   padding: 0;
@@ -13,6 +11,7 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
   vertical-align: baseline; }
 
 /* HTML5 display-role reset for older browsers */
+
 article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
   display: block; }
 
@@ -25,13 +24,15 @@ ol, ul, li {
 blockquote, q {
   quotes: none; }
 
-blockquote:before, blockquote:after {
-  content: '';
-  content: none; }
+blockquote {
+  &:before, &:after {
+    content: '';
+    content: none; } }
 
-q:before, q:after {
-  content: '';
-  content: none; }
+q {
+  &:before, &:after {
+    content: '';
+    content: none; } }
 
 table {
   border-collapse: collapse;
@@ -39,29 +40,5 @@ table {
 
 a {
   text-decoration: none;
-  color: #000; }
-
-body {
-  background: url("../../assets/imgs/background1.png");
-  background-size: cover; }
-
-.profile-info {
-  display: flex;
-  justify-content: space-between;
-  width: 90%;
-  margin: 0 auto;
-  margin-top: 6.6rem; }
-  .profile-info-picture {
-    height: 30rem;
-    width: 20rem;
-    background: white; }
-  .profile-info-information {
-    color: white;
-    text-align: right; }
-    .profile-info-information-username {
-      font-size: 3.6rem;
-      display: flex;
-      align-items: center;
-      justify-content: flex-end; }
-
-/*# sourceMappingURL=styles.css.map */
+  color: #000;
+}

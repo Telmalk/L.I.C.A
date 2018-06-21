@@ -1,0 +1,28 @@
+body {
+  background: url("../../assets/imgs/background1.png");
+  background-size: cover;
+}
+
+.profile-info {
+  display: flex;
+  justify-content: space-between;
+  width: 90%;
+  margin: 0 auto;
+  margin-top: 6.6rem;
+  &-picture {
+    height: 30rem;
+    width: 20rem;
+    background: white;
+  }
+  &-information {
+    color: white;
+    text-align: right;
+    &-username {
+      font-size: 3.6rem;
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+    }
+  }
+}
+
