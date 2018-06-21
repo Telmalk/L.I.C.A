@@ -4,9 +4,21 @@
   src: url('../../assets/fonts/Oswald-Regular.ttf');
 }
 
+@font-face {
+  font-family: 'Oswald-Light';
+  src: url('../../assets/fonts/Oswald-Light.ttf');
+}
+
+@font-face {
+  font-family: 'Oswald-Bold';
+  src: url('../../assets/fonts/Oswald-Bold.ttf');
+}
+
+
 // MIXINS
 @import 'components/reset';
 @import 'mixins/forsize';
 @import 'components/userPage';
 
 // COMPONENTS
+@import 'components/header';

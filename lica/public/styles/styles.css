@@ -1,6 +1,12 @@
 @font-face {
   font-family: 'Oswald-Regular';
   src: url("../../assets/fonts/Oswald-Regular.ttf"); }
+@font-face {
+  font-family: 'Oswald-Light';
+  src: url("../../assets/fonts/Oswald-Light.ttf"); }
+@font-face {
+  font-family: 'Oswald-Bold';
+  src: url("../../assets/fonts/Oswald-Bold.ttf"); }
 /* http://meyerweb.com/eric/tools/css/reset/
    v2.0 | 20110126
    License: none (public domain)
@@ -40,10 +46,6 @@ table {
 a {
   text-decoration: none;
   color: #000; }
-
-body {
-  background: url("../../assets/imgs/background1.png");
-  background-size: cover; }
 
 .profile-info {
   display: flex;
