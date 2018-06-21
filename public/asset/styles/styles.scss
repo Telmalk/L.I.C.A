@@ -1,0 +1,16 @@
+// FONTS
+@font-face {
+  font-family: 'Oswald-Regular';
+  src: url('../fonts/Oswald-Regular.ttf');
+}
+
+// MIXINS
+@import './mixins/forsize';
+
+// Components
+
+// Global
+* {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
