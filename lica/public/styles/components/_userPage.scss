@@ -1,6 +1,8 @@
-body {
+.userbackground {
   background: url("../../assets/imgs/background1.png");
   background-size: cover;
+  height: 100vh;
+  width: 100vw;
 }
 
 .profile-info {
@@ -8,21 +10,34 @@ body {
   justify-content: space-between;
   width: 90%;
   margin: 0 auto;
-  margin-top: 6.6rem;
+  padding-top: 6.6rem;
   &-picture {
-    height: 30rem;
+    height: 40rem;
     width: 20rem;
     background: white;
   }
   &-information {
     color: white;
     text-align: right;
-    &-username {
-      font-size: 3.6rem;
+    &-flex {
       display: flex;
       align-items: center;
       justify-content: flex-end;
     }
+    & h2 {
+      font-size: 3.6rem;
+    }
+    & a {
+      margin-left: 1rem;
+    }
+    &-date {
+      margin: 2.8rem 3.1rem 0 0;
+      font-size: 2.4rem;
+    }
+    &-description {
+      font-size: 3rem;
+      width: 70%;
+      margin: 0;
+    }
   }
 }
-
