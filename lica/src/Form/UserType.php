@@ -19,11 +19,6 @@ class UserType extends AbstractType
             ->add('birthdate')
             ->add('mail')
             ->add('creditCode')
-            ->add('nbCredit')
-            ->add('win')
-            ->add('defeat')
-            ->add('pendingFight')
-            ->add('rating')
         ;
     }
 
