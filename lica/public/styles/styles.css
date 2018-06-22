@@ -47,24 +47,127 @@ a {
   text-decoration: none;
   color: #000; }
 
+
+body {
+  background: url("../../assets/imgs/background1.png");
+  background-size: cover;
+  background-repeat: no-repeat; }
+
 .profile-info {
   display: flex;
   justify-content: space-between;
   width: 90%;
   margin: 0 auto;
-  margin-top: 6.6rem; }
+  padding-top: 6.6rem; }
   .profile-info-picture {
-    height: 30rem;
-    width: 20rem;
-    background: white; }
+    height: 10rem;
+    width: 30rem; }
+    .profile-info-picture img {
+      height: 100%;
+      width: 100%; }
   .profile-info-information {
-    color: white;
+    color: #FDFDFD;
     text-align: right; }
-    .profile-info-information-username {
-      font-size: 3.6rem;
+    .profile-info-information-flex {
       display: flex;
-      align-items: center;
       justify-content: flex-end; }
+    .profile-info-information h2 {
+      font-size: 3.6rem; }
+    .profile-info-information a {
+      margin-left: 1rem; }
+    .profile-info-information-date {
+      margin: 2.8rem 3.1rem 0 0;
+      font-size: 2.4rem; }
+    .profile-info-information-description {
+      font-size: 1.8rem;
+      line-height: 1.5;
+      font-family: 'Oswald-Light';
+      width: 80%;
+      margin: 2rem 0; }
+    .profile-info-information-money {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      margin-right: 2rem; }
+      .profile-info-information-money-amount {
+        font-size: 2rem;
+        color: #ffe55c; }
+    .profile-info-information-email {
+      font-size: 2.4rem;
+      margin-top: 2rem;
+      margin-bottom: 0.5rem; }
+
+.battleswon {
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
+  margin: 5rem auto; }
+  .battleswon-wins, .battleswon-loses {
+    color: #3EB8AB; }
+    .battleswon-wins p, .battleswon-wins span, .battleswon-loses p, .battleswon-loses span {
+      text-transform: uppercase;
+      font-size: 3rem; }
+  .battleswon-loses {
+    color: #A83A3A; }
+
+.combat-history {
+  text-align: center; }
+  .combat-history-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: .3rem solid;
+    border-bottom-color: rgba(0, 0, 0, 0.8);
+    height: 6rem;
+    width: 70%;
+    margin: 0 auto; }
+    .combat-history-container i {
+      margin-left: 1rem;
+      color: #fff;
+      font-size: 2.4rem; }
+  .combat-history-title {
+    font-family: 'Oswald-Light';
+    font-size: 2.5rem;
+    color: #FFF; }
+
+.history-payment {
+  margin-top: 2rem; }
+
+.profile-aliens {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 3rem; }
+  .profile-aliens-title {
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    text-align: center;
+    color: #FFF; }
+  .profile-aliens-alien-card {
+    display: flex;
+    justify-content: center;
+    height: 40rem;
+    width: 80%;
+    margin: 5rem auto;
+    background: rgba(0, 0, 0, 0.8); }
+    .profile-aliens-alien-card-img {
+      margin-top: 5rem;
+      height: 20rem;
+      width: 15rem; }
+      .profile-aliens-alien-card-img img {
+        width: 100%;
+        height: 100%; }
+
+.link {
+  color: #3EB8AB;
+  font-size: 1.6rem; }
+
+.edit img {
+  margin-top: 2rem; }
+
+.margin-fix {
+  margin: 0 2.9rem 0 0; }
 
 .header {
   position: fixed;

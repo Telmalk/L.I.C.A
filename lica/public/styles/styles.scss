@@ -17,11 +17,11 @@
 // MIXINS
 @import 'components/reset';
 @import 'mixins/forsize';
-@import 'components/userPage';
 
 // COMPONENTS
 @import 'components/header';
 @import 'components/rulesPage';
+@import 'components/userPage';
 
 * {
   box-sizing: border-box;

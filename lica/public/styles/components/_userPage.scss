@@ -1,23 +1,167 @@
+body {
+  background: url("../../assets/imgs/background1.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+//  height: 100vh;
+//  width: 100vw;
+}
+
 .profile-info {
   display: flex;
   justify-content: space-between;
   width: 90%;
   margin: 0 auto;
-  margin-top: 6.6rem;
+  padding-top: 6.6rem;
   &-picture {
-    height: 30rem;
-    width: 20rem;
-    background: white;
+    height: 10rem;
+    width: 30rem;
+    & img {
+      height: 100%;
+      width: 100%;
+    }
   }
   &-information {
-    color: white;
+    color: #FDFDFD;
     text-align: right;
-    &-username {
-      font-size: 3.6rem;
+    &-flex {
       display: flex;
-      align-items: center;
       justify-content: flex-end;
+    }
+    & h2 {
+      font-size: 3.6rem;
+    }
+    & a {
+      margin-left: 1rem;
+    }
+    &-date {
+      margin: 2.8rem 3.1rem 0 0;
+      font-size: 2.4rem;
+    }
+    &-description {
+      font-size: 1.8rem;
+      line-height: 1.5;
+      font-family: 'Oswald-Light';
+      width: 80%;
+      margin: 2rem 0;
+    }
+    &-money {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      margin-right: 2rem;
+      &-amount {
+        font-size: 2rem;
+        color: #ffe55c;
+      }
+    }
+    &-email {
+      font-size: 2.4rem;
+      margin-top: 2rem;
+      margin-bottom: 0.5rem;
     }
   }
 }
 
+// BATTLES WON AND DEFEATS
+
+.battleswon {
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
+  margin: 5rem auto;
+  &-wins, &-loses {
+    color: #3EB8AB;
+    & p, & span {
+      text-transform: uppercase;
+      font-size: 3rem;
+    }
+  }
+  &-loses {
+    color: #A83A3A;
+  }
+}
+
+
+// COMBAT HISTORY
+
+
+.combat-history {
+  text-align: center;
+  &-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: .3rem solid;
+    border-bottom-color: rgba(black, .8);
+    height: 6rem;
+    width: 70%;
+    margin: 0 auto;
+    & i {
+      margin-left: 1rem;
+      color: #fff;
+      font-size: 2.4rem;
+    }
+  }
+  &-title {
+    font-family: 'Oswald-Light';
+    font-size: 2.5rem;
+    color: #FFF;
+  }
+}
+
+.history-payment {
+  margin-top: 2rem;
+}
+
+// MY ALIENS
+
+
+.profile-aliens {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 3rem;
+  &-title {
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    text-align: center;
+    color: #FFF;
+  }
+  &-alien-card {
+    display: flex;
+    justify-content: center;
+    height: 40rem;
+    width: 80%;
+    margin: 5rem auto;
+    background: rgba(#000, .8);
+    &-img {
+      margin-top: 5rem;
+      height: 20rem;
+      width: 15rem; 
+      & img{
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+}
+
+
+
+//FIXES
+
+.link {
+  color: #3EB8AB;
+  font-size: 1.6rem;
+}
+
+.edit {
+  & img {
+    margin-top: 2rem;
+  }
+}
+
+.margin-fix {
+  margin: 0 2.9rem 0 0;
+}
