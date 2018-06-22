@@ -22,8 +22,9 @@
 @import 'components/header';
 @import 'components/rulesPage';
 @import 'components/userPage';
+@import 'components/homePage';
 
 * {
   box-sizing: border-box;
-  background: #000;
+  font-family: 'Oswald-Regular';
 }
