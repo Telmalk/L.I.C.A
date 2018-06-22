@@ -1,56 +1,322 @@
-/*
-Error: File to import not found or unreadable: components/header.
-        on line 24 of styles.scss
-
-19: @import 'components/reset';
-20: @import 'mixins/forsize';
-21: @import 'components/userPage';
-22: 
-23: // COMPONENTS
-24: @import 'components/header';
-
-Backtrace:
-styles.scss:24
-/Library/Ruby/Gems/2.3.0/gems/sass-3.5.5/lib/sass/tree/import_node.rb:67:in `rescue in import'
-/Library/Ruby/Gems/2.3.0/gems/sass-3.5.5/lib/sass/tree/import_node.rb:45:in `import'
-/Library/Ruby/Gems/2.3.0/gems/sass-3.5.5/lib/sass/tree/import_node.rb:28:in `imported_file'
-/Library/Ruby/Gems/2.3.0/gems/sass-3.5.5/lib/sass/tree/import_node.rb:37:in `css_import?'
-/Library/Ruby/Gems/2.3.0/gems/sass-3.5.5/lib/sass/tree/visitors/perform.rb:314:in `visit_import'
-/Library/Ruby/Gems/2.3.0/gems/sass-3.5.5/lib/sass/tree/visitors/base.rb:36:in `visit'
-/Library/Ruby/Gems/2.3.0/gems/sass-3.5.5/lib/sass/tree/visitors/perform.rb:162:in `block in visit'
-/Library/Ruby/Gems/2.3.0/gems/sass-3.5.5/lib/sass/stack.rb:79:in `block in with_base'
-/Library/Ruby/Gems/2.3.0/gems/sass-3.5.5/lib/sass/stack.rb:135:in `with_frame'
-/Library/Ruby/Gems/2.3.0/gems/sass-3.5.5/lib/sass/stack.rb:79:in `with_base'
-/Library/Ruby/Gems/2.3.0/gems/sass-3.5.5/lib/sass/tree/visitors/perform.rb:162:in `visit'
-/Library/Ruby/Gems/2.3.0/gems/sass-3.5.5/lib/sass/tree/visitors/base.rb:52:in `block in visit_children'
-/Library/Ruby/Gems/2.3.0/gems/sass-3.5.5/lib/sass/tree/visitors/base.rb:52:in `map'
-/Library/Ruby/Gems/2.3.0/gems/sass-3.5.5/lib/sass/tree/visitors/base.rb:52:in `visit_children'
-/Library/Ruby/Gems/2.3.0/gems/sass-3.5.5/lib/sass/tree/visitors/perform.rb:171:in `block in visit_children'
-/Library/Ruby/Gems/2.3.0/gems/sass-3.5.5/lib/sass/tree/visitors/perform.rb:183:in `with_environment'
-/Library/Ruby/Gems/2.3.0/gems/sass-3.5.5/lib/sass/tree/visitors/perform.rb:170:in `visit_children'
-/Library/Ruby/Gems/2.3.0/gems/sass-3.5.5/lib/sass/tree/visitors/base.rb:36:in `block in visit'
-/Library/Ruby/Gems/2.3.0/gems/sass-3.5.5/lib/sass/tree/visitors/perform.rb:190:in `visit_root'
-/Library/Ruby/Gems/2.3.0/gems/sass-3.5.5/lib/sass/tree/visitors/base.rb:36:in `visit'
-/Library/Ruby/Gems/2.3.0/gems/sass-3.5.5/lib/sass/tree/visitors/perform.rb:161:in `visit'
-/Library/Ruby/Gems/2.3.0/gems/sass-3.5.5/lib/sass/tree/visitors/perform.rb:10:in `visit'
-/Library/Ruby/Gems/2.3.0/gems/sass-3.5.5/lib/sass/tree/root_node.rb:36:in `css_tree'
-/Library/Ruby/Gems/2.3.0/gems/sass-3.5.5/lib/sass/tree/root_node.rb:29:in `render_with_sourcemap'
-/Library/Ruby/Gems/2.3.0/gems/sass-3.5.5/lib/sass/engine.rb:389:in `_render_with_sourcemap'
-/Library/Ruby/Gems/2.3.0/gems/sass-3.5.5/lib/sass/engine.rb:307:in `render_with_sourcemap'
-/Library/Ruby/Gems/2.3.0/gems/sass-3.5.5/lib/sass/plugin/compiler.rb:462:in `update_stylesheet'
-/Library/Ruby/Gems/2.3.0/gems/sass-3.5.5/lib/sass/plugin/compiler.rb:215:in `block in update_stylesheets'
-/Library/Ruby/Gems/2.3.0/gems/sass-3.5.5/lib/sass/plugin/compiler.rb:209:in `each'
-/Library/Ruby/Gems/2.3.0/gems/sass-3.5.5/lib/sass/plugin/compiler.rb:209:in `update_stylesheets'
-/Library/Ruby/Gems/2.3.0/gems/sass-3.5.5/lib/sass/plugin.rb:82:in `update_stylesheets'
-/Library/Ruby/Gems/2.3.0/gems/sass-3.5.5/lib/sass/exec/sass_scss.rb:340:in `watch_or_update'
-/Library/Ruby/Gems/2.3.0/gems/sass-3.5.5/lib/sass/exec/sass_scss.rb:51:in `process_result'
-/Library/Ruby/Gems/2.3.0/gems/sass-3.5.5/lib/sass/exec/base.rb:52:in `parse'
-/Library/Ruby/Gems/2.3.0/gems/sass-3.5.5/lib/sass/exec/base.rb:19:in `parse!'
-/Library/Ruby/Gems/2.3.0/gems/sass-3.5.5/bin/scss:13:in `<top (required)>'
-/usr/local/bin/scss:23:in `load'
-/usr/local/bin/scss:23:in `<main>'
+@font-face {
+  font-family: 'Oswald-Regular';
+  src: url("../../assets/fonts/Oswald-Regular.ttf"); }
+@font-face {
+  font-family: 'Oswald-Light';
+  src: url("../../assets/fonts/Oswald-Light.ttf"); }
+@font-face {
+  font-family: 'Oswald-Bold';
+  src: url("../../assets/fonts/Oswald-Bold.ttf"); }
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
 */
-body:before {
-  white-space: pre;
-  font-family: monospace;
-  content: "Error: File to import not found or unreadable: components/header.\A         on line 24 of styles.scss\A \A 19: @import 'components/reset';\A 20: @import 'mixins/forsize';\A 21: @import 'components/userPage';\A 22: \A 23: // COMPONENTS\A 24: @import 'components/header';"; }
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 62.5%;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul, li {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after {
+  content: '';
+  content: none; }
+
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+a {
+  text-decoration: none;
+  color: #000; }
+
+.header {
+  position: fixed;
+  display: flex;
+  justify-content: space-between;
+  height: 5.5rem;
+  width: 100%;
+  padding: 2.5rem 1.5rem 0 1.5rem;
+  font-family: 'Oswald-Regular';
+  font-style: italic; }
+  .header-logo {
+    width: 5.8rem;
+    height: 2.7rem; }
+  .header-nav {
+    height: 3rem;
+    position: relative; }
+    .header-nav-burger {
+      width: 3rem;
+      height: 3rem; }
+      .header-nav-burger-item {
+        width: 2rem;
+        height: 0.2rem;
+        border-radius: 1rem;
+        background: #fefefe;
+        position: relative; }
+        .header-nav-burger-item::before, .header-nav-burger-item::after {
+          content: '';
+          position: absolute;
+          width: 2rem;
+          height: 0.2rem;
+          border-radius: 1rem;
+          background: #fefefe;
+          top: 0.75rem; }
+        .header-nav-burger-item::after {
+          top: 1.5rem; }
+    .header-nav-modal {
+      position: absolute;
+      width: 70vw;
+      height: 100vh;
+      left: 15vw;
+      top: -2.5rem;
+      background: rgba(0, 0, 0, 0.5);
+      padding: 2.5rem;
+      transition: transform 0.3s cubic-bezier(0.25, 0.1, 0.25, 1); }
+      .header-nav-modal-cross {
+        width: 2.5rem;
+        height: 2.5rem; }
+    .header-nav-list {
+      margin-top: 20vh;
+      text-align: center; }
+      .header-nav-list-item {
+        font-size: 2.8rem;
+        line-height: 4.2rem;
+        color: #d8d8d8; }
+
+.active {
+  transform: translateX(-65vw); }
+
+.inactive {
+  transform: translateX(15vw); }
+
+body {
+  background: #000; }
+
+.rules {
+  color: #fefefe;
+  padding: 0 6rem;
+  font-family: 'Oswald-Regular'; }
+  .rules-title {
+    margin: 12rem auto 5rem auto;
+    text-align: center;
+    width: 100%; }
+    .rules-title-item {
+      height: 21.7rem;
+      width: 20rem; }
+  .rules-fight-title, .rules-bet-title, .rules-adopt-title {
+    margin-bottom: 0.8rem;
+    font-size: 1.8rem;
+    line-height: 2.7rem;
+    color: #3aa89c; }
+  .rules-fight-text, .rules-bet-text, .rules-adopt-text {
+    margin-bottom: 0.5rem;
+    font-size: 1.2rem;
+    line-height: 1.8rem; }
+
+.bolder {
+  font-weight: bold; }
+
+.userbackground {
+  background: url("../../assets/imgs/background1.png");
+  background-size: cover;
+  background-repeat: no-repeat; }
+
+.profile-info {
+  display: flex;
+  justify-content: space-between;
+  width: 90%;
+  margin: 0 auto;
+  padding-top: 6.6rem; }
+  .profile-info-picture {
+    height: 10rem;
+    width: 30rem; }
+    .profile-info-picture img {
+      height: 100%;
+      width: 100%; }
+  .profile-info-information {
+    color: #FDFDFD;
+    text-align: right;
+    background: none; }
+    .profile-info-information-flex {
+      display: flex;
+      justify-content: flex-end; }
+    .profile-info-information h2 {
+      font-size: 3.6rem; }
+    .profile-info-information a {
+      margin-left: 1rem; }
+    .profile-info-information-date {
+      margin: 2.8rem 3.1rem 0 0;
+      font-size: 2.4rem; }
+    .profile-info-information-description {
+      font-size: 1.8rem;
+      line-height: 1.5;
+      font-family: 'Oswald-Light';
+      width: 80%;
+      margin: 2rem 0; }
+    .profile-info-information-money {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      margin-right: 2rem; }
+      .profile-info-information-money-amount {
+        font-size: 2rem;
+        color: #ffe55c; }
+    .profile-info-information-email {
+      font-size: 2.4rem;
+      margin-top: 2rem;
+      margin-bottom: 0.5rem; }
+
+.battleswon {
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
+  margin: 5rem auto; }
+  .battleswon-wins, .battleswon-loses {
+    color: #3EB8AB; }
+    .battleswon-wins p, .battleswon-wins span, .battleswon-loses p, .battleswon-loses span {
+      text-transform: uppercase;
+      font-size: 3rem; }
+  .battleswon-loses {
+    color: #A83A3A; }
+
+.combat-history {
+  text-align: center; }
+  .combat-history-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: .3rem solid;
+    border-bottom-color: rgba(0, 0, 0, 0.8);
+    height: 6rem;
+    width: 70%;
+    margin: 0 auto; }
+    .combat-history-container i {
+      margin-left: 1rem;
+      color: #fff;
+      font-size: 2.4rem; }
+  .combat-history-title {
+    font-family: 'Oswald-Light';
+    font-size: 2.5rem;
+    color: #FFF; }
+
+.history-payment {
+  margin-top: 2rem; }
+
+.profile-aliens {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 3rem; }
+  .profile-aliens-title {
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    text-align: center;
+    color: #FFF; }
+  .profile-aliens-alien-card {
+    display: flex;
+    justify-content: center;
+    height: 40rem;
+    width: 80%;
+    margin: 5rem auto;
+    background: rgba(0, 0, 0, 0.8); }
+    .profile-aliens-alien-card-img {
+      margin-top: 5rem;
+      height: 20rem;
+      width: 15rem; }
+      .profile-aliens-alien-card-img img {
+        width: 100%;
+        height: 100%; }
+
+.link {
+  color: #3EB8AB;
+  font-size: 1.6rem; }
+
+.edit img {
+  margin-top: 2rem; }
+
+.margin-fix {
+  margin: 0 2.9rem 0 0; }
+
+.header {
+  position: fixed;
+  display: flex;
+  justify-content: space-between;
+  height: 5.5rem;
+  width: 100%;
+  padding: 2.5rem 1.5rem 0 1.5rem;
+  font-family: 'Oswald-Regular';
+  font-style: italic; }
+  .header-logo {
+    width: 5.8rem;
+    height: 2.7rem; }
+  .header-nav {
+    height: 3rem;
+    position: relative; }
+    .header-nav-burger {
+      width: 3rem;
+      height: 3rem; }
+      .header-nav-burger-item {
+        width: 2rem;
+        height: 0.2rem;
+        border-radius: 1rem;
+        background: #fefefe;
+        position: relative; }
+        .header-nav-burger-item::before, .header-nav-burger-item::after {
+          content: '';
+          position: absolute;
+          width: 2rem;
+          height: 0.2rem;
+          border-radius: 1rem;
+          background: #fefefe;
+          top: 0.75rem; }
+        .header-nav-burger-item::after {
+          top: 1.5rem; }
+    .header-nav-modal {
+      position: absolute;
+      width: 70vw;
+      height: 100vh;
+      left: 15vw;
+      top: -2.5rem;
+      background: rgba(0, 0, 0, 0.5);
+      padding: 2.5rem;
+      transition: transform 0.3s cubic-bezier(0.25, 0.1, 0.25, 1); }
+      .header-nav-modal-cross {
+        width: 2.5rem;
+        height: 2.5rem; }
+    .header-nav-list {
+      margin-top: 20vh;
+      text-align: center; }
+      .header-nav-list-item {
+        font-size: 2.8rem;
+        line-height: 4.2rem;
+        color: #d8d8d8; }
+
+.active {
+  transform: translateX(-65vw); }
+
+.inactive {
+  transform: translateX(15vw); }
+
+* {
+  box-sizing: border-box; }
+
+/*# sourceMappingURL=styles.css.map */

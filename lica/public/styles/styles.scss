@@ -14,11 +14,19 @@
   src: url('../../assets/fonts/Oswald-Bold.ttf');
 }
 
-
 // MIXINS
 @import 'components/reset';
 @import 'mixins/forsize';
-@import 'components/userPage';
 
 // COMPONENTS
 @import 'components/header';
+@import 'components/rulesPage';
+@import 'components/userPage';
+
+// COMPONENTS
+
+
+@import 'components/header';
+* {
+  box-sizing: border-box;
+}
