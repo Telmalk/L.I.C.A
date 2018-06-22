@@ -8,12 +8,23 @@
 </head>
 <body>
     <header class="header">
-        <img class="header-logo" src="../" alt="Logo L.I.C.A">
+        <img class="header-logo" src="../assets/imgs/logo.png" alt="Logo L.I.C.A">
         <nav class="header-nav">
-            <div class="header-nav-burger">
-                <span class="header-nav-burger-item"></span>
+            <div id="burger-open" class="header-nav-burger">
+                <div class="header-nav-burger-item"></div>
+            </div>
+            <div id="burger" class="header-nav-modal inactive">
+                <img id="burger-close" class="header-nav-modal-cross" src="../assets/imgs/close.png" alt="Cross menu">
+                <ul class="header-nav-list">
+                    <li class="header-nav-list-item">Accueil</li>
+                    <li class="header-nav-list-item">Réglements L.I.C.A</li>
+                    <li class="header-nav-list-item">Combats et Paris</li>
+                    <li class="header-nav-list-item">Le Bestiaire</li>
+                    <li class="header-nav-list-item">Ton Profil</li>
+                </ul>
             </div>
         </nav>
     </header>
+    <script src="scripts/burger.js"></script>
 </body>
 </html>
