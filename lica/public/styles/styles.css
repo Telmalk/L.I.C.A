@@ -121,7 +121,7 @@ a {
         color: #d8d8d8; }
 
 .active {
-  transform: translateX(-65vw); }
+  transform: translateX(-75vw); }
 
 .inactive {
   transform: translateX(15vw); }
@@ -129,7 +129,8 @@ a {
 .rules {
   color: #fefefe;
   padding: 0 6rem;
-  font-family: 'Oswald-Regular'; }
+  font-family: 'Oswald-Regular';
+  background: #000; }
   .rules-title {
     margin: 12rem auto 5rem auto;
     text-align: center;
@@ -151,7 +152,6 @@ a {
   font-weight: bold; }
 
 * {
-  box-sizing: border-box;
-  background: #000; }
+  box-sizing: border-box; }
 
 /*# sourceMappingURL=styles.css.map */
