@@ -255,7 +255,7 @@ body {
 .homepage-background {
   background: url("../../assets/imgs/backgroundhome.png") #0F0F0F;
   background-size: contain;
-  background-position: 50% 4%;
+  background-position: 50% 0%;
   background-repeat: no-repeat;
   object-fit: fill; }
 
@@ -298,7 +298,7 @@ body {
     .homepage-container-concept-img {
       position: absolute;
       right: 0;
-      width: 15rem;
+      width: 18rem;
       height: 20rem; }
       .homepage-container-concept-img img {
         width: 100%;
@@ -313,7 +313,33 @@ body {
         font-size: .9rem;
         line-height: 1.5;
         font-family: 'Oswald-light';
-        width: 60%; }
+        width: 50%; }
+  .homepage-container-rules {
+    margin-top: 8.5rem;
+    position: relative; }
+    .homepage-container-rules-title {
+      color: #3EB8AB;
+      font-size: 2.4rem;
+      margin-bottom: 1.5rem;
+      text-transform: uppercase;
+      text-align: center; }
+    .homepage-container-rules-details {
+      font-size: 1rem;
+      line-height: 1.5;
+      margin-bottom: .8rem; }
+    .homepage-container-rules-see-more {
+      font-size: 1.2rem;
+      color: #3EB8AB;
+      text-transform: uppercase;
+      text-align: center;
+      margin-top: 1.5rem; }
+  .homepage-container-footer {
+    margin-top: 5.5rem;
+    margin-bottom: 3rem; }
+    .homepage-container-footer-copyright {
+      font-size: .8rem;
+      text-transform: uppercase;
+      text-align: center; }
 
 .homepage-fullpage-alien2 {
   margin-top: 6rem; }
