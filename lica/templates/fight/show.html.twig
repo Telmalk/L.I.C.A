@@ -1,0 +1,42 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Fight{% endblock %}
+
+{% block body %}
+    <h1>Fight</h1>
+
+    <table class="table">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ fight.id }}</td>
+            </tr>
+            <tr>
+                <th>Bet</th>
+                <td>{{ fight.bet }}</td>
+            </tr>
+            <tr>
+                <th>Odd_fighter1</th>
+                <td>{{ fight.oddFighter1 }}</td>
+            </tr>
+            <tr>
+                <th>Odd_fighter2</th>
+                <td>{{ fight.oddFighter2 }}</td>
+            </tr>
+            <tr>
+                <th>Date</th>
+                <td>{{ fight.date ? fight.date|date('Y-m-d H:i:s') : '' }}</td>
+            </tr>
+            <tr>
+                <th>Accepted</th>
+                <td>{{ fight.accepted ? 'Yes' : 'No' }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a href="{{ path('fight_index') }}">back to list</a>
+
+    <a href="{{ path('fight_edit', {'id': fight.id}) }}">edit</a>
+
+    {{ include('fight/_delete_form.html.twig') }}
+{% endblock %}
