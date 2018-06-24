@@ -22,11 +22,31 @@
 @import 'components/header';
 @import 'components/rulesPage';
 @import 'components/userPage';
+@import 'components/homePage';
+
+// VARIABLES
+
+//@import 'variables/variables';
 
 // COMPONENTS
 @import 'components/header';
 
 
 * {
-  box-sizing: border-box
+  box-sizing: border-box;
+  font-family: 'Oswald-Regular';
+}
+
+.back-to-top {
+  position: fixed;
+  bottom: 2.5rem;
+  right: 1.5rem;
+  height: 3.5rem;
+  width: 3.5rem;
+  background: #3EB8AB;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  border-radius: 50%;
 }
