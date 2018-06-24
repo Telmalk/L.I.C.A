@@ -1,4 +1,4 @@
-body {
+.userbackground {
   background: url("../../assets/imgs/background1.png");
   background-size: cover;
   background-repeat: no-repeat;
@@ -23,6 +23,7 @@ body {
   &-information {
     color: #FDFDFD;
     text-align: right;
+    background: none;
     &-flex {
       display: flex;
       justify-content: flex-end;
@@ -92,7 +93,7 @@ body {
     justify-content: center;
     align-items: center;
     border-bottom: .3rem solid;
-    border-bottom-color: rgba(black, .8);
+    border-bottom-color: rgba(#000, .8);
     height: 6rem;
     width: 70%;
     margin: 0 auto;

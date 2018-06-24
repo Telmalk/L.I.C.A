@@ -103,10 +103,8 @@ a {
 
 .active {
   transform: translateX(-65vw); }
-
 .inactive {
   transform: translateX(15vw); }
-
 .rules {
   color: #fefefe;
   padding: 0 6rem;
@@ -127,11 +125,41 @@ a {
     margin-bottom: 0.5rem;
     font-size: 1.2rem;
     line-height: 1.8rem; }
+.bolder {
+  font-weight: bold; }
+  transform: translateX(-75vw); }
+.inactive {
+  transform: translateX(15vw); }
+
+body {
+  background: #000; }
+
+.rules {
+  color: #fefefe;
+  padding: 0 6rem;
+  font-family: 'Oswald-Regular';
+  background: #000; }
+  .rules-title {
+    margin: 12rem auto 5rem auto;
+    text-align: center;
+    width: 100%; }
+    .rules-title-item {
+      height: 21.7rem;
+      width: 20rem; }
+  .rules-fight-title, .rules-bet-title, .rules-adopt-title {
+    margin-bottom: 0.8rem;
+    font-size: 1.8rem;
+    line-height: 2.7rem;
+    color: #3aa89c; }
+  .rules-fight-text, .rules-bet-text, .rules-adopt-text {
+    margin-bottom: 0.5rem;
+    font-size: 1.2rem;
+    line-height: 1.8rem; }
 
 .bolder {
   font-weight: bold; }
 
-body {
+.userbackground {
   background: url("../../assets/imgs/background1.png");
   background-size: cover;
   background-repeat: no-repeat; }
@@ -150,7 +178,8 @@ body {
       width: 100%; }
   .profile-info-information {
     color: #FDFDFD;
-    text-align: right; }
+    text-align: right;
+    background: none; }
     .profile-info-information-flex {
       display: flex;
       justify-content: flex-end; }
@@ -341,6 +370,7 @@ body {
       text-transform: uppercase;
       text-align: center; }
 
+
 .homepage-fullpage-alien2 {
   margin-top: 6rem; }
   .homepage-fullpage-alien2-img {
@@ -371,5 +401,7 @@ body {
   align-items: center;
   font-size: 2rem;
   border-radius: 50%; }
+* {
+  box-sizing: border-box; }
 
 /*# sourceMappingURL=styles.css.map */
