@@ -16,5 +16,9 @@
         <li>Your controller at <code><a href="{{ 'src/Controller/RulesController.php'|file_link(0) }}">src/Controller/RulesController.php</a></code></li>
         <li>Your template at <code><a href="{{ 'templates/rules/index.html.twig'|file_link(0) }}">templates/rules/index.html.twig</a></code></li>
     </ul>
+    <p>{% for row in request %}
+        {{ row }}
+        {% endfor %}
+    </p>
 </div>
 {% endblock %}
