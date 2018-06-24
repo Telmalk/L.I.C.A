@@ -25,7 +25,7 @@ easy_admin:
             - { property: 'defeat', label: 'defeat', value: '0' }
             - { property: 'pending_fight', type: 'checkbox', value: false }
             - { property: 'rating', label: 'Rating', value: '0' }
-            - { property: 'img_user', type: 'file', label: User Image }
+            - { property: 'img_user', type: 'file', label: User Image } #<- c'est un peux la merde la --'
       Alien:
         class: App\Entity\Alien
       Fight:
