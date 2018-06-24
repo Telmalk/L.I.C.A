@@ -111,6 +111,11 @@ class Alien
      */
     private $price;
 
+    /**
+     * @ORM\Column(type="string", length=100)
+     */
+    private $img;
+
     public function getId()
     {
         return $this->id;
@@ -347,5 +352,17 @@ class Alien
     {
         // TODO: Implement __toString() method.
         return (string)$this->getId();
+    }
+
+    public function getImg(): ?string
+    {
+        return $this->img;
+    }
+
+    public function setImg(string $img): self
+    {
+        $this->img = $img;
+
+        return $this;
     }
 }
