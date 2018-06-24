@@ -1,3 +1,26 @@
 easy_admin:
     entities:
-        - App\Entity\User
+      User:
+        class: App\Entity\User
+        form:  # <-- 'form' is applied to both 'new' and 'edit' views
+            fields:
+                - { property: 'name', type: 'text', label: 'Name' }
+                - { property: 'surname', type: 'text', label: 'Surname' }
+                - { property: 'Password', type: 'text', label: 'Password' }
+                - { property: 'Pseudo', type: 'text', label: 'Pseudo' }
+                - { property: 'Birthdate', type: 'date', label: 'Birthdate' }
+                - { property: 'mail', type: 'email', label: 'Mail' }
+                - { property: 'creditCode', type: 'text', label: 'Credit code' }
+                - { property: 'pendingFight', type: 'hidden', value: false }
+
+                # surname {string}
+                # password {string hashed}
+                # pseudo {string}
+                # birthdate {date}
+                # mail {string}
+                # creditCode {string}
+                # nbCredit {int}
+                # win {int}
+                # defeat {int}
+                # pendingFight {bool}
+                # rating {int}
