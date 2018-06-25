@@ -3,13 +3,6 @@ easy_admin:
       #- App\Entity\User
       #- App\Entity\Fight
       #- App\Entity\Alien
-      #- App\Entity\Admin
-      Admin:
-        class: App\Entity\Admin
-        form:
-          fields:
-            - { property: 'name', type: 'text', label: 'Name' }
-            - { property: 'password', type: 'text', label: 'Password' }
       User:
         class: App\Entity\User
         form:
@@ -19,13 +12,19 @@ easy_admin:
             - { property: 'mail', type: 'email', label: 'Mail' }
             - { property: 'password', type: 'text', label: 'Password' }
             - { property: 'pseudo', type: 'text', label: 'Pseudo' }
-            - { property: 'birthdate', type: 'date', label: 'Birthdate' }
+            - { property: 'birthdate', type: 'App\Form\MyCustomDate', label: 'Birthdate' }
             - { property: 'nb_credit', type: 'number', label: 'Number of SpaceCoin' }
             - { property: 'win', label: 'win', value: '0' }
             - { property: 'defeat', label: 'defeat', value: '0' }
             - { property: 'pending_fight', type: 'checkbox', value: false }
             - { property: 'rating', label: 'Rating', value: '0' }
             - { property: 'img_user', type: 'file', label: User Image } #<- c'est un peux la merde la --'
+#        list:
+#            fields:
+#              - { property: 'image', type: 'image', base_path: '%app.path.product_images%' }
+#        show:
+#            fields:
+#              - { property: 'image', type: 'image', base_path: '%app.path.product_images%' }
       Alien:
         class: App\Entity\Alien
       Fight:

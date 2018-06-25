@@ -1,12 +1,38 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="UTF-8">
-        <title>{% block title %}wesh{% endblock %}</title>
-        {% block stylesheets %}{% endblock %}
-    </head>
-    <body>
-        {% block body %}{% endblock %}
-        {% block javascripts %}{% endblock %}
-    </body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>{% block title %}wesh{% endblock %}</title>
+    {% block stylesheets %}
+        <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
+        <link rel="stylesheet" href="{{ asset('styles/styles.css') }}">
+    {% endblock %}
+</head>
+{% block body %}
+<body>
+<header class="header">
+    <img class="header-logo" src="{{ asset('imgs/logo.png') }}" alt="Logo L.I.C.A">
+    <nav class="header-nav">
+        <div id="burger-open" class="header-nav-burger">
+            <div class="header-nav-burger-item"></div>
+        </div>
+        <div id="burger" class="header-nav-modal inactive">
+            <img id="burger-close" class="header-nav-modal-cross" src="{{ asset('imgs/close.png') }}" alt="Cross menu">
+            <ul class="header-nav-list">
+                <li class="header-nav-list-item">Accueil</li>
+                <li class="header-nav-list-item">Réglements L.I.C.A</li>
+                <li class="header-nav-list-item">Combats et Paris</li>
+                <li class="header-nav-list-item">Le Bestiaire</li>
+                <li class="header-nav-list-item">Ton Profil</li>
+            </ul>
+        </div>
+    </nav>
+</header>
+{% endblock %}
+{% block javascripts %}
+    <script src="{{ asset('/scripts/burger.js') }}"></script>
+{% endblock %}
+</body>
 </html>

@@ -74,7 +74,7 @@ CREATE TABLE `alien` (
   PRIMARY KEY (`id`),
   KEY `IDX_E606C249A76ED395` (`user_id`),
   CONSTRAINT `FK_E606C249A76ED395` FOREIGN KEY (`user_id`) REFERENCES `user` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -83,7 +83,7 @@ CREATE TABLE `alien` (
 
 LOCK TABLES `alien` WRITE;
 /*!40000 ALTER TABLE `alien` DISABLE KEYS */;
-INSERT INTO `alien` VALUES (1,NULL,'Toto',2,2,'f','nutruk','fd',1,1,1,1,'fds','sdf',1,1,'fdsf',0,1,1,'');
+INSERT INTO `alien` VALUES (1,NULL,'Toto',2,2,'f','nutruk','fd',1,1,1,1,'fds','sdf',1,1,'fdsf',0,1,1,''),(2,2,'fdf',1,1,'fd','fd','sdf',1,1,1,1,'sdfs','fdsf',1,1,'sdf',1,2,2,'fsd');
 /*!40000 ALTER TABLE `alien` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -114,7 +114,7 @@ CREATE TABLE `fight` (
   CONSTRAINT `FK_21AA445656AE248B` FOREIGN KEY (`user1_id`) REFERENCES `user` (`id`),
   CONSTRAINT `FK_21AA445689624646` FOREIGN KEY (`alien2_id`) REFERENCES `alien` (`id`),
   CONSTRAINT `FK_21AA44569BD7E9A8` FOREIGN KEY (`alien1_id`) REFERENCES `alien` (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -123,6 +123,7 @@ CREATE TABLE `fight` (
 
 LOCK TABLES `fight` WRITE;
 /*!40000 ALTER TABLE `fight` DISABLE KEYS */;
+INSERT INTO `fight` VALUES (1,3,2,1,2,2,2,2,'2013-01-01 00:00:00',0);
 /*!40000 ALTER TABLE `fight` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -145,7 +146,7 @@ CREATE TABLE `migration_versions` (
 
 LOCK TABLES `migration_versions` WRITE;
 /*!40000 ALTER TABLE `migration_versions` DISABLE KEYS */;
-INSERT INTO `migration_versions` VALUES ('20180623143609'),('20180623144225'),('20180623145532'),('20180623181621'),('20180624084244');
+INSERT INTO `migration_versions` VALUES ('20180623143609'),('20180623144225'),('20180623145532'),('20180623181621'),('20180624084244'),('20180624200146');
 /*!40000 ALTER TABLE `migration_versions` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -165,13 +166,14 @@ CREATE TABLE `user` (
   `birthdate` date NOT NULL,
   `mail` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL,
   `credi_code` varchar(100) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `nb_credit` int(11) NOT NULL,
+  `nb_credit` int(11) DEFAULT '0',
   `win` int(11) NOT NULL,
   `defeat` int(11) NOT NULL,
   `pending_fight` tinyint(1) NOT NULL,
   `rating` int(11) NOT NULL,
+  `img_user` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -180,6 +182,7 @@ CREATE TABLE `user` (
 
 LOCK TABLES `user` WRITE;
 /*!40000 ALTER TABLE `user` DISABLE KEYS */;
+INSERT INTO `user` VALUES (2,'toto','titi','gsdl','g','2013-01-01','tsd@gmail.com',NULL,43,7,10,0,9,NULL),(3,'sdfd','fsdf','sdfsdf','f','2013-01-01','fdffs@dfsdf.fr',NULL,NULL,1,1,0,19,NULL);
 /*!40000 ALTER TABLE `user` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -192,4 +195,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2018-06-24 11:48:01
+-- Dump completed on 2018-06-25 16:16:40
