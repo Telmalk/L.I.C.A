@@ -5,7 +5,6 @@
   height: 5.5rem;
   width: 100%;
   padding: 2.5rem 1.5rem 0 1.5rem;
-  font-family: 'Oswald-Regular';
   font-style: italic;
   @include for-size(desktop-up) {
     height: 10rem;
@@ -87,7 +86,7 @@
           line-height: 4.2rem;
           color: #d8d8d8;
           @include for-size(desktop-up) {
-            font-size: 2.4rem;
+            font-size: $title;
             line-height: 1.5rem;
             color: #3aa89c;
           }
