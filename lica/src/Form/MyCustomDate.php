@@ -8,7 +8,7 @@
 
 namespace App\Form;
 
-use Symfony\Component\Form\Extension\Core\Type\DateType;
+use  Symfony\Component\Form\Extension\Core\Type\DateType;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 
 class MyCustomDate extends DateType

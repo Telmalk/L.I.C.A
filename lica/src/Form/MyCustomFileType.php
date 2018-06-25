@@ -19,7 +19,7 @@ class MyCustomFileType extends AbstractType
     public function configureOptions(OptionsResolver $resolver)
     {
         $resolver->setDefaults(array(
-        'data_class' => Product::class,
+        'data_class' => User::class,
     ));
     }
 }
