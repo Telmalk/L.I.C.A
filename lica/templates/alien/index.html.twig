@@ -1,0 +1,69 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Alien index{% endblock %}
+
+{% block body %}
+    <h1>Alien index</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Race</th>
+                <th>Weight</th>
+                <th>Height</th>
+                <th>Sex</th>
+                <th>Origin</th>
+                <th>Nutrition</th>
+                <th>Attack</th>
+                <th>Defense</th>
+                <th>Speed</th>
+                <th>Threat</th>
+                <th>Description_card</th>
+                <th>Trait</th>
+                <th>Win</th>
+                <th>Defeat</th>
+                <th>HealthStatus</th>
+                <th>Adopted</th>
+                <th>Rating</th>
+                <th>Price</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for alien in aliens %}
+            <tr>
+                <td>{{ alien.id }}</td>
+                <td>{{ alien.race }}</td>
+                <td>{{ alien.weight }}</td>
+                <td>{{ alien.height }}</td>
+                <td>{{ alien.sex }}</td>
+                <td>{{ alien.origin }}</td>
+                <td>{{ alien.nutrition }}</td>
+                <td>{{ alien.attack }}</td>
+                <td>{{ alien.defense }}</td>
+                <td>{{ alien.speed }}</td>
+                <td>{{ alien.threat }}</td>
+                <td>{{ alien.descriptionCard }}</td>
+                <td>{{ alien.trait }}</td>
+                <td>{{ alien.win }}</td>
+                <td>{{ alien.defeat }}</td>
+                <td>{{ alien.healthStatus }}</td>
+                <td>{{ alien.adopted ? 'Yes' : 'No' }}</td>
+                <td>{{ alien.rating }}</td>
+                <td>{{ alien.price }}</td>
+                <td>
+                    <a href="{{ path('alien_show', {'id': alien.id}) }}">show</a>
+                    <a href="{{ path('alien_edit', {'id': alien.id}) }}">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="20">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('alien_new') }}">Create new</a>
+{% endblock %}

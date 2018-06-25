@@ -1,0 +1,43 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Fight index{% endblock %}
+
+{% block body %}
+    <h1>Fight index</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Bet</th>
+                <th>Odd_fighter1</th>
+                <th>Odd_fighter2</th>
+                <th>Date</th>
+                <th>Accepted</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for fight in fights %}
+            <tr>
+                <td>{{ fight.id }}</td>
+                <td>{{ fight.bet }}</td>
+                <td>{{ fight.oddFighter1 }}</td>
+                <td>{{ fight.oddFighter2 }}</td>
+                <td>{{ fight.date ? fight.date|date('Y-m-d H:i:s') : '' }}</td>
+                <td>{{ fight.accepted ? 'Yes' : 'No' }}</td>
+                <td>
+                    <a href="{{ path('fight_show', {'id': fight.id}) }}">show</a>
+                    <a href="{{ path('fight_edit', {'id': fight.id}) }}">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="7">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('fight_new') }}">Create new</a>
+{% endblock %}
