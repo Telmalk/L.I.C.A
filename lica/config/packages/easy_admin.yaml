@@ -3,13 +3,6 @@ easy_admin:
       #- App\Entity\User
       #- App\Entity\Fight
       #- App\Entity\Alien
-      #- App\Entity\Admin
-      Admin:
-        class: App\Entity\Admin
-        form:
-          fields:
-            - { property: 'name', type: 'text', label: 'Name' }
-            - { property: 'password', type: 'text', label: 'Password' }
       User:
         class: App\Entity\User
         form:
