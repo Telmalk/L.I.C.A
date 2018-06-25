@@ -16,6 +16,7 @@
 
 // MIXINS
 @import 'components/reset';
+@import 'variables/variables';
 @import 'mixins/forsize';
 
 // COMPONENTS
@@ -23,10 +24,6 @@
 @import 'components/rulesPage';
 @import 'components/userPage';
 @import 'components/homePage';
-
-// VARIABLES
-
-//@import 'variables/variables';
 
 // COMPONENTS
 @import 'components/header';

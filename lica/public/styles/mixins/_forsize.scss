@@ -1,7 +1,7 @@
 @mixin for-size($range) {
-  $phone-upper-boundary: 640px;
-  $tablet-upper-boundary: 1140px;
-  $desktop-upper-boundary: 1800px;
+  $phone-upper-boundary: $bp-tablet;
+  $tablet-upper-boundary: $bp-desktop;
+  $desktop-upper-boundary: $bp-desktop-large;
 
   @if $range == tablet-up {
     @media (min-width: $phone-upper-boundary) { @content; }
