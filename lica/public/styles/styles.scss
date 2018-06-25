@@ -18,6 +18,7 @@
 
 // MIXINS
 @import 'components/reset';
+@import 'variables/variables';
 @import 'mixins/forsize';
 
 // COMPONENTS
@@ -25,11 +26,6 @@
 @import 'components/rulesPage';
 @import 'components/userPage';
 @import 'components/homePage';
-
-
-// COMPONENTS
-@import 'components/header';
-
 
 * {
   box-sizing: border-box;

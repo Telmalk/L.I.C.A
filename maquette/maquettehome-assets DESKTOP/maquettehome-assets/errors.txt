@@ -1,0 +1,4 @@
+[2018-06-25 11:21:16] layer "L.I.C.A copie": Expected end of input but "c" found.
+[2018-06-25 11:21:16] layer "L.I.C.A copie 2": Expected end of input but "c" found.
+[2018-06-25 11:21:16] layer "L.I.C.A": Unsupported extension: a
+[2018-06-25 11:21:16] layer "L.I.C.A": Unsupported extension: a
