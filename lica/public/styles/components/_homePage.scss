@@ -1,0 +1,134 @@
+.homepage-background {
+  background: url("../../assets/imgs/backgroundhome.png") #0F0F0F;
+  background-size: contain;
+  background-position: 50% 0%;
+  background-repeat: no-repeat;
+  object-fit: fill;
+}
+
+.homepage-container {
+  color: #FFF;
+  width: 85%;
+  margin: 0 auto;
+  &-title {
+   font-size: 3.2rem;
+    text-transform: uppercase;
+    line-height: 1.5;
+ }
+  &-subtitle {
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    line-height: 1.5;
+  }
+  &-us {
+    &-alien1-img {
+      position: absolute;
+      left: 0;
+      width: 16.4rem;
+      height: 27.5rem;
+      & img {
+        height: 100%;
+        width: 100%;
+      }
+    }
+    &-text {
+      &-title {
+        text-align: right;
+        font-size: 2.4rem;
+        text-transform: uppercase;
+        color: #3EB8AB;
+        margin-bottom: 1rem;
+      }
+      &-details {
+        font-family: 'Oswald-light';
+        text-align: right;
+        font-size: .9rem;
+        line-height: 1.5;
+        width: 50%;
+        margin-left: 50%;
+      }
+    }
+  }
+  &-concept {
+    position: relative;
+    margin-top: 8rem;
+    &-img {
+      position: absolute;
+      right: 0;
+      width: 18rem;
+      height: 20rem;
+      & img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+    &-text {
+      text-align: left;
+      &-title {
+        color: #3EB8AB;
+        font-size: 2.4rem;
+        margin-bottom: 1rem;
+      }
+      &-details {
+        font-size: .9rem;
+        line-height: 1.5;
+        font-family: 'Oswald-light';
+        width: 50%;
+      }
+    }
+  }
+  &-rules {
+    margin-top: 8.5rem;
+    position: relative;
+    &-title {
+      color: #3EB8AB;
+      font-size: 2.4rem;
+      margin-bottom: 1.5rem;
+      text-transform: uppercase;
+      text-align: center;
+    }
+    &-details {
+      font-size: 1rem;
+      line-height: 1.5;
+      margin-bottom: .8rem;
+    }
+    &-see-more {
+      font-size: 1.2rem;
+      color: #3EB8AB;
+      text-transform: uppercase;
+      text-align: center;
+      margin-top: 1.5rem;
+    }
+  }
+  &-footer {
+    margin-top: 5.5rem;
+    margin-bottom: 3rem;
+    &-copyright {
+      font-size: .8rem;
+      text-transform: uppercase;
+      text-align: center;
+    }
+  }
+}
+
+
+
+.homepage-fullpage {
+  &-alien2 {
+    margin-top: 6rem;
+    &-img {
+      height: 60%;
+      width: 100%;
+      & img {
+        height: 100%;
+        width: 100%;
+      }
+    }
+  }
+}
+
+.top-container {
+  text-align: center;
+  margin-top: 5rem;
+  margin-bottom: 40rem;
+}
