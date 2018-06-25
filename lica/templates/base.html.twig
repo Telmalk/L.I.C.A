@@ -10,6 +10,7 @@
         <link rel="stylesheet" href="{{ asset('styles/styles.css') }}">
     {% endblock %}
 </head>
+{% block body %}
 <body>
 <header class="header">
     <img class="header-logo" src="{{ asset('imgs/logo.png') }}" alt="Logo L.I.C.A">
@@ -29,7 +30,7 @@
         </div>
     </nav>
 </header>
-{% block body %}{% endblock %}
+{% endblock %}
 {% block javascripts %}
     <script src="{{ asset('/scripts/burger.js') }}"></script>
 {% endblock %}

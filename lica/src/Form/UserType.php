@@ -24,6 +24,7 @@ class UserType extends AbstractType
             ->add('defeat')
             ->add('pendingFight')
             ->add('rating')
+            ->add('img-user')
         ;
     }
 
