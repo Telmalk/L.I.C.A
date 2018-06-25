@@ -19,6 +19,12 @@ easy_admin:
             - { property: 'pending_fight', type: 'checkbox', value: false }
             - { property: 'rating', label: 'Rating', value: '0' }
             - { property: 'img_user', type: 'file', label: User Image } #<- c'est un peux la merde la --'
+#        list:
+#            fields:
+#              - { property: 'image', type: 'image', base_path: '%app.path.product_images%' }
+#        show:
+#            fields:
+#              - { property: 'image', type: 'image', base_path: '%app.path.product_images%' }
       Alien:
         class: App\Entity\Alien
       Fight:
