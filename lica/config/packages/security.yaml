@@ -1,12 +1,31 @@
 security:
+
+    role_hierarchy:
+        ROLE_ADMIN: [ROLE_USER]
+
+    encoders:
+        Symfony\Component\Security\Core\User\User:
+            algorithm: bcrypt
+
     # https://symfony.com/doc/current/security.html#where-do-users-come-from-user-providers
     providers:
-        in_memory: { memory: ~ }
+        in_memory:
+            memory:
+                users:
+                    admin:
+                        password: $2y$13$Nk/ObUVaGoH7fv1XiayNZuFcRwWuVdnjNAoi4uBxKX8r/h0s3dHFK
+                        roles: 'ROLE_ADMIN'
     firewalls:
         dev:
             pattern: ^/(_(profiler|wdt)|css|images|js)/
             security: false
         main:
+            pattern: ^/
+            provider: in_memory
+            form_login:
+                login_path: login
+                check_path: login
+            logout: true
             anonymous: true
 
             # activate different ways to authenticate
@@ -20,5 +39,6 @@ security:
     # Easy way to control access for large sections of your site
     # Note: Only the *first* access control that matches will be used
     access_control:
-        # - { path: ^/admin, roles: ROLE_ADMIN }
-        # - { path: ^/profile, roles: ROLE_USER }
+        - { path: ^/admin/, role: ROLE_ADMIN }
+        - { path: ^/login$/, role: IS_AUTHENTICATED_ANONYMOUSLY }
+        - { path: ^/, role: IS_AUTHENTICATED_ANONYMOUSLY }

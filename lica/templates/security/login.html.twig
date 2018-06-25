@@ -1,0 +1,30 @@
+{% block stylesheets %}
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+{% endblock %}
+
+{% block body %}
+
+    <form style="display:flex;flex-direction:column;justify-content:space-between;height:200px;width:60%;margin:auto;" class="form-signin" action="{{ path('login') }}" method="POST">
+        <h2 class="form-signin-heading">Please sign in</h2>
+
+        <label for="_username" class="sr-only">Username</label>
+        <input type="text"
+               id="_username"
+               name="_username"
+               class="form-control"
+               placeholder="Username"
+               required
+               autofocus>
+
+        <label for="_password" class="sr-only">Password</label>
+        <input type="password"
+               id="_password"
+               name="_password"
+               class="form-control"
+               placeholder="Password"
+               required>
+
+        <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+    </form>
+
+{% endblock %}

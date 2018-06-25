@@ -1,0 +1,26 @@
+// Font
+$font-serif: 'Times', 'Times new roman', serif;
+$font-ss: 'Arial', 'Helvetica', sans-serif;
+
+// Color
+$green: #3EB8AB;
+$yellow: #FFE55C;
+$red: #A83A3A;
+
+
+// Font-size
+
+$largeTitle : 3.2rem;
+$title : 2.4rem;
+$details : 1.2rem;
+
+
+// Breakpoint
+$bp-tablet: 600px;
+$bp-desktop: 949px;
+$bp-desktop-large: 1200px;
+$bp-desktop-x-large: 1800px;
+
+html {
+  font-size: 62.5%;
+}

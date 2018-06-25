@@ -1,0 +1,71 @@
+.header {
+  position: fixed;
+  display: flex;
+  justify-content: space-between;
+  height: 5.5rem;
+  width: 100%;
+  padding: 2.5rem 1.5rem 0 1.5rem;
+  font-family: 'Oswald-Regular';
+  font-style: italic;
+  &-logo {
+    width: 5.8rem;
+    height: 2.7rem;
+  }
+  &-nav {
+    height: 3rem;
+    position: relative;
+    &-burger {
+      width: 3rem;
+      height: 3rem;
+      &-item {
+        width: 2rem;
+        height: 0.2rem;
+        border-radius: 1rem;
+        background: #fefefe;
+        position: relative;
+        &::before, &::after {
+          content: '';
+          position: absolute;
+          width: 2rem;
+          height: 0.2rem;
+          border-radius: 1rem;
+          background: #fefefe;
+          top: 0.75rem;
+        }
+        &::after {
+          top: 1.5rem;
+        }
+      }
+    }
+    &-modal {
+      position: absolute;
+      width: 70vw;
+      height: 100vh;
+      left: 15vw;
+      top: -2.5rem;
+      background: rgba(0,0,0, 0.5);
+      padding: 2.5rem;
+      transition: transform .3s cubic-bezier(.25, .1, .25, 1);
+      &-cross {
+        width: 2.5rem;
+        height: 2.5rem;
+      }
+    }
+    &-list {
+      margin-top: 20vh;
+      text-align: center;
+      &-item {
+        font-size: 2.8rem;
+        line-height: 4.2rem;
+        color: #d8d8d8;
+      }
+    }
+  }
+}
+
+.active {
+  transform: translateX(-75vw);
+}
+.inactive {
+  transform: translateX(15vw);
+}

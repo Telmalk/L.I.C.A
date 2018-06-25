@@ -76,6 +76,11 @@ class User
      */
     private $rating;
 
+    /**
+     * @ORM\Column(type="string", length=255, nullable=true)
+     */
+    private $imgUser;
+
     public function getId()
     {
         return $this->id;
@@ -228,5 +233,17 @@ class User
     {
         // TODO: Implement __toString() method.
         return (string)$this->getId();
+    }
+
+    public function getImgUser(): ?string
+    {
+        return $this->imgUser;
+    }
+
+    public function setImgUser(?string $imgUser): self
+    {
+        $this->imgUser = $imgUser;
+
+        return $this;
     }
 }
