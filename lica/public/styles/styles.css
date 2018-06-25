@@ -253,11 +253,7 @@ body {
   margin: 0 2.9rem 0 0; }
 
 .homepage-background {
-  background: url("../../assets/imgs/backgroundhome.png") #0F0F0F;
-  background-size: contain;
-  background-position: 50% 0%;
-  background-repeat: no-repeat;
-  object-fit: fill; }
+  background: #0F0F0F; }
 
 .homepage-container {
   color: #FFF;
@@ -266,16 +262,29 @@ body {
   .homepage-container-title {
     font-size: 3.2rem;
     text-transform: uppercase;
-    line-height: 1.5; }
+    line-height: 1.5;
+    padding-top: 5rem; }
+    @media (min-width: 1200px) {
+      .homepage-container-title {
+        font-size: 4.5rem; } }
   .homepage-container-subtitle {
     font-size: 1.5rem;
     text-transform: uppercase;
-    line-height: 1.5; }
+    line-height: 1.5;
+    font-family: 'oswald-light'; }
+    @media (min-width: 1200px) {
+      .homepage-container-subtitle {
+        font-size: 3rem; } }
   .homepage-container-us-alien1-img {
     position: absolute;
     left: 0;
     width: 16.4rem;
     height: 27.5rem; }
+    @media (min-width: 1200px) {
+      .homepage-container-us-alien1-img {
+        width: 37rem;
+        height: 58rem;
+        left: 10rem; } }
     .homepage-container-us-alien1-img img {
       height: 100%;
       width: 100%; }
@@ -285,13 +294,20 @@ body {
     text-transform: uppercase;
     color: #3EB8AB;
     margin-bottom: 1rem; }
+    @media (min-width: 1200px) {
+      .homepage-container-us-text-title {
+        font-size: 3rem;
+        margin-bottom: 4rem; } }
   .homepage-container-us-text-details {
     font-family: 'Oswald-light';
     text-align: right;
-    font-size: .9rem;
+    font-size: 1.2rem;
     line-height: 1.5;
     width: 50%;
     margin-left: 50%; }
+    @media (min-width: 1200px) {
+      .homepage-container-us-text-details {
+        font-size: 2.4rem; } }
   .homepage-container-concept {
     position: relative;
     margin-top: 8rem; }
@@ -300,6 +316,10 @@ body {
       right: 0;
       width: 18rem;
       height: 20rem; }
+      @media (min-width: 1200px) {
+        .homepage-container-concept-img {
+          width: 43rem;
+          height: 41rem; } }
       .homepage-container-concept-img img {
         width: 100%;
         height: 100%; }
@@ -309,30 +329,50 @@ body {
         color: #3EB8AB;
         font-size: 2.4rem;
         margin-bottom: 1rem; }
+        @media (min-width: 1200px) {
+          .homepage-container-concept-text-title {
+            font-size: 3rem; } }
       .homepage-container-concept-text-details {
-        font-size: .9rem;
+        font-size: 1.2rem;
         line-height: 1.5;
         font-family: 'Oswald-light';
         width: 50%; }
+        @media (min-width: 1200px) {
+          .homepage-container-concept-text-details {
+            font-size: 2.4rem; } }
   .homepage-container-rules {
     margin-top: 8.5rem;
     position: relative; }
+    @media (min-width: 1200px) {
+      .homepage-container-rules {
+        margin-top: 15rem; } }
     .homepage-container-rules-title {
       color: #3EB8AB;
       font-size: 2.4rem;
       margin-bottom: 1.5rem;
       text-transform: uppercase;
       text-align: center; }
+      @media (min-width: 1200px) {
+        .homepage-container-rules-title {
+          font-size: 3rem;
+          margin-bottom: 5rem; } }
     .homepage-container-rules-details {
-      font-size: 1rem;
+      font-size: 1.2rem;
       line-height: 1.5;
       margin-bottom: .8rem; }
+      @media (min-width: 1200px) {
+        .homepage-container-rules-details {
+          font-size: 2.4rem;
+          text-align: center; } }
     .homepage-container-rules-see-more {
       font-size: 1.2rem;
       color: #3EB8AB;
       text-transform: uppercase;
       text-align: center;
       margin-top: 1.5rem; }
+      @media (min-width: 1200px) {
+        .homepage-container-rules-see-more {
+          font-size: 2.4rem; } }
   .homepage-container-footer {
     margin-top: 5.5rem;
     margin-bottom: 3rem; }
@@ -340,20 +380,36 @@ body {
       font-size: .8rem;
       text-transform: uppercase;
       text-align: center; }
+      @media (min-width: 1200px) {
+        .homepage-container-footer-copyright {
+          font-size: 1.2rem; } }
 
 .homepage-fullpage-alien2 {
   margin-top: 6rem; }
   .homepage-fullpage-alien2-img {
     height: 60%;
     width: 100%; }
+    @media (min-width: 1200px) {
+      .homepage-fullpage-alien2-img {
+        height: 80%; } }
     .homepage-fullpage-alien2-img img {
       height: 100%;
       width: 100%; }
+      @media (min-width: 1200px) {
+        .homepage-fullpage-alien2-img img {
+          content: url("../../assets/imgs/alien2desktop.png"); } }
 
 .top-container {
   text-align: center;
-  margin-top: 5rem;
-  margin-bottom: 40rem; }
+  margin-bottom: 25rem;
+  margin-top: 0;
+  height: 100vh;
+  width: 100vw;
+  background: url("../../assets/imgs/backgroundhome.png") #0F0F0F;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  object-fit: fill; }
 
 * {
   box-sizing: border-box;
@@ -370,6 +426,13 @@ body {
   justify-content: center;
   align-items: center;
   font-size: 2rem;
-  border-radius: 50%; }
+  border-radius: 50%;
+  z-index: 2;
+  cursor: pointer; }
+  @media (min-width: 1200px) {
+    .back-to-top {
+      height: 5.5rem;
+      width: 5.5rem;
+      font-size: 4rem; } }
 
 /*# sourceMappingURL=styles.css.map */

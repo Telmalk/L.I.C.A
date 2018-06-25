@@ -13,6 +13,8 @@
   font-family: 'Oswald-Bold';
   src: url('../../assets/fonts/Oswald-Bold.ttf');
 }
+// VARIABLES
+@import 'variables/variables';
 
 // MIXINS
 @import 'components/reset';
@@ -24,9 +26,6 @@
 @import 'components/userPage';
 @import 'components/homePage';
 
-// VARIABLES
-
-//@import 'variables/variables';
 
 * {
   box-sizing: border-box;
@@ -45,4 +44,11 @@
   align-items: center;
   font-size: 2rem;
   border-radius: 50%;
+  z-index: 2;
+  cursor: pointer;
+  @include for-size(desktop-up){
+    height: 5.5rem;
+    width: 5.5rem;
+    font-size: 4rem;
+  }
 }
