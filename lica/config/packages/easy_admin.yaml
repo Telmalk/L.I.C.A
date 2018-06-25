@@ -19,7 +19,7 @@ easy_admin:
             - { property: 'mail', type: 'email', label: 'Mail' }
             - { property: 'password', type: 'text', label: 'Password' }
             - { property: 'pseudo', type: 'text', label: 'Pseudo' }
-            - { property: 'birthdate', type: 'date', label: 'Birthdate' }
+            - { property: 'birthdate', type: 'App\Form\MyCustomDate', label: 'Birthdate' }
             - { property: 'nb_credit', type: 'number', label: 'Number of SpaceCoin' }
             - { property: 'win', label: 'win', value: '0' }
             - { property: 'defeat', label: 'defeat', value: '0' }
