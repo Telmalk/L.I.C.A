@@ -13,6 +13,11 @@
   font-family: 'Oswald-Bold';
   src: url('../../assets/fonts/Oswald-Bold.ttf');
 }
+
+@font-face {
+  font-family: 'BeautyAndTheBeast';
+  src: url('../../assets/fonts/BeautyandtheBeast.ttf.woff');
+}
 // VARIABLES
 @import 'variables/variables';
 
@@ -26,6 +31,7 @@
 @import 'components/rulesPage';
 @import 'components/userPage';
 @import 'components/homePage';
+@import 'components/fightPage';
 
 * {
   box-sizing: border-box;

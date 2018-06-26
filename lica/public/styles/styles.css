@@ -7,6 +7,9 @@
 @font-face {
   font-family: 'Oswald-Bold';
   src: url("../../assets/fonts/Oswald-Bold.ttf"); }
+@font-face {
+  font-family: 'BeautyAndTheBeast';
+  src: url("../../assets/fonts/BeautyandtheBeast.ttf.woff"); }
 /* http://meyerweb.com/eric/tools/css/reset/
    v2.0 | 20110126
    License: none (public domain)
@@ -74,7 +77,9 @@ a {
       height: 3rem; }
       @media (min-width: 1200px) {
         .header-nav-burger {
-          display: none; } }
+          display: none;
+          width: 0;
+          height: 0; } }
       .header-nav-burger-item {
         width: 2rem;
         height: 0.2rem;
@@ -106,6 +111,7 @@ a {
           top: 0;
           left: 0;
           height: 100%;
+          background: none;
           transition: none;
           width: 50vw; } }
       .header-nav-modal-cross {
@@ -130,7 +136,8 @@ a {
           .header-nav-list-item-link {
             font-size: 2.4rem;
             line-height: 1.5rem;
-            color: #3aa89c; } }
+            color: #3aa89c;
+            text-shadow: 2px 2px 20px #3aa89c; } }
 
 .active {
   transform: translateX(-80vw); }
@@ -140,9 +147,6 @@ a {
   @media (min-width: 1200px) {
     .inactive {
       transform: none; } }
-
-body {
-  background: #000; }
 
 .rules {
   color: #fefefe;
@@ -467,6 +471,65 @@ body {
   background-position: center;
   background-repeat: no-repeat;
   object-fit: fill; }
+
+.fight {
+  color: #fefefe; }
+  .fight-home {
+    background: url("../../assets/imgs/combatetparismobile.png") #0F0F0F;
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 100%;
+    height: 30rem;
+    padding: 10rem 0; }
+    .fight-home-title {
+      font-size: 4.5rem;
+      width: 40%;
+      color: #fefefe;
+      text-align: center;
+      margin: 0 auto; }
+      .fight-home-title-span {
+        font-family: 'BeautyAndTheBeast';
+        width: 100%;
+        text-align: right; }
+  .fight-content {
+    background: #0F0F0F;
+    padding-top: 3rem; }
+    .fight-content-img {
+      display: none; }
+      @media (min-width: 1200px) {
+        .fight-content-img {
+          display: block; } }
+    .fight-content-planning {
+      width: 80%;
+      margin: 0 auto;
+      position: relative;
+      background: #1c1c1c;
+      font-family: 'Oswald-Light';
+      color: #fefefe;
+      font-size: 3rem;
+      text-align: center;
+      padding: 1rem 0 2rem 0; }
+      .fight-content-planning-date {
+        margin: 3rem 0 1.5rem 0; }
+      .fight-content-planning-item {
+        padding: 1.5rem 5rem;
+        height: 10rem;
+        display: flex;
+        justify-content: space-around;
+        position: relative; }
+        .fight-content-planning-item-infos {
+          font-size: 2rem;
+          line-height: 2rem;
+          text-align: center;
+          width: 30%; }
+        .fight-content-planning-item-button {
+          color: #3aa89c;
+          border: 1px solid #3aa89c;
+          border-radius: 10rem;
+          margin-top: .5rem; }
+        .fight-content-planning-item-vs {
+          font-size: 4rem;
+          color: #3aa89c; }
 
 * {
   box-sizing: border-box;

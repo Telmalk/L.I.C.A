@@ -26,6 +26,8 @@
       height: 3rem;
       @include for-size(desktop-up) {
         display: none;
+        width: 0;
+        height: 0;
       }
       &-item {
         width: 2rem;
@@ -61,6 +63,7 @@
         top: 0;
         left: 0;
         height: 100%;
+        background: none;
         transition: none;
         width: 50vw;
       }
@@ -89,6 +92,7 @@
             font-size: $title;
             line-height: 1.5rem;
             color: #3aa89c;
+            text-shadow: 2px 2px 20px #3aa89c;
           }
         }
       }
