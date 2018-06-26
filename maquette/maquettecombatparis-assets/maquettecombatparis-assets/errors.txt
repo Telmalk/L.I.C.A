@@ -1,0 +1,12 @@
+[2018-06-25 15:02:53] layer "L.I.C.A": Unsupported extension: a
+[2018-06-25 15:02:53] layer "L.I.C.A copie": Expected end of input but "c" found.
+[2018-06-25 15:02:53] layer "L.I.C.A copie 2": Expected end of input but "c" found.
+[2018-06-25 15:02:53] layer "L.I.C.A copie 3": Expected end of input but "c" found.
+[2018-06-25 15:02:53] layer "L.I.C.A copie 4": Expected end of input but "c" found.
+[2018-06-25 15:02:53] layer "L.I.C.A copie 5": Expected end of input but "c" found.
+[2018-06-25 16:01:51] layer "L.I.C.A": Unsupported extension: a
+[2018-06-25 15:02:53] layer "L.I.C.A copie": Expected end of input but "c" found.
+[2018-06-25 15:02:53] layer "L.I.C.A copie 2": Expected end of input but "c" found.
+[2018-06-25 15:02:53] layer "L.I.C.A copie 3": Expected end of input but "c" found.
+[2018-06-25 15:02:53] layer "L.I.C.A copie 4": Expected end of input but "c" found.
+[2018-06-25 15:02:53] layer "L.I.C.A copie 5": Expected end of input but "c" found.

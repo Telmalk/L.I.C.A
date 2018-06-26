@@ -7,6 +7,9 @@
 @font-face {
   font-family: 'Oswald-Bold';
   src: url("../../assets/fonts/Oswald-Bold.ttf"); }
+@font-face {
+  font-family: 'BeautyAndTheBeast';
+  src: url("../../assets/fonts/BeautyandtheBeast.ttf.woff"); }
 /* http://meyerweb.com/eric/tools/css/reset/
    v2.0 | 20110126
    License: none (public domain)
@@ -47,9 +50,6 @@ a {
   text-decoration: none;
   color: #000; }
 
-html {
-  font-size: 62.5%; }
-
 .header {
   position: fixed;
   display: flex;
@@ -57,16 +57,15 @@ html {
   height: 5.5rem;
   width: 100%;
   padding: 2.5rem 1.5rem 0 1.5rem;
-  font-family: 'Oswald-Regular';
   font-style: italic; }
-  @media (min-width: 900px) {
+  @media (min-width: 1200px) {
     .header {
       height: 10rem;
       padding: 2.5rem 20rem 0 5rem; } }
   .header-logo {
     width: 5.8rem;
     height: 2.7rem; }
-    @media (min-width: 900px) {
+    @media (min-width: 1200px) {
       .header-logo {
         width: 11.6rem;
         height: 5.4rem; } }
@@ -76,9 +75,11 @@ html {
     .header-nav-burger {
       width: 3rem;
       height: 3rem; }
-      @media (min-width: 900px) {
+      @media (min-width: 1200px) {
         .header-nav-burger {
-          display: none; } }
+          display: none;
+          width: 0;
+          height: 0; } }
       .header-nav-burger-item {
         width: 2rem;
         height: 0.2rem;
@@ -104,24 +105,25 @@ html {
       background: rgba(0, 0, 0, 0.5);
       padding: 2.5rem;
       transition: transform .3s linear; }
-      @media (min-width: 900px) {
+      @media (min-width: 1200px) {
         .header-nav-modal {
           position: relative;
           top: 0;
           left: 0;
           height: 100%;
+          background: none;
           transition: none;
           width: 50vw; } }
       .header-nav-modal-cross {
         width: 2.5rem;
         height: 2.5rem; }
-        @media (min-width: 900px) {
+        @media (min-width: 1200px) {
           .header-nav-modal-cross {
             display: none; } }
     .header-nav-list {
       margin-top: 20vh;
       text-align: center; }
-      @media (min-width: 900px) {
+      @media (min-width: 1200px) {
         .header-nav-list {
           display: flex;
           justify-content: space-between;
@@ -130,45 +132,61 @@ html {
         font-size: 2.8rem;
         line-height: 4.2rem;
         color: #d8d8d8; }
-        @media (min-width: 900px) {
+        @media (min-width: 1200px) {
           .header-nav-list-item-link {
             font-size: 2.4rem;
             line-height: 1.5rem;
-            color: #3aa89c; } }
+            color: #3aa89c;
+            text-shadow: 2px 2px 20px #3aa89c; } }
 
 .active {
   transform: translateX(-80vw); }
 
 .inactive {
   transform: translateX(15vw); }
-  @media (min-width: 900px) {
+  @media (min-width: 1200px) {
     .inactive {
       transform: none; } }
-
-body {
-  background: #000; }
 
 .rules {
   color: #fefefe;
   padding: 0 6rem;
-  font-family: 'Oswald-Regular';
   background: #000; }
+  @media (min-width: 1200px) {
+    .rules {
+      padding: 0 15rem; } }
   .rules-title {
     margin: 12rem auto 5rem auto;
     text-align: center;
     width: 100%; }
+    @media (min-width: 1200px) {
+      .rules-title {
+        margin: 16rem auto 10rem auto; } }
     .rules-title-item {
       height: 21.7rem;
       width: 20rem; }
+      @media (min-width: 1200px) {
+        .rules-title-item {
+          height: 43.4rem;
+          width: 40rem; } }
   .rules-fight-title, .rules-bet-title, .rules-adopt-title {
     margin-bottom: 0.8rem;
-    font-size: 1.8rem;
-    line-height: 2.7rem;
+    font-size: 2.4rem;
+    line-height: 3.6rem;
     color: #3aa89c; }
+    @media (min-width: 1200px) {
+      .rules-fight-title, .rules-bet-title, .rules-adopt-title {
+        font-size: 3rem;
+        margin-bottom: 2rem; } }
   .rules-fight-text, .rules-bet-text, .rules-adopt-text {
     margin-bottom: 0.5rem;
     font-size: 1.2rem;
     line-height: 1.8rem; }
+    @media (min-width: 1200px) {
+      .rules-fight-text, .rules-bet-text, .rules-adopt-text {
+        font-size: 2.4rem;
+        margin-bottom: 1.5rem;
+        line-height: 2.6rem; } }
 
 .bolder {
   font-weight: bold; }
@@ -426,6 +444,7 @@ body {
       @media (min-width: 1200px) {
         .homepage-container-footer-copyright {
           font-size: 1.2rem; } }
+
 .homepage-fullpage-alien2 {
   margin-top: 6rem; }
   .homepage-fullpage-alien2-img {
@@ -453,160 +472,64 @@ body {
   background-repeat: no-repeat;
   object-fit: fill; }
 
-.header {
-  position: fixed;
-  display: flex;
-  justify-content: space-between;
-  height: 5.5rem;
-  width: 100%;
-  padding: 2.5rem 1.5rem 0 1.5rem;
-  font-family: 'Oswald-Regular';
-  font-style: italic; }
-  .header-logo {
-    width: 5.8rem;
-    height: 2.7rem; }
-  .header-nav {
-    height: 3rem;
-    position: relative; }
-    .header-nav-burger {
-      width: 3rem;
-      height: 3rem; }
-      .header-nav-burger-item {
-        width: 2rem;
-        height: 0.2rem;
-        border-radius: 1rem;
-        background: #fefefe;
+.fight {
+  color: #fefefe; }
+  .fight-home {
+    background: url("../../assets/imgs/combatetparismobile.png") #0F0F0F;
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 100%;
+    height: 30rem;
+    padding: 10rem 0; }
+    .fight-home-title {
+      font-size: 4.5rem;
+      width: 40%;
+      color: #fefefe;
+      text-align: center;
+      margin: 0 auto; }
+      .fight-home-title-span {
+        font-family: 'BeautyAndTheBeast';
+        width: 100%;
+        text-align: right; }
+  .fight-content {
+    background: #0F0F0F;
+    padding-top: 3rem; }
+    .fight-content-img {
+      display: none; }
+      @media (min-width: 1200px) {
+        .fight-content-img {
+          display: block; } }
+    .fight-content-planning {
+      width: 80%;
+      margin: 0 auto;
+      position: relative;
+      background: #1c1c1c;
+      font-family: 'Oswald-Light';
+      color: #fefefe;
+      font-size: 3rem;
+      text-align: center;
+      padding: 1rem 0 2rem 0; }
+      .fight-content-planning-date {
+        margin: 3rem 0 1.5rem 0; }
+      .fight-content-planning-item {
+        padding: 1.5rem 5rem;
+        height: 10rem;
+        display: flex;
+        justify-content: space-around;
         position: relative; }
-        .header-nav-burger-item::before, .header-nav-burger-item::after {
-          content: '';
-          position: absolute;
-          width: 2rem;
-          height: 0.2rem;
-          border-radius: 1rem;
-          background: #fefefe;
-          top: 0.75rem; }
-        .header-nav-burger-item::after {
-          top: 1.5rem; }
-    .header-nav-modal {
-      position: absolute;
-      width: 70vw;
-      height: 100vh;
-      left: 15vw;
-      top: -2.5rem;
-      background: rgba(0, 0, 0, 0.5);
-      padding: 2.5rem;
-      transition: transform 0.3s cubic-bezier(0.25, 0.1, 0.25, 1); }
-      .header-nav-modal-cross {
-        width: 2.5rem;
-        height: 2.5rem; }
-    .header-nav-list {
-      margin-top: 20vh;
-      text-align: center; }
-      .header-nav-list-item {
-        font-size: 2.8rem;
-        line-height: 4.2rem;
-        color: #d8d8d8; }
-
-.active {
-  transform: translateX(-75vw); }
-
-.inactive {
-  transform: translateX(15vw); }
-
-.header {
-  position: fixed;
-  display: flex;
-  justify-content: space-between;
-  height: 5.5rem;
-  width: 100%;
-  padding: 2.5rem 1.5rem 0 1.5rem;
-  font-family: 'Oswald-Regular';
-  font-style: italic; }
-  @media (min-width: 900px) {
-    .header {
-      height: 10rem;
-      padding: 2.5rem 20rem 0 5rem; } }
-  .header-logo {
-    width: 5.8rem;
-    height: 2.7rem; }
-    @media (min-width: 900px) {
-      .header-logo {
-        width: 11.6rem;
-        height: 5.4rem; } }
-  .header-nav {
-    height: 3rem;
-    position: relative; }
-    .header-nav-burger {
-      width: 3rem;
-      height: 3rem; }
-      @media (min-width: 900px) {
-        .header-nav-burger {
-          display: none; } }
-      .header-nav-burger-item {
-        width: 2rem;
-        height: 0.2rem;
-        border-radius: 1rem;
-        background: #fefefe;
-        position: relative; }
-        .header-nav-burger-item::before, .header-nav-burger-item::after {
-          content: '';
-          position: absolute;
-          width: 2rem;
-          height: 0.2rem;
-          border-radius: 1rem;
-          background: #fefefe;
-          top: 0.75rem; }
-        .header-nav-burger-item::after {
-          top: 1.5rem; }
-    .header-nav-modal {
-      position: absolute;
-      width: 70vw;
-      height: 100vh;
-      left: 15vw;
-      top: -2.5rem;
-      background: rgba(0, 0, 0, 0.5);
-      padding: 2.5rem;
-      transition: transform .3s linear; }
-      @media (min-width: 900px) {
-        .header-nav-modal {
-          position: relative;
-          top: 0;
-          left: 0;
-          height: 100%;
-          transition: none;
-          width: 50vw; } }
-      .header-nav-modal-cross {
-        width: 2.5rem;
-        height: 2.5rem; }
-        @media (min-width: 900px) {
-          .header-nav-modal-cross {
-            display: none; } }
-    .header-nav-list {
-      margin-top: 20vh;
-      text-align: center; }
-      @media (min-width: 900px) {
-        .header-nav-list {
-          display: flex;
-          justify-content: space-between;
-          margin-top: 0; } }
-      .header-nav-list-item-link {
-        font-size: 2.8rem;
-        line-height: 4.2rem;
-        color: #d8d8d8; }
-        @media (min-width: 900px) {
-          .header-nav-list-item-link {
-            font-size: 2.4rem;
-            line-height: 1.5rem;
-            color: #3aa89c; } }
-
-.active {
-  transform: translateX(-80vw); }
-
-.inactive {
-  transform: translateX(15vw); }
-  @media (min-width: 900px) {
-    .inactive {
-      transform: none; } }
+        .fight-content-planning-item-infos {
+          font-size: 2rem;
+          line-height: 2rem;
+          text-align: center;
+          width: 30%; }
+        .fight-content-planning-item-button {
+          color: #3aa89c;
+          border: 1px solid #3aa89c;
+          border-radius: 10rem;
+          margin-top: .5rem; }
+        .fight-content-planning-item-vs {
+          font-size: 4rem;
+          color: #3aa89c; }
 
 * {
   box-sizing: border-box;
