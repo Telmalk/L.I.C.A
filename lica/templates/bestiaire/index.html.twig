@@ -5,7 +5,7 @@
 <div class="bestiaire-background">
 <section class="bestiaire-header">
     <h2 class="bestiaire-header-title">les bestiaires</h2>
-</section>
+    </section>
 <section class="bestiaire-selection">
     <div class="bestiaire-selection-scrolldown">
         <div class="bestiaire-selection-scrolldown-title">
@@ -23,17 +23,19 @@
 
 <section class="bestiaire-aliens">
     <div class="bestiaire-aliens-cards">
+        {% for alien in aliens %}
         <div class="bestiaire-aliens-card">
             <div class="bestiaire-aliens-card-img">
                 <img src="https://vignette.wikia.nocookie.net/halo/images/f/fb/Elite_de_Operaciones_Especiales_HR.png/revision/latest?cb=20160503120721&path-prefix=es" alt="">
             </div>
             <div class="bestiaire-aliens-card-details">
-                <p>Nom <span>Alien</span></p>
-                <p>Elo <span>598</span></p>
-                <p>Prix <span>298</span></p>
+                <p>Nom <span>{{ alien.race }}</span></p>
+                <p>Elo <span>{{ alien.rating }}</span></p>
+                <p>Prix <span>{{ alien.price }}</span></p>
             </div>
             <a href="" class="bestiaire-aliens-card-adopter">Adopter ?</a>
         </div>
+        {% endfor %}
         <div class="bestiaire-aliens-card">
             <div class="bestiaire-aliens-card-img">
                 <img src="https://vignette.wikia.nocookie.net/halo/images/f/fb/Elite_de_Operaciones_Especiales_HR.png/revision/latest?cb=20160503120721&path-prefix=es" alt="">

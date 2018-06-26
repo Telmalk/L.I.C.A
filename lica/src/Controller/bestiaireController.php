@@ -8,6 +8,11 @@
 
 namespace App\Controller;
 
+use App\Entity\Alien;
+use App\Form\AlienType;
+use App\Repository\AlienRepository;
+use Symfony\Component\HttpFoundation\Request;
+use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 
@@ -16,11 +21,12 @@ class bestiaireController extends Controller
     /**
      * @Route("/bestiaire", name="bestiaire")
      */
-    public function index()
+    public function index(AlienRepository $alienRepository): Response
     {
         return $this->render('bestiaire/index.html.twig', [
             'controller_name' => 'BestiaireController',
-            'title' => "Bestiaire"
+            'title' => "Bestiaire",
+            'aliens' => $alienRepository->findAll()
         ]);
     }
 }
