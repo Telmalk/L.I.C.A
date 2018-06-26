@@ -116,6 +116,11 @@ class Alien
      */
     private $img;
 
+    /**
+     * @ORM\Column(type="string", length=50)
+     */
+    private $name;
+
     public function getId()
     {
         return $this->id;
@@ -362,6 +367,18 @@ class Alien
     public function setImg(string $img): self
     {
         $this->img = $img;
+
+        return $this;
+    }
+
+    public function getName(): ?string
+    {
+        return $this->name;
+    }
+
+    public function setName(string $name): self
+    {
+        $this->name = $name;
 
         return $this;
     }
