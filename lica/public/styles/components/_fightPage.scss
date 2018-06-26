@@ -23,12 +23,6 @@
   &-content {
     background: #0F0F0F;
     padding-top: 3rem;
-    &-img {
-      display: none;
-      @include for-size(desktop-up) {
-        display: block;
-      }
-    }
     &-planning {
       width: 80%;
       margin: 0 auto;
@@ -63,6 +57,22 @@
         &-vs {
           font-size: 4rem;
           color: #3aa89c;
+        }
+      }
+      &-request {
+        border-top: 1px solid #3aa89c;
+        margin-top: 2rem;
+        padding-top: 2rem;
+        width: 100%;
+        &-title {
+          margin-bottom: 2rem;
+        }
+        &-button {
+          height: 100%;
+          font-size: 2rem;
+          line-height: 5rem;
+          text-align: center;
+          text-decoration: underline;
         }
       }
     }

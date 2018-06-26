@@ -61,7 +61,7 @@ a {
   @media (min-width: 1200px) {
     .header {
       height: 10rem;
-      padding: 2.5rem 20rem 0 5rem; } }
+      padding: 2.5rem 2rem 0 5rem; } }
   .header-logo {
     width: 5.8rem;
     height: 2.7rem; }
@@ -103,7 +103,7 @@ a {
       left: 15vw;
       top: -2.5rem;
       background: rgba(0, 0, 0, 0.5);
-      padding: 2.5rem;
+      padding: 2.5rem 5rem;
       transition: transform .3s linear; }
       @media (min-width: 1200px) {
         .header-nav-modal {
@@ -113,34 +113,58 @@ a {
           height: 100%;
           background: none;
           transition: none;
-          width: 50vw; } }
+          width: 60vw; } }
+      .header-nav-modal-head {
+        display: flex;
+        justify-content: space-between; }
+        @media (min-width: 1200px) {
+          .header-nav-modal-head {
+            display: none; } }
+      .header-nav-modal-user {
+        color: #d8d8d8;
+        font-size: 1.4rem;
+        line-height: 2.5rem; }
       .header-nav-modal-cross {
         width: 2.5rem;
         height: 2.5rem; }
-        @media (min-width: 1200px) {
-          .header-nav-modal-cross {
-            display: none; } }
     .header-nav-list {
-      margin-top: 20vh;
-      text-align: center; }
+      margin-top: 20vh; }
       @media (min-width: 1200px) {
         .header-nav-list {
           display: flex;
           justify-content: space-between;
           margin-top: 0; } }
-      .header-nav-list-item-link {
-        font-size: 2.8rem;
-        line-height: 4.2rem;
-        color: #d8d8d8; }
-        @media (min-width: 1200px) {
-          .header-nav-list-item-link {
-            font-size: 2.4rem;
-            line-height: 1.5rem;
-            color: #3aa89c;
-            text-shadow: 2px 2px 20px #3aa89c; } }
+      .header-nav-list-item {
+        margin-bottom: 4rem; }
+        .header-nav-list-item-link {
+          font-size: 2.8rem;
+          line-height: 4.2rem;
+          color: #d8d8d8; }
+          @media (min-width: 1200px) {
+            .header-nav-list-item-link {
+              font-size: 2.4rem;
+              line-height: 1.5rem;
+              color: #3aa89c;
+              text-shadow: 2px 2px 20px #3aa89c; }
+              .header-nav-list-item-link:hover {
+                text-decoration: underline; } }
+        .header-nav-list-item-connect {
+          display: none; }
+          @media (min-width: 1200px) {
+            .header-nav-list-item-connect {
+              display: block;
+              margin-left: 3rem;
+              font-size: 1.8rem;
+              color: #3aa89c;
+              text-shadow: 2px 2px 20px #3aa89c; }
+              .header-nav-list-item-connect:hover {
+                text-decoration: underline; } }
 
 .active {
   transform: translateX(-80vw); }
+  @media (min-width: 1200px) {
+    .active {
+      transform: none; } }
 
 .inactive {
   transform: translateX(15vw); }
@@ -637,29 +661,6 @@ a {
         .bestiaire-aliens-card-adopter {
           font-size: 2.4rem; } }
 
-.header {
-  position: fixed;
-  display: flex;
-  justify-content: space-between;
-  height: 5.5rem;
-  width: 100%;
-  padding: 2.5rem 1.5rem 0 1.5rem;
-  font-family: 'Oswald-Regular';
-  font-style: italic; }
-  .header-logo {
-    width: 5.8rem;
-    height: 2.7rem; }
-  .header-nav {
-    height: 3rem;
-    position: relative; }
-    .header-nav-burger {
-      width: 3rem;
-      height: 3rem; }
-      .header-nav-burger-item {
-        width: 2rem;
-        height: 0.2rem;
-        border-radius: 1rem;
-        background: #fefefe;
 .fight {
   color: #fefefe; }
   .fight-home {
@@ -682,11 +683,6 @@ a {
   .fight-content {
     background: #0F0F0F;
     padding-top: 3rem; }
-    .fight-content-img {
-      display: none; }
-      @media (min-width: 1200px) {
-        .fight-content-img {
-          display: block; } }
     .fight-content-planning {
       width: 80%;
       margin: 0 auto;
@@ -718,6 +714,19 @@ a {
         .fight-content-planning-item-vs {
           font-size: 4rem;
           color: #3aa89c; }
+      .fight-content-planning-request {
+        border-top: 1px solid #3aa89c;
+        margin-top: 2rem;
+        padding-top: 2rem;
+        width: 100%; }
+        .fight-content-planning-request-title {
+          margin-bottom: 2rem; }
+        .fight-content-planning-request-button {
+          height: 100%;
+          font-size: 2rem;
+          line-height: 5rem;
+          text-align: center;
+          text-decoration: underline; }
 
 * {
   box-sizing: border-box;

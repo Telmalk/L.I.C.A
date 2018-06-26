@@ -8,7 +8,7 @@
   font-style: italic;
   @include for-size(desktop-up) {
     height: 10rem;
-    padding: 2.5rem 20rem 0 5rem;
+    padding: 2.5rem 2rem 0 5rem;
   }
   &-logo {
     width: 5.8rem;
@@ -56,7 +56,7 @@
       left: 15vw;
       top: -2.5rem;
       background: rgba(0,0,0, 0.5);
-      padding: 2.5rem;
+      padding: 2.5rem 5rem;
       transition: transform .3s linear;
       @include for-size(desktop-up) {
         position: relative;
@@ -65,25 +65,34 @@
         height: 100%;
         background: none;
         transition: none;
-        width: 50vw;
+        width: 60vw;
       }
-      &-cross {
-        width: 2.5rem;
-        height: 2.5rem;
+      &-head {
+        display: flex;
+        justify-content: space-between;
         @include for-size(desktop-up) {
           display: none;
         }
       }
+      &-user {
+        color: #d8d8d8;
+        font-size: 1.4rem;
+        line-height: 2.5rem;
+      }
+      &-cross {
+        width: 2.5rem;
+        height: 2.5rem;
+      }
     }
     &-list {
       margin-top: 20vh;
-      text-align: center;
       @include for-size(desktop-up) {
         display: flex;
         justify-content: space-between;
         margin-top: 0;
       }
       &-item {
+        margin-bottom: 4rem;
         &-link {
           font-size: 2.8rem;
           line-height: 4.2rem;
@@ -93,6 +102,22 @@
             line-height: 1.5rem;
             color: #3aa89c;
             text-shadow: 2px 2px 20px #3aa89c;
+            &:hover {
+              text-decoration: underline;
+            }
+          }
+        }
+        &-connect {
+          display: none;
+          @include for-size(desktop-up) {
+            display: block;
+            margin-left: 3rem;
+            font-size: 1.8rem;
+            color: #3aa89c;
+            text-shadow: 2px 2px 20px #3aa89c;
+            &:hover {
+              text-decoration: underline;
+            }
           }
         }
       }
@@ -102,6 +127,9 @@
 
 .active {
   transform: translateX(-80vw);
+  @include for-size(desktop-up) {
+    transform: none;
+  }
 }
 .inactive {
   transform: translateX(15vw);
