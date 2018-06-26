@@ -13,15 +13,9 @@ class RulesController extends Controller
      */
     public function index()
     {
-        $id = 1;
-
-        $em = $this->container->get("doctrine.orm.default_entity_manager");
-        $entities = $em->getRepository(Alien::class)->findBy([
-            "user" => $id,
-        ]);
         return $this->render('rules/index.html.twig', [
             'controller_name' => 'RulesController',
-            'request' => $entities,
+            'title' => 'Règlements'
         ]);
     }
 }

@@ -154,7 +154,7 @@ body {
   font-family: 'Oswald-Regular';
   background: #000; }
   .rules-title {
-    margin: 12rem auto 5rem auto;
+    padding: 12rem 5rem;
     text-align: center;
     width: 100%; }
     .rules-title-item {
