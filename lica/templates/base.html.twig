@@ -12,24 +12,24 @@
 </head>
 {% block body %}
 <body>
-<header class="header">
-    <img class="header-logo" src="../assets/imgs/logo.png" alt="Logo L.I.C.A">
-    <nav class="header-nav">
-        <div id="burger-open" class="header-nav-burger">
-            <div class="header-nav-burger-item"></div>
-        </div>
-        <div id="burger" class="header-nav-modal inactive">
-            <img id="burger-close" class="header-nav-modal-cross" src="../assets/imgs/close.png" alt="Cross menu">
-            <ul class="header-nav-list">
-                <li class="header-nav-list-item"><a class="header-nav-list-item-link" href="./">Accueil</a></li>
-                <li class="header-nav-list-item"><a class="header-nav-list-item-link" href="./rules">Règlements L.I.C.A</a></li>
-                <li class="header-nav-list-item"><a class="header-nav-list-item-link" href="">Combats et Paris</a></li>
-                <li class="header-nav-list-item"><a class="header-nav-list-item-link" href="">Le Bestiaire</a></li>
-                <li class="header-nav-list-item"><a class="header-nav-list-item-link" href="./userPage">Ton Profil</a></li>
-            </ul>
-        </div>
-    </nav>
-</header>
+    <header class="header">
+        <img class="header-logo" src="../assets/imgs/logo.png" alt="Logo L.I.C.A">
+        <nav class="header-nav">
+            <div id="burger-open" class="header-nav-burger">
+                <div class="header-nav-burger-item"></div>
+            </div>
+            <div id="burger" class="header-nav-modal inactive">
+                <img id="burger-close" class="header-nav-modal-cross" src="../assets/imgs/close.png" alt="Cross menu">
+                <ul class="header-nav-list">
+                    <li class="header-nav-list-item"><a class="header-nav-list-item-link" href="./">Accueil</a></li>
+                    <li class="header-nav-list-item"><a class="header-nav-list-item-link" href="./rules">Règlements L.I.C.A</a></li>
+                    <li class="header-nav-list-item"><a class="header-nav-list-item-link" href="./fightPage">Combats et Paris</a></li>
+                    <li class="header-nav-list-item"><a class="header-nav-list-item-link" href="./bestiaire">Le Bestiaire</a></li>
+                    <li class="header-nav-list-item"><a class="header-nav-list-item-link" href="./userPage">Ton Profil</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
 {% endblock %}
 {% block javascripts %}
     <script src="{{ asset('/scripts/burger.js') }}"></script>

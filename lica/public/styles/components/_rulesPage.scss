@@ -1,0 +1,52 @@
+.rules {
+  color: #fefefe;
+  padding: 0 6rem;
+  background: #000;
+  @include for-size(desktop-up) {
+    padding: 0 15rem;
+  }
+  // TITLE
+  &-title {
+    margin: 12rem auto 5rem auto;
+    text-align: center;
+    width: 100%;
+    @include for-size(desktop-up) {
+      margin: 16rem auto 10rem auto;
+    }
+    &-item {
+      height: 21.7rem;
+      width: 20rem;
+      @include for-size(desktop-up) {
+        height: 43.4rem;
+        width: 40rem;
+      }
+    }
+  }
+  // FIGHT RULES
+  &-fight, &-bet, &-adopt {
+    &-title {
+      margin-bottom: 0.8rem;
+      font-size: $title;
+      line-height: 3.6rem;
+      color: #3aa89c;
+      @include for-size(desktop-up) {
+        font-size: $desktopTitle;
+        margin-bottom: 2rem;
+      }
+    }
+    &-text {
+      margin-bottom: 0.5rem;
+      font-size: $details;
+      line-height: 1.8rem;
+      @include for-size(desktop-up) {
+        font-size: $title;
+        margin-bottom: 1.5rem;
+        line-height: 2.6rem;
+      }
+    }
+  }
+}
+
+.bolder {
+  font-weight: bold;
+}

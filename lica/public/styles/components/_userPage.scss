@@ -1,9 +1,7 @@
 .userbackground {
-  background: url("../../assets/imgs/background1.png");
+  background: url("../../assets/imgs/background1.png") #0F0F0F;
   background-size: cover;
   background-repeat: no-repeat;
-//  height: 100vh;
-//  width: 100vw;
 }
 
 .profile-info {
@@ -12,16 +10,21 @@
   width: 90%;
   margin: 0 auto;
   padding-top: 6.6rem;
+  background: rgba(#0F0F0F, 0.4);
   &-picture {
-    height: 10rem;
-    width: 30rem;
+    height: 15vh;
+    width: 60vw;
+    @include for-size(desktop-up) {
+      height: 30vh;
+      width: 20vw;
+    }
     & img {
       height: 100%;
       width: 100%;
     }
   }
   &-information {
-    color: #FDFDFD;
+    color: #FFF;
     text-align: right;
     background: none;
     &-flex {
@@ -29,21 +32,30 @@
       justify-content: flex-end;
     }
     & h2 {
-      font-size: 3.6rem;
+      font-size: $largeTitle;
+      @include for-size(desktop-up) {
+        font-size: $desktopLargeTitle;
+      }
     }
     & a {
       margin-left: 1rem;
     }
     &-date {
       margin: 2.8rem 3.1rem 0 0;
-      font-size: 2.4rem;
+      font-size: $title;
+      @include for-size(desktop-up) {
+        font-size: $title;
+      }
     }
     &-description {
-      font-size: 1.8rem;
+      font-size: $details;
       line-height: 1.5;
       font-family: 'Oswald-Light';
       width: 80%;
       margin: 2rem 0;
+      @include for-size(desktop-up) {
+        font-size: $desktopDetails;
+      }
     }
     &-money {
       display: flex;
@@ -51,8 +63,11 @@
       align-items: center;
       margin-right: 2rem;
       &-amount {
-        font-size: 2rem;
-        color: #ffe55c;
+        font-size: $details;
+        color: $yellow;
+        @include for-size(desktop-up) {
+          font-size: $desktopDetails;
+        }
       }
     }
     &-email {
@@ -70,22 +85,24 @@
   justify-content: space-between;
   width: 80%;
   margin: 5rem auto;
+  @include for-size(desktop-up) {
+    padding-top: 10rem;
+    width: 50%;
+  }
   &-wins, &-loses {
-    color: #3EB8AB;
+    color: $green;
     & p, & span {
       text-transform: uppercase;
       font-size: 3rem;
     }
   }
   &-loses {
-    color: #A83A3A;
+    color: $red;
   }
 }
 
 
 // COMBAT HISTORY
-
-
 .combat-history {
   text-align: center;
   &-container {
@@ -97,37 +114,47 @@
     height: 6rem;
     width: 70%;
     margin: 0 auto;
+    cursor: pointer;
     & i {
       margin-left: 1rem;
       color: #fff;
-      font-size: 2.4rem;
+      font-size: $title;
+      @include for-size(desktop-up) {
+        font-size: $desktopTitle;
+      }
     }
   }
   &-title {
     font-family: 'Oswald-Light';
-    font-size: 2.5rem;
+    font-size: $title;
     color: #FFF;
+    @include for-size(desktop-up) {
+      font-size: $desktopTitle;
+    }
   }
 }
 
-.history-payment {
-  margin-top: 2rem;
-}
-
 // MY ALIENS
-
-
 .profile-aliens {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-direction: column;
   margin-top: 3rem;
   &-title {
-    font-size: 2.5rem;
+    font-size: $title;
     text-transform: uppercase;
     text-align: center;
     color: #FFF;
+    @include for-size(desktop-up) {
+      font-size: $desktopTitle;
+    }
+  }
+  &-cards {
+    display: flex;
+    flex-direction: column;
+    @include for-size(desktop-up) {
+      justify-content: flex-start;
+      flex-direction: row;
+      flex-wrap: wrap;
+      width: 100%;
+    }
   }
   &-alien-card {
     display: flex;
@@ -136,6 +163,10 @@
     width: 80%;
     margin: 5rem auto;
     background: rgba(#000, .8);
+    @include for-size(desktop-up) {
+      width: 30%;
+      flex-wrap: wrap;
+    }
     &-img {
       margin-top: 5rem;
       height: 20rem;
@@ -154,7 +185,10 @@
 
 .link {
   color: #3EB8AB;
-  font-size: 1.6rem;
+  font-size: $details;
+  @include for-size(desktop-up) {
+    font-size: $desktopDetails;
+  }
 }
 
 .edit {
