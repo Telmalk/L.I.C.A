@@ -1,0 +1,70 @@
+.fight {
+  color: #fefefe;
+  &-home {
+    background: url('../../assets/imgs/combatetparismobile.png') #0F0F0F;
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 100%;
+    height: 30rem;
+    padding: 10rem 0;
+    &-title {
+      font-size: $desktopLargeTitle;
+      width: 40%;
+      color: #fefefe;
+      text-align: center;
+      margin: 0 auto;
+      &-span {
+        font-family: 'BeautyAndTheBeast';
+        width: 100%;
+        text-align: right;
+      }
+    }
+  }
+  &-content {
+    background: #0F0F0F;
+    padding-top: 3rem;
+    &-img {
+      display: none;
+      @include for-size(desktop-up) {
+        display: block;
+      }
+    }
+    &-planning {
+      width: 80%;
+      margin: 0 auto;
+      position: relative;
+      background: #1c1c1c;
+      font-family: 'Oswald-Light';
+      color: #fefefe;
+      font-size: $desktopTitle;
+      text-align: center;
+      padding: 1rem 0 2rem 0;
+      &-date {
+        margin: 3rem 0 1.5rem 0;
+      }
+      &-item {
+        padding: 1.5rem 5rem;
+        height: 10rem;
+        display: flex;
+        justify-content: space-around;
+        position: relative;
+        &-infos {
+          font-size: 2rem;
+          line-height: 2rem;
+          text-align: center;
+          width: 30%;
+        }
+        &-button {
+          color: #3aa89c;
+          border: 1px solid #3aa89c;
+          border-radius: 10rem;
+          margin-top: .5rem;
+        }
+        &-vs {
+          font-size: 4rem;
+          color: #3aa89c;
+        }
+      }
+    }
+  }
+}
