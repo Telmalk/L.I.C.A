@@ -192,7 +192,7 @@ a {
   font-weight: bold; }
 
 .userbackground {
-  background: url("../../assets/imgs/background1.png");
+  background: url("../../assets/imgs/background1.png") #0F0F0F;
   background-size: cover;
   background-repeat: no-repeat; }
 
@@ -201,41 +201,58 @@ a {
   justify-content: space-between;
   width: 90%;
   margin: 0 auto;
-  padding-top: 6.6rem; }
+  padding-top: 6.6rem;
+  background: rgba(15, 15, 15, 0.4); }
   .profile-info-picture {
-    height: 10rem;
-    width: 30rem; }
+    height: 15vh;
+    width: 60vw; }
+    @media (min-width: 1200px) {
+      .profile-info-picture {
+        height: 30vh;
+        width: 20vw; } }
     .profile-info-picture img {
       height: 100%;
       width: 100%; }
   .profile-info-information {
-    color: #FDFDFD;
+    color: #FFF;
     text-align: right;
     background: none; }
     .profile-info-information-flex {
       display: flex;
       justify-content: flex-end; }
     .profile-info-information h2 {
-      font-size: 3.6rem; }
+      font-size: 3.2rem; }
+      @media (min-width: 1200px) {
+        .profile-info-information h2 {
+          font-size: 4.5rem; } }
     .profile-info-information a {
       margin-left: 1rem; }
     .profile-info-information-date {
       margin: 2.8rem 3.1rem 0 0;
       font-size: 2.4rem; }
+      @media (min-width: 1200px) {
+        .profile-info-information-date {
+          font-size: 2.4rem; } }
     .profile-info-information-description {
-      font-size: 1.8rem;
+      font-size: 1.2rem;
       line-height: 1.5;
       font-family: 'Oswald-Light';
       width: 80%;
       margin: 2rem 0; }
+      @media (min-width: 1200px) {
+        .profile-info-information-description {
+          font-size: 2.4rem; } }
     .profile-info-information-money {
       display: flex;
       justify-content: flex-end;
       align-items: center;
       margin-right: 2rem; }
       .profile-info-information-money-amount {
-        font-size: 2rem;
-        color: #ffe55c; }
+        font-size: 1.2rem;
+        color: #FFE55C; }
+        @media (min-width: 1200px) {
+          .profile-info-information-money-amount {
+            font-size: 2.4rem; } }
     .profile-info-information-email {
       font-size: 2.4rem;
       margin-top: 2rem;
@@ -246,6 +263,10 @@ a {
   justify-content: space-between;
   width: 80%;
   margin: 5rem auto; }
+  @media (min-width: 1200px) {
+    .battleswon {
+      padding-top: 10rem;
+      width: 50%; } }
   .battleswon-wins, .battleswon-loses {
     color: #3EB8AB; }
     .battleswon-wins p, .battleswon-wins span, .battleswon-loses p, .battleswon-loses span {
@@ -264,30 +285,42 @@ a {
     border-bottom-color: rgba(0, 0, 0, 0.8);
     height: 6rem;
     width: 70%;
-    margin: 0 auto; }
+    margin: 0 auto;
+    cursor: pointer; }
     .combat-history-container i {
       margin-left: 1rem;
       color: #fff;
       font-size: 2.4rem; }
+      @media (min-width: 1200px) {
+        .combat-history-container i {
+          font-size: 3rem; } }
   .combat-history-title {
     font-family: 'Oswald-Light';
-    font-size: 2.5rem;
+    font-size: 2.4rem;
     color: #FFF; }
-
-.history-payment {
-  margin-top: 2rem; }
+    @media (min-width: 1200px) {
+      .combat-history-title {
+        font-size: 3rem; } }
 
 .profile-aliens {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-direction: column;
   margin-top: 3rem; }
   .profile-aliens-title {
-    font-size: 2.5rem;
+    font-size: 2.4rem;
     text-transform: uppercase;
     text-align: center;
     color: #FFF; }
+    @media (min-width: 1200px) {
+      .profile-aliens-title {
+        font-size: 3rem; } }
+  .profile-aliens-cards {
+    display: flex;
+    flex-direction: column; }
+    @media (min-width: 1200px) {
+      .profile-aliens-cards {
+        justify-content: flex-start;
+        flex-direction: row;
+        flex-wrap: wrap;
+        width: 100%; } }
   .profile-aliens-alien-card {
     display: flex;
     justify-content: center;
@@ -295,6 +328,10 @@ a {
     width: 80%;
     margin: 5rem auto;
     background: rgba(0, 0, 0, 0.8); }
+    @media (min-width: 1200px) {
+      .profile-aliens-alien-card {
+        width: 30%;
+        flex-wrap: wrap; } }
     .profile-aliens-alien-card-img {
       margin-top: 5rem;
       height: 20rem;
@@ -305,7 +342,10 @@ a {
 
 .link {
   color: #3EB8AB;
-  font-size: 1.6rem; }
+  font-size: 1.2rem; }
+  @media (min-width: 1200px) {
+    .link {
+      font-size: 2.4rem; } }
 
 .edit img {
   margin-top: 2rem; }
@@ -472,6 +512,154 @@ a {
   background-repeat: no-repeat;
   object-fit: fill; }
 
+.bestiaire-background {
+  background: #0F0F0F; }
+
+.bestiaire-header {
+  background: url("../../assets/imgs/imgbestiaire.png") #0F0F0F;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top center;
+  height: 60vh;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+  .bestiaire-header-title {
+    font-size: 3.2rem;
+    color: #FFF;
+    text-transform: uppercase; }
+    @media (min-width: 1200px) {
+      .bestiaire-header-title {
+        font-size: 4.5rem; } }
+
+.bestiaire-selection-scrolldown {
+  text-align: center;
+  width: 30%;
+  margin: 0 auto; }
+  @media (min-width: 1200px) {
+    .bestiaire-selection-scrolldown {
+      width: 10%; } }
+  .bestiaire-selection-scrolldown-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: .3rem solid #FFF;
+    cursor: pointer;
+    color: #FFF;
+    font-size: 2.4rem;
+    text-transform: uppercase; }
+    @media (min-width: 1200px) {
+      .bestiaire-selection-scrolldown-title {
+        font-size: 3rem; } }
+  .bestiaire-selection-scrolldown i {
+    margin-left: 1rem;
+    color: #fff;
+    font-size: 2.4rem; }
+    @media (min-width: 1200px) {
+      .bestiaire-selection-scrolldown i {
+        font-size: 3rem; } }
+  .bestiaire-selection-scrolldown-menu {
+    display: none;
+    background: rgba(255, 255, 255, 0.4);
+    text-align: left;
+    color: #3EB8AB;
+    text-transform: uppercase;
+    font-size: 1.2rem; }
+    @media (min-width: 1200px) {
+      .bestiaire-selection-scrolldown-menu {
+        font-size: 2.4rem; } }
+    .bestiaire-selection-scrolldown-menu li {
+      margin-bottom: .5rem;
+      padding: .4rem; }
+    .bestiaire-selection-scrolldown-menu li:first-child {
+      margin-top: .5rem; }
+
+.bestiaire-aliens {
+  padding-top: 6rem;
+  padding-bottom: 10rem; }
+  .bestiaire-aliens-cards {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; }
+    @media (min-width: 1200px) {
+      .bestiaire-aliens-cards {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        width: 80%;
+        margin: 0 auto; } }
+  .bestiaire-aliens-card {
+    margin-top: 4rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 60%;
+    height: 55%;
+    background: #000;
+    border-radius: 5%; }
+    @media (min-width: 1200px) {
+      .bestiaire-aliens-card {
+        width: 30%; } }
+    .bestiaire-aliens-card-img {
+      margin-top: 5rem;
+      height: 20rem;
+      width: 15rem;
+      background: #000; }
+      .bestiaire-aliens-card-img img {
+        width: 100%;
+        height: 100%; }
+    .bestiaire-aliens-card-details {
+      margin-top: 2rem;
+      margin-bottom: 3rem; }
+      .bestiaire-aliens-card-details p {
+        color: #FFF;
+        font-size: 1.2rem;
+        line-height: 1.5;
+        text-transform: uppercase; }
+        @media (min-width: 1200px) {
+          .bestiaire-aliens-card-details p {
+            font-size: 2.4rem; } }
+      .bestiaire-aliens-card-details span {
+        color: #FFF;
+        font-size: 1.2rem;
+        line-height: 1.5;
+        text-transform: uppercase; }
+        @media (min-width: 1200px) {
+          .bestiaire-aliens-card-details span {
+            font-size: 2.4rem; } }
+    .bestiaire-aliens-card-adopter {
+      margin-top: 1rem;
+      font-size: 1.2rem;
+      color: #3EB8AB;
+      text-transform: uppercase; }
+      @media (min-width: 1200px) {
+        .bestiaire-aliens-card-adopter {
+          font-size: 2.4rem; } }
+
+.header {
+  position: fixed;
+  display: flex;
+  justify-content: space-between;
+  height: 5.5rem;
+  width: 100%;
+  padding: 2.5rem 1.5rem 0 1.5rem;
+  font-family: 'Oswald-Regular';
+  font-style: italic; }
+  .header-logo {
+    width: 5.8rem;
+    height: 2.7rem; }
+  .header-nav {
+    height: 3rem;
+    position: relative; }
+    .header-nav-burger {
+      width: 3rem;
+      height: 3rem; }
+      .header-nav-burger-item {
+        width: 2rem;
+        height: 0.2rem;
+        border-radius: 1rem;
+        background: #fefefe;
 .fight {
   color: #fefefe; }
   .fight-home {
