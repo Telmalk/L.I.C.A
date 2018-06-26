@@ -174,18 +174,18 @@ a {
 
 .rules {
   color: #fefefe;
-  padding: 0 6rem;
+  padding: 0 6rem 6rem;
   background: #000; }
   @media (min-width: 1200px) {
     .rules {
       padding: 0 15rem; } }
   .rules-title {
-    margin: 12rem auto 5rem auto;
+    padding: 12rem 5rem;
     text-align: center;
     width: 100%; }
     @media (min-width: 1200px) {
       .rules-title {
-        margin: 16rem auto 10rem auto; } }
+        padding: 16rem 10rem; } }
     .rules-title-item {
       height: 21.7rem;
       width: 20rem; }
@@ -720,7 +720,8 @@ a {
         padding-top: 2rem;
         width: 100%; }
         .fight-content-planning-request-title {
-          margin-bottom: 2rem; }
+          margin-bottom: 2rem;
+          font-size: 3rem; }
         .fight-content-planning-request-button {
           height: 100%;
           font-size: 2rem;
