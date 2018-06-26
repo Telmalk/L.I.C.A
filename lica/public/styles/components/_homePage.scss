@@ -1,9 +1,13 @@
 .homepage-background {
+<<<<<<< HEAD
   background: url("../../assets/imgs/backgroundhome.png") #0F0F0F;
   background-size: contain;
   background-position: 50% 0%;
   background-repeat: no-repeat;
   object-fit: fill;
+=======
+  background: #0F0F0F;
+>>>>>>> bb4a8e16bb460909fdf4982d9632fd75be512e6d
 }
 
 .homepage-container {
@@ -11,14 +15,31 @@
   width: 85%;
   margin: 0 auto;
   &-title {
+<<<<<<< HEAD
    font-size: 3.2rem;
     text-transform: uppercase;
     line-height: 1.5;
+=======
+   font-size: $largeTitle;
+    text-transform: uppercase;
+    line-height: 1.5;
+    padding-top: 5rem;
+    @include for-size(desktop-up) {
+      font-size: $desktopLargeTitle;
+    }
+>>>>>>> bb4a8e16bb460909fdf4982d9632fd75be512e6d
  }
   &-subtitle {
     font-size: 1.5rem;
     text-transform: uppercase;
     line-height: 1.5;
+<<<<<<< HEAD
+=======
+    font-family: 'oswald-light';
+    @include for-size(desktop-up) {
+      font-size: $desktopTitle;
+    }
+>>>>>>> bb4a8e16bb460909fdf4982d9632fd75be512e6d
   }
   &-us {
     &-alien1-img {
@@ -26,6 +47,14 @@
       left: 0;
       width: 16.4rem;
       height: 27.5rem;
+<<<<<<< HEAD
+=======
+      @include for-size(desktop-up) {
+        width: 37rem;
+        height: 58rem;
+        left: 10rem;
+      }
+>>>>>>> bb4a8e16bb460909fdf4982d9632fd75be512e6d
       & img {
         height: 100%;
         width: 100%;
@@ -34,18 +63,39 @@
     &-text {
       &-title {
         text-align: right;
+<<<<<<< HEAD
         font-size: 2.4rem;
         text-transform: uppercase;
         color: #3EB8AB;
         margin-bottom: 1rem;
+=======
+        font-size: $title;
+        text-transform: uppercase;
+        color: #3EB8AB;
+        margin-bottom: 1rem;
+        @include for-size(desktop-up) {
+          font-size: $desktopTitle;
+          margin-bottom: 4rem;
+        }
+>>>>>>> bb4a8e16bb460909fdf4982d9632fd75be512e6d
       }
       &-details {
         font-family: 'Oswald-light';
         text-align: right;
+<<<<<<< HEAD
         font-size: .9rem;
         line-height: 1.5;
         width: 50%;
         margin-left: 50%;
+=======
+        font-size: $details;
+        line-height: 1.5;
+        width: 50%;
+        margin-left: 50%;
+        @include for-size(desktop-up) {
+          font-size: $desktopDetails;
+        }
+>>>>>>> bb4a8e16bb460909fdf4982d9632fd75be512e6d
       }
     }
   }
@@ -57,6 +107,13 @@
       right: 0;
       width: 18rem;
       height: 20rem;
+<<<<<<< HEAD
+=======
+      @include for-size(desktop-up) {
+        width: 43rem;
+        height: 41rem;
+      }
+>>>>>>> bb4a8e16bb460909fdf4982d9632fd75be512e6d
       & img {
         width: 100%;
         height: 100%;
@@ -66,6 +123,7 @@
       text-align: left;
       &-title {
         color: #3EB8AB;
+<<<<<<< HEAD
         font-size: 2.4rem;
         margin-bottom: 1rem;
       }
@@ -74,12 +132,29 @@
         line-height: 1.5;
         font-family: 'Oswald-light';
         width: 50%;
+=======
+        font-size: $title;
+        margin-bottom: 1rem;
+        @include for-size(desktop-up) {
+          font-size: $desktopTitle;
+        }
+      }
+      &-details {
+        font-size: $details;
+        line-height: 1.5;
+        font-family: 'Oswald-light';
+        width: 50%;
+        @include for-size(desktop-up) {
+          font-size: $desktopDetails;
+        }
+>>>>>>> bb4a8e16bb460909fdf4982d9632fd75be512e6d
       }
     }
   }
   &-rules {
     margin-top: 8.5rem;
     position: relative;
+<<<<<<< HEAD
     &-title {
       color: #3EB8AB;
       font-size: 2.4rem;
@@ -91,6 +166,30 @@
       font-size: 1rem;
       line-height: 1.5;
       margin-bottom: .8rem;
+=======
+    @include for-size(desktop-up) {
+      margin-top: 15rem;
+    }
+    &-title {
+      color: #3EB8AB;
+      font-size: $title;
+      margin-bottom: 1.5rem;
+      text-transform: uppercase;
+      text-align: center;
+      @include for-size(desktop-up) {
+        font-size: $desktopTitle;
+        margin-bottom: 5rem;
+      }
+    }
+    &-details {
+      font-size: $details;
+      line-height: 1.5;
+      margin-bottom: .8rem;
+      @include for-size(desktop-up) {
+        font-size: $desktopDetails;
+        text-align: center;
+      }
+>>>>>>> bb4a8e16bb460909fdf4982d9632fd75be512e6d
     }
     &-see-more {
       font-size: 1.2rem;
@@ -98,6 +197,12 @@
       text-transform: uppercase;
       text-align: center;
       margin-top: 1.5rem;
+<<<<<<< HEAD
+=======
+      @include for-size(desktop-up) {
+        font-size: 2.4rem;
+      }
+>>>>>>> bb4a8e16bb460909fdf4982d9632fd75be512e6d
     }
   }
   &-footer {
@@ -107,6 +212,12 @@
       font-size: .8rem;
       text-transform: uppercase;
       text-align: center;
+<<<<<<< HEAD
+=======
+      @include for-size(desktop-up) {
+        font-size: 1.2rem;
+      }
+>>>>>>> bb4a8e16bb460909fdf4982d9632fd75be512e6d
     }
   }
 }
@@ -119,9 +230,21 @@
     &-img {
       height: 60%;
       width: 100%;
+<<<<<<< HEAD
       & img {
         height: 100%;
         width: 100%;
+=======
+      @include for-size(desktop-up) {
+        height: 80%;
+      }
+      & img {
+        height: 100%;
+        width: 100%;
+        @include for-size(desktop-up) {
+          content: url("../../assets/imgs/alien2desktop.png");
+        }
+>>>>>>> bb4a8e16bb460909fdf4982d9632fd75be512e6d
       }
     }
   }
@@ -129,6 +252,18 @@
 
 .top-container {
   text-align: center;
+<<<<<<< HEAD
   margin-top: 5rem;
   margin-bottom: 40rem;
+=======
+  margin-bottom: 25rem;
+  margin-top: 0;
+  height: 100vh;
+  width: 100vw;
+  background: url("../../assets/imgs/backgroundhome.png") #0F0F0F;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  object-fit: fill;
+>>>>>>> bb4a8e16bb460909fdf4982d9632fd75be512e6d
 }

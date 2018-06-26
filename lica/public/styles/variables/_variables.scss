@@ -1,7 +1,10 @@
+<<<<<<< HEAD
 // Font
 $font-serif: 'Times', 'Times new roman', serif;
 $font-ss: 'Arial', 'Helvetica', sans-serif;
 
+=======
+>>>>>>> bb4a8e16bb460909fdf4982d9632fd75be512e6d
 // Color
 $green: #3EB8AB;
 $yellow: #FFE55C;
@@ -11,6 +14,7 @@ $red: #A83A3A;
 // Font-size
 
 $largeTitle : 3.2rem;
+<<<<<<< HEAD
 $title : 2.4rem;
 $details : 1.2rem;
 
@@ -24,3 +28,19 @@ $bp-desktop-x-large: 1800px;
 html {
   font-size: 62.5%;
 }
+=======
+$title: 2.4rem;
+$details: 1.2rem;
+
+// Font-size Desktop
+
+$desktopLargeTitle: 4.5rem;
+$desktopTitle: 3rem;
+$desktopDetails: 2.4rem;
+
+// Breakpoint
+$bp-tablet: 640px;
+$bp-desktop: 900px;
+$bp-desktop-large: 1200px;
+$bp-desktop-x-large: 1800px;
+>>>>>>> bb4a8e16bb460909fdf4982d9632fd75be512e6d
