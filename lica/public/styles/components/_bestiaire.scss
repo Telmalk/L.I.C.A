@@ -63,6 +63,12 @@
       & li {
         margin-bottom: .5rem;
         padding: .4rem;
+        @include for-size(desktop-up) {
+          &:hover {
+            background: rgba(#fff, 0.9);
+            cursor: pointer;
+          }
+        }
       }
       & li:first-child {
         margin-top: .5rem;
@@ -143,3 +149,8 @@
   }
 }
 
+
+
+.is-open {
+ display: block;
+}

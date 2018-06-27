@@ -123,8 +123,7 @@ a {
       .header-nav-modal-user {
         color: #d8d8d8;
         font-size: 1.4rem;
-        line-height: 2.5rem;
-        margin-left: 62rem; }
+        line-height: 2.5rem; }
       .header-nav-modal-cross {
         width: 2.5rem;
         height: 2.5rem; }
@@ -636,6 +635,10 @@ a {
     .bestiaire-selection-scrolldown-menu li {
       margin-bottom: .5rem;
       padding: .4rem; }
+      @media (min-width: 1200px) {
+        .bestiaire-selection-scrolldown-menu li:hover {
+          background: rgba(255, 255, 255, 0.9);
+          cursor: pointer; } }
     .bestiaire-selection-scrolldown-menu li:first-child {
       margin-top: .5rem; }
 
@@ -701,6 +704,9 @@ a {
       @media (min-width: 1200px) {
         .bestiaire-aliens-card-adopter {
           font-size: 2.4rem; } }
+
+.is-open {
+  display: block; }
 
 .fight {
   color: #fefefe; }
