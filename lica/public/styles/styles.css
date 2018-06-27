@@ -123,8 +123,7 @@ a {
       .header-nav-modal-user {
         color: #d8d8d8;
         font-size: 1.4rem;
-        line-height: 2.5rem;
-        margin-left: 62rem; }
+        line-height: 2.5rem; }
       .header-nav-modal-cross {
         width: 2.5rem;
         height: 2.5rem; }
@@ -750,7 +749,7 @@ a {
             font-size: 3rem; } }
       .fight-content-planning-date {
         margin: 3rem 0 2rem 0;
-        font-size: 2rem; }
+        font-size: 1.5rem; }
         @media (min-width: 1200px) {
           .fight-content-planning-date {
             font-size: 2.4rem; } }
@@ -805,7 +804,7 @@ a {
         .fight-content-planning-item-vs {
           font-size: 4rem;
           color: #3aa89c;
-          margin-top: 2rem; }
+          margin-top: 1.5rem; }
           @media (min-width: 1200px) {
             .fight-content-planning-item-vs {
               font-size: 6rem; } }
@@ -867,13 +866,14 @@ a {
                 font-size: 6rem; } }
         .fight-content-planning-request-button {
           font-size: 1.8rem;
-          line-height: 5rem;
+          line-height: 2.5rem;
           text-align: center;
           text-decoration: underline; }
           @media (min-width: 1200px) {
             .fight-content-planning-request-button {
               cursor: pointer;
-              font-size: 2.4rem; }
+              font-size: 2.4rem;
+              line-height: 5rem; }
               .fight-content-planning-request-button:hover {
                 color: #3aa89c; } }
   .fight-reverse {
