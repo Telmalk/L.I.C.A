@@ -706,16 +706,32 @@ a {
   .fight-home {
     background: url("../../assets/imgs/combatetparismobile.png") #0F0F0F;
     background-repeat: no-repeat;
-    background-size: contain;
+    background-position: right;
+    background-size: cover;
     width: 100%;
-    height: 30rem;
-    padding: 10rem 0; }
+    height: 50vh;
+    padding: 20vh 0; }
+    @media (min-width: 1200px) {
+      .fight-home {
+        background: url("../../assets/imgs/combatetparis.png") #0F0F0F;
+        background-repeat: no-repeat;
+        background-position: top center;
+        background-size: cover;
+        height: 70vh;
+        padding: 30vh 0; } }
     .fight-home-title {
-      font-size: 4.5rem;
-      width: 40%;
+      font-size: 5rem;
+      line-height: 5.5rem;
+      width: 30%;
       color: #fefefe;
       text-align: center;
-      margin: 0 auto; }
+      margin: 0 auto;
+      font-family: 'BeautyAndTheBeast'; }
+      @media (min-width: 1200px) {
+        .fight-home-title {
+          font-size: 6rem;
+          line-height: 6.5rem;
+          width: 10%; } }
       .fight-home-title-span {
         font-family: 'BeautyAndTheBeast';
         width: 100%;
