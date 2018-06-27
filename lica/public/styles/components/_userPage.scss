@@ -5,14 +5,18 @@
 }
 
 .profile-info {
-  display: flex;
-  justify-content: space-between;
   width: 90%;
   margin: 0 auto;
   padding-top: 10rem;
+  @include for-size(desktop-up) {
+    display: flex;
+    justify-content: space-between;
+  }
   &-picture {
+    margin: 0 auto;
     height: 20rem;
     width: 20rem;
+    box-shadow: 1px 1px 10px #3aa89c;
     & img {
       height: 100%;
       width: 100%;
@@ -22,6 +26,7 @@
     color: #FFF;
     text-align: right;
     background: none;
+    padding: 4rem 8rem 0;
     &-flex {
       display: flex;
       justify-content: flex-end;
@@ -33,7 +38,7 @@
       }
     }
     & a {
-      margin-left: 1rem;
+      margin: .8rem 0 0 1rem;
     }
     &-date {
       margin: 2.8rem 3.1rem 0 0;
@@ -213,8 +218,6 @@
     }
   }
 }
-
-
 
 //FIXES
 

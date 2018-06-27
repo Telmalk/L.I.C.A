@@ -291,21 +291,26 @@ body {
   background-repeat: no-repeat; }
 
 .profile-info {
-  display: flex;
-  justify-content: space-between;
   width: 90%;
   margin: 0 auto;
   padding-top: 10rem; }
+  @media (min-width: 1200px) {
+    .profile-info {
+      display: flex;
+      justify-content: space-between; } }
   .profile-info-picture {
+    margin: 0 auto;
     height: 20rem;
-    width: 20rem; }
+    width: 20rem;
+    box-shadow: 1px 1px 10px #3aa89c; }
     .profile-info-picture img {
       height: 100%;
       width: 100%; }
   .profile-info-information {
     color: #FFF;
     text-align: right;
-    background: none; }
+    background: none;
+    padding: 4rem 8rem 0; }
     .profile-info-information-flex {
       display: flex;
       justify-content: flex-end; }
@@ -315,7 +320,7 @@ body {
         .profile-info-information h2 {
           font-size: 4.5rem; } }
     .profile-info-information a {
-      margin-left: 1rem; }
+      margin: .8rem 0 0 1rem; }
     .profile-info-information-date {
       margin: 2.8rem 3.1rem 0 0;
       font-size: 2.4rem; }
@@ -682,7 +687,8 @@ body {
     cursor: pointer;
     color: #FFF;
     font-size: 2.4rem;
-    text-transform: uppercase; }
+    text-transform: uppercase;
+    margin-top: 3rem; }
     @media (min-width: 1200px) {
       .bestiaire-selection-scrolldown-title {
         font-size: 3rem; } }
@@ -714,7 +720,6 @@ body {
       margin-top: .5rem; }
 
 .bestiaire-aliens {
-  padding-top: 6rem;
   padding-bottom: 10rem; }
   .bestiaire-aliens-cards {
     display: flex;
@@ -755,8 +760,7 @@ body {
       .bestiaire-aliens-card-details p {
         color: #FFF;
         font-size: 1.2rem;
-        line-height: 1.5;
-        text-transform: uppercase; }
+        line-height: 1.5; }
         @media (min-width: 1200px) {
           .bestiaire-aliens-card-details p {
             font-size: 2.4rem; } }
