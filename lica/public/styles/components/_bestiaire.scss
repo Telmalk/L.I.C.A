@@ -80,6 +80,63 @@
 
 .bestiaire-aliens {
   padding-bottom: 10rem;
+  position: relative;
+  &-modal {
+    display: none;
+    overflow: hidden;
+    color: #fefefe;
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    z-index: 9;
+    background: #0F0F0F;
+    &-content {
+      width: 80vw;
+      height: 70vh;
+      margin: 15vh auto;
+      &-img {
+        height: 20rem;
+        width: 15rem;
+        margin: 0 auto 3rem;
+        &-item {
+          width: 100%;
+          height: 100%;
+        }
+      }
+      &-infos {
+        width: 100%;
+        padding: 0 20%;
+        &-race {
+          font-size: $title;
+          line-height: 3.6rem;
+          border-bottom: 1px solid #fefefe;
+          margin-bottom: 1rem;
+        }
+        &-origin {
+          font-size: 1.6rem;
+          line-height: 2.4rem;
+          border-bottom: 1px solid #fefefe;
+          margin-bottom: 1rem;
+        }
+        &-height, &-weight {
+          font-size: $details;
+          line-height: 1.8rem;
+        }
+        &-description {
+          font-size: $details;
+          line-height: 1.8rem;
+          border-top: 1px solid #fefefe;
+          margin-top: 1rem;
+        }
+        &-price {
+          font-size: 1.8rem;
+          line-height: 2.7rem;
+          border-top: 1px solid #fefefe;
+          margin-top: 1rem;
+        }
+      }
+    }
+  }
   &-cards {
     display: flex;
     justify-content: center;
@@ -137,10 +194,11 @@
         }
       }
     }
-    &-adopter {
-      margin-top: 1rem;
+    &-adopter, &-button {
+      margin-top: 1.5rem;
       font-size: $details;
       color: $green;
+      text-align: center;
       text-transform: uppercase;
       @include for-size(desktop-up) {
         font-size: $desktopDetails;
@@ -156,14 +214,13 @@
 .bestiaire-aliens-card-adopter-overlay {
   display: none;
   position: absolute;
-  height: 50%;
+  height: 5rem;
   width: 50%;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   background: #FFF;
   border-radius: 5%;
-  padding-top: 5rem;
   &-title {
     font-size: $details;
     text-align: center;
@@ -175,9 +232,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-top: 50%;
     padding: 0 2rem;
-    transform: translateY(-50%);
     @include for-size(desktop-up) {
       padding: 0 5rem;
     }
