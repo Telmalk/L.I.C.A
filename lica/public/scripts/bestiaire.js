@@ -3,7 +3,8 @@ const scrolldown = document.querySelector('.bestiaire-selection-scrolldown-menu'
 const sure = document.querySelectorAll('.bestiaire-aliens-card-button');
 const adopt = document.querySelector('.bestiaire-aliens-card-adopter');
 const aliens_details = document.querySelector('.bestiaire-aliens-modal');
-const validate = document.querySelector('.bestiaire-aliens-card-adopter-overlay')
+const validate = document.querySelector('.bestiaire-aliens-card-adopter-overlay');
+const exit_button = document.querySelector('.bestiaire-aliens-modal-content-cross');
 
 
 
@@ -19,4 +20,8 @@ for (let i = 0; i < sure.length; i++) {
 
 adopt.addEventListener('click', () => {
     validate.classList.toggle('is-open');
+});
+
+exit_button.addEventListener('click', () => {
+    aliens_details.style.display = 'none';
 });
