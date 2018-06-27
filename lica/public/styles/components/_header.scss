@@ -1,3 +1,7 @@
+body {
+  background: #0F0F0F;
+}
+
 .header {
   position: fixed;
   display: flex;
@@ -118,6 +122,84 @@
             &:hover {
               text-decoration: underline;
             }
+          }
+        }
+      }
+    }
+  }
+  &-connect {
+    position: absolute;
+    top: 50vh;
+    left: 50vw;
+    transform: translate3d(-50%, -50%, 0);
+    width: 50vw;
+    height: 40vh;
+    background: #1a1a1a;
+    color: #fefefe;
+    border: 1px solid black;
+    font-size: $desktopTitle;
+    line-height: 3.5rem;
+    padding: 1rem;
+    border-radius: 3%;
+    @include for-size(desktop-up) {
+      display: flex;
+      height: 25vh;
+      width: 30vw;
+    }
+    &-form {
+      display: flex;
+      flex-direction: column;
+      width: 80%;
+      margin: 0 auto;
+      @include for-size(desktop-up) {
+        padding: 1.5rem 6rem;
+      }
+      &-input {
+        width: 100%;
+        border: 1px solid #fefefe;
+        border-radius: 10%;
+      }
+      &-submit {
+        margin: 1.5rem auto 0;
+        border: 1px solid #fefefe;
+        background: none;
+        border-radius: 10%;
+        color: #fefefe;
+        @include for-size(desktop-up) {
+          &:hover {
+            color: #0F0F0F;
+            background: #fefefe;
+            border: 1px solid #0F0F0F;
+            cursor: pointer;
+          }
+        }
+      }
+    }
+    &-register {
+      border-top: 1px solid #fefefe;
+      text-align: center;
+      width: 100%;
+      margin-top: 2.5rem;
+      padding: 2.5rem 0;
+      @include for-size(desktop-up) {
+        border-left: 1px solid #fefefe;
+        border-top: none;
+        height: 80%;
+        width: 35%;
+        padding: 5rem 0;
+      }
+      &-link {
+        font-size: 1.8rem;
+        border: 1px solid #fefefe;
+        color: #fefefe;
+        border-radius: 10%;
+        padding: 0 1rem;
+        @include for-size(desktop-up) {
+          &:hover {
+            color: #0F0F0F;
+            background: #fefefe;
+            border: 1px solid #0F0F0F;
+            cursor: pointer;
           }
         }
       }
