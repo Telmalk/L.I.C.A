@@ -50,7 +50,7 @@
       }
       &-date {
         margin: 3rem 0 2rem 0;
-        font-size: 2rem;
+        font-size: 1.5rem;
         @include for-size(desktop-up) {
           font-size: $title;
         }
@@ -111,7 +111,7 @@
         &-vs {
           font-size: 4rem;
           color: #3aa89c;
-          margin-top: 2rem;
+          margin-top: 1.5rem;
           @include for-size(desktop-up) {
             font-size: 6rem;
           }
@@ -181,12 +181,13 @@
         }
         &-button {
           font-size: 1.8rem;
-          line-height: 5rem;
+          line-height: 2.5rem;
           text-align: center;
           text-decoration: underline;
           @include for-size(desktop-up) {
             cursor: pointer;
             font-size: $title;
+            line-height: 5rem;
             &:hover {
               color: #3aa89c;
             }
