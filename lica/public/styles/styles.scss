@@ -38,6 +38,10 @@
   font-family: 'Oswald-Regular';
 }
 
+body {
+  overflow-x: hidden;
+}
+
 .back-to-top {
   position: fixed;
   bottom: 2.5rem;
