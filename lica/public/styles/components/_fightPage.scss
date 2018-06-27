@@ -22,12 +22,9 @@
   }
   &-content {
     background: #0F0F0F;
-    padding-top: 3rem;
-    &-img {
-      display: none;
-      @include for-size(desktop-up) {
-        display: block;
-      }
+    padding: 3rem 0;
+    @include for-size(desktop-up) {
+      padding: 6rem 0;
     }
     &-planning {
       width: 80%;
@@ -39,32 +36,166 @@
       font-size: $desktopTitle;
       text-align: center;
       padding: 1rem 0 2rem 0;
+      border-radius: 1%;
+      @include for-size(desktop-up) {
+        width: 75%;
+      }
+      &-title {
+        margin-bottom: 2rem;
+        font-size: 2.4rem;
+        @include for-size(desktop-up) {
+          margin-bottom: 4rem;
+          font-size: $desktopTitle;
+        }
+      }
       &-date {
-        margin: 3rem 0 1.5rem 0;
+        margin: 3rem 0 2rem 0;
+        font-size: 2rem;
+        @include for-size(desktop-up) {
+          font-size: $title;
+        }
       }
       &-item {
-        padding: 1.5rem 5rem;
+        padding: 1.5rem 3rem;
         height: 10rem;
         display: flex;
         justify-content: space-around;
         position: relative;
+        margin-bottom: 1.2rem;
+        @include for-size(desktop-up) {
+          padding: 0 3rem;
+          margin-bottom: 2.5rem;
+          height: 12rem;
+        }
         &-infos {
-          font-size: 2rem;
-          line-height: 2rem;
-          text-align: center;
-          width: 30%;
+          width: 40%;
+          @include for-size(desktop-up) {
+            display: flex;
+            justify-content: space-around;
+          }
+          &-img {
+            display: none;
+            @include for-size(desktop-up) {
+              display: block;
+              width: 8rem;
+              height: 10rem;
+              background: #fefefe;
+            }
+          }
+          &-text {
+            font-size: $title;
+            line-height: 2rem;
+            text-align: center;
+            @include for-size(desktop-up) {
+              font-size: 2.8rem;
+              line-height: 2.8rem;
+              width: 30%;
+            }
+          }
         }
         &-button {
           color: #3aa89c;
           border: 1px solid #3aa89c;
           border-radius: 10rem;
-          margin-top: .5rem;
+          margin: .5rem auto 0;
+          width: 60%;
+          @include for-size(desktop-up) {
+            width: 100%;
+            cursor: pointer;
+            &:hover {
+              color: #fefefe;
+              background: #3aa89c;
+            }
+          }
         }
         &-vs {
           font-size: 4rem;
           color: #3aa89c;
+          margin-top: 2rem;
+          @include for-size(desktop-up) {
+            font-size: 6rem;
+          }
+        }
+      }
+      &-request {
+        border-top: 1px solid #3aa89c;
+        margin-top: 2rem;
+        padding-top: 2rem;
+        width: 100%;
+        &-title {
+          margin-bottom: 2rem;
+          font-size: 2.4rem;
+          @include for-size(desktop-up) {
+            margin-bottom: 4rem;
+            font-size: $desktopTitle;
+          }
+        }
+        &-item {
+          padding: 1.5rem 3rem;
+          height: 10rem;
+          display: flex;
+          justify-content: space-around;
+          position: relative;
+          margin-bottom: 1.2rem;
+          @include for-size(desktop-up) {
+            margin-bottom: 2.5rem;
+            padding: 0 3rem;
+            height: 12rem;
+          }
+          &-infos {
+            width: 40%;
+            font-size: 2.4rem;
+            line-height: 2rem;
+            text-align: center;
+            @include for-size(desktop-up) {
+              display: flex;
+              justify-content: space-around;
+            }
+            &-img {
+              display: none;
+              @include for-size(desktop-up) {
+                display: block;
+                width: 8rem;
+                height: 10rem;
+                background: #fefefe;
+              }
+            }
+            &-text {
+              font-size: $title;
+              line-height: 2rem;
+              text-align: center;
+              @include for-size(desktop-up) {
+                font-size: 2.8rem;
+                line-height: 2.8rem;
+                width: 30%;
+              }
+            }
+          }
+          &-vs {
+            font-size: 4rem;
+            color: #3aa89c;
+            @include for-size(desktop-up) {
+              font-size: 6rem;
+            }
+          }
+        }
+        &-button {
+          font-size: 1.8rem;
+          line-height: 5rem;
+          text-align: center;
+          text-decoration: underline;
+          @include for-size(desktop-up) {
+            cursor: pointer;
+            font-size: $title;
+            &:hover {
+              color: #3aa89c;
+            }
+          }
         }
       }
     }
+  }
+  &-reverse {
+    flex-direction: row-reverse;
   }
 }

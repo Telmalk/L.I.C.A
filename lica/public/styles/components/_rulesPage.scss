@@ -1,17 +1,17 @@
 .rules {
   color: #fefefe;
-  padding: 0 6rem;
+  padding: 0 6rem 6rem;
   background: #000;
   @include for-size(desktop-up) {
     padding: 0 15rem;
   }
   // TITLE
   &-title {
-    margin: 12rem auto 5rem auto;
+    padding: 12rem 5rem;
     text-align: center;
     width: 100%;
     @include for-size(desktop-up) {
-      margin: 16rem auto 10rem auto;
+      padding: 16rem 10rem;
     }
     &-item {
       height: 21.7rem;
