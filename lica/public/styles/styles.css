@@ -658,14 +658,15 @@ a {
         width: 80%;
         margin: 0 auto; } }
   .bestiaire-aliens-card {
-    margin-top: 4rem;
     display: flex;
     flex-direction: column;
     align-items: center;
+    position: relative;
     width: 60%;
     height: 55%;
     background: #000;
-    border-radius: 5%; }
+    border-radius: 5%;
+    margin-top: 4rem; }
     @media (min-width: 1200px) {
       .bestiaire-aliens-card {
         width: 30%; } }
@@ -703,7 +704,41 @@ a {
       text-transform: uppercase; }
       @media (min-width: 1200px) {
         .bestiaire-aliens-card-adopter {
-          font-size: 2.4rem; } }
+          font-size: 2.4rem; }
+          .bestiaire-aliens-card-adopter:hover {
+            text-decoration: underline;
+            cursor: pointer; } }
+
+.bestiaire-aliens-card-adopter-overlay {
+  display: none;
+  position: absolute;
+  height: 50%;
+  width: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #FFF;
+  border-radius: 5%;
+  padding-top: 5rem; }
+  .bestiaire-aliens-card-adopter-overlay-title {
+    font-size: 1.2rem;
+    text-align: center; }
+    @media (min-width: 1200px) {
+      .bestiaire-aliens-card-adopter-overlay-title {
+        font-size: 2.4rem; } }
+  .bestiaire-aliens-card-adopter-overlay-button-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 50%;
+    padding: 0 2rem;
+    transform: translateY(-50%); }
+    @media (min-width: 1200px) {
+      .bestiaire-aliens-card-adopter-overlay-button-container {
+        padding: 0 5rem; } }
+  .bestiaire-aliens-card-adopter-overlay-button {
+    background: #3EB8AB;
+    border: none; }
 
 .is-open {
   display: block; }

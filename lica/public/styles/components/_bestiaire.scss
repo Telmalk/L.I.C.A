@@ -94,14 +94,15 @@
     }
   }
   &-card {
-    margin-top: 4rem;
     display: flex;
     flex-direction: column;
     align-items: center;
+    position: relative;
     width: 60%;
     height: 55%;
     background: #000;
     border-radius: 5%;
+    margin-top: 4rem;
     @include for-size(desktop-up) {
       width: 30%;
     }
@@ -144,10 +145,50 @@
       text-transform: uppercase;
       @include for-size(desktop-up) {
         font-size: $desktopDetails;
+        &:hover {
+          text-decoration: underline;
+          cursor: pointer;
+        }
       }
     }
   }
 }
+
+.bestiaire-aliens-card-adopter-overlay {
+  display: none;
+  position: absolute;
+  height: 50%;
+  width: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #FFF;
+  border-radius: 5%;
+  padding-top: 5rem;
+  &-title {
+    font-size: $details;
+    text-align: center;
+    @include for-size(desktop-up) {
+      font-size: $desktopDetails;
+    }
+  }
+  &-button-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 50%;
+    padding: 0 2rem;
+    transform: translateY(-50%);
+    @include for-size(desktop-up) {
+      padding: 0 5rem;
+    }
+  }
+  &-button {
+    background: $green;
+    border: none;
+  }
+}
+
 
 
 
