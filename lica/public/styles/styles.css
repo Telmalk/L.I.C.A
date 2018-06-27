@@ -201,15 +201,11 @@ a {
   justify-content: space-between;
   width: 90%;
   margin: 0 auto;
-  padding-top: 6.6rem;
+  padding-top: 10rem;
   background: rgba(15, 15, 15, 0.4); }
   .profile-info-picture {
-    height: 15vh;
-    width: 60vw; }
-    @media (min-width: 1200px) {
-      .profile-info-picture {
-        height: 30vh;
-        width: 20vw; } }
+    height: 20rem;
+    width: 20rem; }
     .profile-info-picture img {
       height: 100%;
       width: 100%; }
@@ -301,6 +297,40 @@ a {
     @media (min-width: 1200px) {
       .combat-history-title {
         font-size: 3rem; } }
+  .combat-history-overlay {
+    display: none;
+    width: 80%;
+    margin: 0 auto;
+    padding-top: 2.5rem;
+    background: rgba(15, 15, 15, 0.8);
+    border-bottom-right-radius: 2%;
+    border-bottom-left-radius: 2%; }
+    @media (min-width: 1200px) {
+      .combat-history-overlay {
+        width: 70%;
+        font-size: 3rem; } }
+    .combat-history-overlay-result {
+      color: #fff;
+      text-transform: uppercase; }
+      .combat-history-overlay-result-title h2, .combat-history-overlay-result-title span {
+        font-size: 2.4rem;
+        margin-bottom: 3rem; }
+        @media (min-width: 1200px) {
+          .combat-history-overlay-result-title h2, .combat-history-overlay-result-title span {
+            font-size: 3rem; } }
+      .combat-history-overlay-result-win-lose {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 2rem;
+        padding: 0 2rem; }
+        @media (min-width: 1200px) {
+          .combat-history-overlay-result-win-lose {
+            padding: 0 15rem; } }
+        .combat-history-overlay-result-win-lose-1 span, .combat-history-overlay-result-win-lose-1 p {
+          font-size: 1.2rem; }
+          @media (min-width: 1200px) {
+            .combat-history-overlay-result-win-lose-1 span, .combat-history-overlay-result-win-lose-1 p {
+              font-size: 2.4rem; } }
 
 .profile-aliens {
   margin-top: 3rem; }
@@ -503,7 +533,7 @@ a {
 .top-container {
   text-align: center;
   margin-bottom: 25rem;
-  margin-top: 0;
+  padding-top: 5rem;
   height: 100vh;
   width: 100vw;
   background: url("../../assets/imgs/backgroundhome.png") #0F0F0F;
@@ -637,29 +667,6 @@ a {
         .bestiaire-aliens-card-adopter {
           font-size: 2.4rem; } }
 
-.header {
-  position: fixed;
-  display: flex;
-  justify-content: space-between;
-  height: 5.5rem;
-  width: 100%;
-  padding: 2.5rem 1.5rem 0 1.5rem;
-  font-family: 'Oswald-Regular';
-  font-style: italic; }
-  .header-logo {
-    width: 5.8rem;
-    height: 2.7rem; }
-  .header-nav {
-    height: 3rem;
-    position: relative; }
-    .header-nav-burger {
-      width: 3rem;
-      height: 3rem; }
-      .header-nav-burger-item {
-        width: 2rem;
-        height: 0.2rem;
-        border-radius: 1rem;
-        background: #fefefe;
 .fight {
   color: #fefefe; }
   .fight-home {
@@ -742,5 +749,11 @@ a {
       height: 5.5rem;
       width: 5.5rem;
       font-size: 4rem; } }
+
+.win {
+  color: #3EB8AB; }
+
+.lose {
+  color: #A83A3A; }
 
 /*# sourceMappingURL=styles.css.map */

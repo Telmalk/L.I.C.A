@@ -9,15 +9,11 @@
   justify-content: space-between;
   width: 90%;
   margin: 0 auto;
-  padding-top: 6.6rem;
+  padding-top: 10rem;
   background: rgba(#0F0F0F, 0.4);
   &-picture {
-    height: 15vh;
-    width: 60vw;
-    @include for-size(desktop-up) {
-      height: 30vh;
-      width: 20vw;
-    }
+    height: 20rem;
+    width: 20rem;
     & img {
       height: 100%;
       width: 100%;
@@ -130,6 +126,45 @@
     color: #FFF;
     @include for-size(desktop-up) {
       font-size: $desktopTitle;
+    }
+  }
+  &-overlay {
+    display: none;
+    width: 80%;
+    margin: 0 auto;
+    padding-top: 2.5rem;
+    background: rgba(#0F0F0F, 0.8);
+    border-bottom-right-radius: 2%;
+    border-bottom-left-radius: 2%;
+    @include for-size(desktop-up) {
+      width: 70%;
+      font-size: $desktopTitle;
+    }
+    &-result {
+      color: #fff;
+      text-transform: uppercase;
+      &-title h2, &-title span {
+        font-size: $title;
+        margin-bottom: 3rem;
+        @include for-size(desktop-up) {
+          font-size: $desktopTitle;
+        }
+      }
+      &-win-lose {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 2rem;
+        padding: 0 2rem;
+        @include for-size(desktop-up) {
+          padding: 0 15rem;
+        }
+        &-1 span, &-1 p {
+          font-size: $details;
+          @include for-size(desktop-up) {
+            font-size: $desktopDetails;
+          }
+        }
+      }
     }
   }
 }
