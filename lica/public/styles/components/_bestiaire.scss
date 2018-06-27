@@ -83,10 +83,9 @@
   position: relative;
   &-modal {
     display: none;
-    overflow: hidden;
     color: #fefefe;
-    width: 100vw;
-    height: 100vh;
+    width: 100%;
+    height: 100%;
     position: absolute;
     z-index: 9;
     background: #0F0F0F;
@@ -94,6 +93,10 @@
       width: 80vw;
       height: 70vh;
       margin: 15vh auto;
+      &-cross {
+        width: 2.5rem;
+        height: 2.5rem;
+      }
       &-img {
         height: 20rem;
         width: 15rem;
