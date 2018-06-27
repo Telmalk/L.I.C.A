@@ -23,10 +23,13 @@ class bestiaireController extends Controller
      */
     public function index(AlienRepository $alienRepository): Response
     {
+        $userID = $this->getUser();
+
         return $this->render('bestiaire/index.html.twig', [
             'controller_name' => 'BestiaireController',
             'title' => "Bestiaire",
-            'aliens' => $alienRepository->findAll()
+            'aliens' => $alienRepository->findAll(),
+            'userID' => $userID
         ]);
     }
 }

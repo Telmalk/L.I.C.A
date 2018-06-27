@@ -22,7 +22,7 @@
 </head>
 <body>
 {% if is_granted('ROLE_USER') %}
-    <p>Connecté</p>
+    <p>Connecté {{ userID }}</p>
 {% else %}
     <p>Pas connecté</p>
 {% endif %}
@@ -31,16 +31,6 @@
     <p>Mauvais pseudo ou mot de passe</p>
 {% endif %}
 <a class="backHomeLink" href="./">Retour à la home</a>
-
-{#<form action="{{ path('loginUser') }}" method="post">#}
-    {#<label for="username">Username:</label>#}
-    {#<input type="text" id="username" name="_username" value="{{ last_username }}" />#}
-
-    {#<label for="password">Password:</label>#}
-    {#<input type="password" id="password" name="_password" />#}
-
-    {#<button type="submit">login</button>#}
-{#</form>#}
 <div class="header-connect">
     <form class="header-connect-form" action="{{ path('loginUser') }}" method="post">
         <label for="username">Pseudo: <input id="username" name="_username" value="{{ last_username }}" class="header-connect-form-input" type="text"></label>

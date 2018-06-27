@@ -11,6 +11,7 @@ use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\Form\Extension\Core\Type\FileType;
 use Symfony\Component\Form\Extension\Core\Type\RepeatedType;
 use Symfony\Component\Form\Extension\Core\Type\PasswordType;
+use Symfony\Component\Form\Extension\Core\Type\DateType;
 
 class UserFrontType extends AbstractType
 {
@@ -25,7 +26,9 @@ class UserFrontType extends AbstractType
                 'second_options' => array('label' => 'Repeat Password'),
             ))
             ->add('pseudo', TextType::class)
-            ->add('birthdate')
+            ->add('birthdate', DateType::class, array(
+                'years' => range(2421,2507)
+            ))
             ->add('mail', EmailType::class)
             ->add('crediCode')
         ;

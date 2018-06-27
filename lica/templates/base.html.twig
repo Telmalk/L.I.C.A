@@ -20,7 +20,11 @@
             </div>
             <div id="burger" class="header-nav-modal inactive">
                 <div class="header-nav-modal-head">
+                    {% if is_granted('ROLE_USER') %}
+                    <a href="./userPage" class="header-nav-modal-user">Pseudo</a><a href='./logout'>Logout</a>
+                    {% else %}
                     <a href="./loginUser" class="header-nav-modal-user">Se connecter/S'inscrire</a>
+                    {% endif %}
                     <img id="burger-close" class="header-nav-modal-cross" src="../assets/imgs/close.png" alt="Cross menu">
                 </div>
                 <ul class="header-nav-list">
@@ -28,7 +32,11 @@
                     <li class="header-nav-list-item"><a class="header-nav-list-item-link" href="./fightPage">Paris et Combats</a></li>
                     <li class="header-nav-list-item"><a class="header-nav-list-item-link" href="./bestiaire">Adoptions</a></li>
                     <li class="header-nav-list-item"><a class="header-nav-list-item-link" href="./rules">Règlements L.I.C.A</a></li>
+                    {% if is_granted('ROLE_USER') %}
+                    <li class="header-nav-list-item"><a class="header-nav-list-item-connect" href="./userPage">Pseudo</a></li><li><a href='./logout'>Logout</a></li>
+                    {% else %}
                     <li class="header-nav-list-item"><a class="header-nav-list-item-connect" href="./loginUser">Se connecter/S'inscrire</a></li>
+                    {% endif %}
                 </ul>
             </div>
         </nav>
