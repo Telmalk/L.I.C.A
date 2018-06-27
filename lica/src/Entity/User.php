@@ -3,11 +3,16 @@
 namespace App\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Validator\Constraints as Assert;
+use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
+use Symfony\Component\Security\Core\User\UserInterface;
 
 /**
  * @ORM\Entity(repositoryClass="App\Repository\UserRepository")
+ * @UniqueEntity(fields="mail", message="Mail already taken")
+ * @UniqueEntity(fields="pseudo", message="Pseudo already taken")
  */
-class User
+class User implements UserInterface
 {
     /**
      * @ORM\Id()
@@ -27,12 +32,19 @@ class User
     private $surname;
 
     /**
-     * @ORM\Column(type="string", length=20)
+     * @Assert\NotBlank()
+     * @Assert\Length(max=4096)
+     */
+    private $plainPassword;
+
+    /**
+     * @ORM\Column(type="string", length=255)
      */
     private $password;
 
     /**
-     * @ORM\Column(type="string", length=30)
+     * @ORM\Column(type="string", length=255, unique=true)
+     * @Assert\NotBlank()
      */
     private $pseudo;
 
@@ -81,6 +93,21 @@ class User
      */
     private $imgUser;
 
+    /**
+     * @ORM\Column(type="array")
+     */
+    private $roles;
+
+    public function __construct()
+    {
+        $this->roles = array('ROLE_USER');
+        $this->nbCredit = 0;
+        $this->win = 0;
+        $this->defeat = 0;
+        $this->pendingFight = false;
+        $this->rating = 0;
+    }
+
     public function getId()
     {
         return $this->id;
@@ -108,6 +135,16 @@ class User
         $this->surname = $surname;
 
         return $this;
+    }
+
+    public function getPlainPassword()
+    {
+        return $this->plainPassword;
+    }
+
+    public function setPlainPassword($password)
+    {
+        $this->plainPassword = $password;
     }
 
     public function getPassword(): ?string
@@ -243,6 +280,31 @@ class User
     public function setImgUser(?string $imgUser): self
     {
         $this->imgUser = $imgUser;
+
+        return $this;
+    }
+
+    public function getSalt()
+    {
+        return null;
+    }
+
+    public function getRoles()
+    {
+        return $this->roles;
+    }
+
+    public function eraseCredentials()
+    {
+    }
+
+    public function getUsername()
+    {
+    }
+
+    public function setRoles(array $roles): self
+    {
+        $this->roles = $roles;
 
         return $this;
     }

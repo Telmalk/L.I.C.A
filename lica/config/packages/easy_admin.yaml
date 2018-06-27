@@ -5,11 +5,27 @@ easy_admin:
       #- App\Entity\Alien
       User:
         class: App\Entity\User
+        list:
+          fields:
+            - "name"
+            - "surname"
+            - "mail"
+            - "password"
+            - "pseudo"
+            - "birthdate"
+            - "nb_credit"
+            - "win"
+            - "defeat"
+            - "pending_fight"
+            - "rating"
+            - "img_user"
+            - "roles"
         form:
           fields:
             - { property: 'name', type: 'text', label: 'Name' }
             - { property: 'surname', type: 'text', label: 'Surname' }
             - { property: 'mail', type: 'email', label: 'Mail' }
+            - { property: 'plainPassword', type: 'text', label: 'Plain password' }
             - { property: 'password', type: 'text', label: 'Password' }
             - { property: 'pseudo', type: 'text', label: 'Pseudo' }
             - { property: 'birthdate', type: 'App\Form\MyCustomDate', label: 'Birthdate' }
