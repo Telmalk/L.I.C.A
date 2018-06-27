@@ -13,11 +13,17 @@
   font-family: 'Oswald-Bold';
   src: url('../../assets/fonts/Oswald-Bold.ttf');
 }
+
+@font-face {
+  font-family: 'BeautyAndTheBeast';
+  src: url('../../assets/fonts/BeautyandtheBeast.ttf.woff');
+}
 // VARIABLES
 @import 'variables/variables';
 
 // MIXINS
 @import 'components/reset';
+@import 'variables/variables';
 @import 'mixins/forsize';
 
 // COMPONENTS
@@ -26,12 +32,7 @@
 @import 'components/userPage';
 @import 'components/homePage';
 @import 'components/bestiaire';
-
-
-
-// COMPONENTS
-@import 'components/header';
-
+@import 'components/fightPage';
 
 * {
   box-sizing: border-box;
