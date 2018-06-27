@@ -50,6 +50,9 @@ a {
   text-decoration: none;
   color: #000; }
 
+body {
+  background: #0F0F0F; }
+
 .header {
   position: fixed;
   display: flex;
@@ -159,6 +162,74 @@ a {
               text-shadow: 2px 2px 20px #3aa89c; }
               .header-nav-list-item-connect:hover {
                 text-decoration: underline; } }
+  .header-connect {
+    position: absolute;
+    top: 50vh;
+    left: 50vw;
+    transform: translate3d(-50%, -50%, 0);
+    width: 50vw;
+    height: 40vh;
+    background: #1a1a1a;
+    color: #fefefe;
+    border: 1px solid black;
+    font-size: 3rem;
+    line-height: 3.5rem;
+    padding: 1rem;
+    border-radius: 3%; }
+    @media (min-width: 1200px) {
+      .header-connect {
+        display: flex;
+        height: 25vh;
+        width: 30vw; } }
+    .header-connect-form {
+      display: flex;
+      flex-direction: column;
+      width: 80%;
+      margin: 0 auto; }
+      @media (min-width: 1200px) {
+        .header-connect-form {
+          padding: 1.5rem 6rem; } }
+      .header-connect-form-input {
+        width: 100%;
+        border: 1px solid #fefefe;
+        border-radius: 10%; }
+      .header-connect-form-submit {
+        margin: 1.5rem auto 0;
+        border: 1px solid #fefefe;
+        background: none;
+        border-radius: 10%;
+        color: #fefefe; }
+        @media (min-width: 1200px) {
+          .header-connect-form-submit:hover {
+            color: #0F0F0F;
+            background: #fefefe;
+            border: 1px solid #0F0F0F;
+            cursor: pointer; } }
+    .header-connect-register {
+      border-top: 1px solid #fefefe;
+      text-align: center;
+      width: 100%;
+      margin-top: 2.5rem;
+      padding: 2.5rem 0; }
+      @media (min-width: 1200px) {
+        .header-connect-register {
+          border-left: 1px solid #fefefe;
+          border-top: none;
+          height: 80%;
+          width: 35%;
+          padding: 5rem 0; } }
+      .header-connect-register-link {
+        font-size: 1.8rem;
+        border: 1px solid #fefefe;
+        color: #fefefe;
+        border-radius: 10%;
+        padding: 0 1rem; }
+        @media (min-width: 1200px) {
+          .header-connect-register-link:hover {
+            color: #0F0F0F;
+            background: #fefefe;
+            border: 1px solid #0F0F0F;
+            cursor: pointer; } }
 
 .active {
   transform: translateX(-80vw); }
@@ -748,16 +819,32 @@ a {
   .fight-home {
     background: url("../../assets/imgs/combatetparismobile.png") #0F0F0F;
     background-repeat: no-repeat;
-    background-size: contain;
+    background-position: right;
+    background-size: cover;
     width: 100%;
-    height: 30rem;
-    padding: 10rem 0; }
+    height: 50vh;
+    padding: 20vh 0; }
+    @media (min-width: 1200px) {
+      .fight-home {
+        background: url("../../assets/imgs/combatetparis.png") #0F0F0F;
+        background-repeat: no-repeat;
+        background-position: top center;
+        background-size: cover;
+        height: 70vh;
+        padding: 30vh 0; } }
     .fight-home-title {
-      font-size: 4.5rem;
-      width: 40%;
+      font-size: 5rem;
+      line-height: 5.5rem;
+      width: 30%;
       color: #fefefe;
       text-align: center;
-      margin: 0 auto; }
+      margin: 0 auto;
+      font-family: 'BeautyAndTheBeast'; }
+      @media (min-width: 1200px) {
+        .fight-home-title {
+          font-size: 6rem;
+          line-height: 6.5rem;
+          width: 10%; } }
       .fight-home-title-span {
         font-family: 'BeautyAndTheBeast';
         width: 100%;
@@ -791,7 +878,7 @@ a {
             font-size: 3rem; } }
       .fight-content-planning-date {
         margin: 3rem 0 2rem 0;
-        font-size: 2rem; }
+        font-size: 1.5rem; }
         @media (min-width: 1200px) {
           .fight-content-planning-date {
             font-size: 2.4rem; } }
@@ -846,12 +933,12 @@ a {
         .fight-content-planning-item-vs {
           font-size: 4rem;
           color: #3aa89c;
-          margin-top: 2rem; }
+          margin-top: 1.5rem; }
           @media (min-width: 1200px) {
             .fight-content-planning-item-vs {
               font-size: 6rem; } }
       .fight-content-planning-request {
-        border-top: 1px solid #3aa89c;
+        border-top: 1.2rem solid #0F0F0F;
         margin-top: 2rem;
         padding-top: 2rem;
         width: 100%; }
@@ -908,13 +995,14 @@ a {
                 font-size: 6rem; } }
         .fight-content-planning-request-button {
           font-size: 1.8rem;
-          line-height: 5rem;
+          line-height: 2.5rem;
           text-align: center;
           text-decoration: underline; }
           @media (min-width: 1200px) {
             .fight-content-planning-request-button {
               cursor: pointer;
-              font-size: 2.4rem; }
+              font-size: 2.4rem;
+              line-height: 5rem; }
               .fight-content-planning-request-button:hover {
                 color: #3aa89c; } }
   .fight-reverse {
