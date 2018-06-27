@@ -1,19 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Connexion</title>
+    <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles/styles.css">
+    <style>
+      p, .backHomeLink {
+          color:white;
+          font-size:20px;
+          margin:10px 0 0 10px;
+      }
+      .backHomeLink {
+         position: absolute;
+         right: 10px;
+         top: 0;
+      }
+    </style>
+</head>
+<body>
 {% if is_granted('ROLE_USER') %}
-    Connecté
+    <p>Connecté</p>
 {% else %}
-    Pas connecté
+    <p>Pas connecté</p>
 {% endif %}
 
 {% if error %}
-    <div>Mauvais pseudo ou mot de passe.</div>
+    <p>Mauvais pseudo ou mot de passe</p>
 {% endif %}
+<a class="backHomeLink" href="./">Retour à la home</a>
 
-<form action="{{ path('loginUser') }}" method="post">
-    <label for="username">Username:</label>
-    <input type="text" id="username" name="_username" value="{{ last_username }}" />
+{#<form action="{{ path('loginUser') }}" method="post">#}
+    {#<label for="username">Username:</label>#}
+    {#<input type="text" id="username" name="_username" value="{{ last_username }}" />#}
 
-    <label for="password">Password:</label>
-    <input type="password" id="password" name="_password" />
+    {#<label for="password">Password:</label>#}
+    {#<input type="password" id="password" name="_password" />#}
 
-    <button type="submit">login</button>
-</form>
+    {#<button type="submit">login</button>#}
+{#</form>#}
+<div class="header-connect">
+    <form class="header-connect-form" action="{{ path('loginUser') }}" method="post">
+        <label for="username">Pseudo: <input id="username" name="_username" value="{{ last_username }}" class="header-connect-form-input" type="text"></label>
+        <label for="password">Mot de passe: <input id="password" name="_password" class="header-connect-form-input" type="password"></label>
+        <input class="header-connect-form-submit" type="submit" value="Se connecter">
+    </form>
+    <div class="header-connect-register">
+        <a class="header-connect-register-link" href="./registerUser">S'inscrire</a>
+    </div>
+</div>
+</body>
+</html>
