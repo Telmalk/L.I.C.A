@@ -637,29 +637,6 @@ a {
         .bestiaire-aliens-card-adopter {
           font-size: 2.4rem; } }
 
-.header {
-  position: fixed;
-  display: flex;
-  justify-content: space-between;
-  height: 5.5rem;
-  width: 100%;
-  padding: 2.5rem 1.5rem 0 1.5rem;
-  font-family: 'Oswald-Regular';
-  font-style: italic; }
-  .header-logo {
-    width: 5.8rem;
-    height: 2.7rem; }
-  .header-nav {
-    height: 3rem;
-    position: relative; }
-    .header-nav-burger {
-      width: 3rem;
-      height: 3rem; }
-      .header-nav-burger-item {
-        width: 2rem;
-        height: 0.2rem;
-        border-radius: 1rem;
-        background: #fefefe;
 .fight {
   color: #fefefe; }
   .fight-home {
