@@ -108,6 +108,11 @@ class User implements UserInterface
         $this->rating = 0;
     }
 
+    public function getUsername()
+    {
+        return $this->pseudo;
+    }
+
     public function getId()
     {
         return $this->id;
@@ -295,10 +300,6 @@ class User implements UserInterface
     }
 
     public function eraseCredentials()
-    {
-    }
-
-    public function getUsername()
     {
     }
 

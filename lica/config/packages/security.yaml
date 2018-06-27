@@ -10,22 +10,32 @@ security:
 
     # https://symfony.com/doc/current/security.html#where-do-users-come-from-user-providers
     providers:
-        in_memory:
-            memory:
-                users:
-                    admin:
-                        password: $2y$13$Nk/ObUVaGoH7fv1XiayNZuFcRwWuVdnjNAoi4uBxKX8r/h0s3dHFK
-                        roles: 'ROLE_ADMIN'
+        user_db:
+            entity: { class: App\Entity\User, property: pseudo }
+#        in_memory:
+#            memory:
+#                users:
+#                    admin:
+#                        password: $2y$13$Nk/ObUVaGoH7fv1XiayNZuFcRwWuVdnjNAoi4uBxKX8r/h0s3dHFK
+#                        roles: 'ROLE_ADMIN'
     firewalls:
         dev:
             pattern: ^/(_(profiler|wdt)|css|images|js)/
             security: false
-        main:
+#        admin:
+#            pattern: ^/
+#            provider: in_memory
+#            form_login:
+#                login_path: login
+#                check_path: login
+#            logout: true
+#            anonymous: true
+        user:
             pattern: ^/
-            provider: in_memory
+            provider: user_db
             form_login:
-                login_path: login
-                check_path: login
+                login_path: loginUser
+                check_path: loginUser
             logout: true
             anonymous: true
 
@@ -39,7 +49,7 @@ security:
 
     # Easy way to control access for large sections of your site
     # Note: Only the *first* access control that matches will be used
-    access_control:
-        - { path: ^/admin/, role: ROLE_ADMIN }
-        - { path: ^/login$/, role: IS_AUTHENTICATED_ANONYMOUSLY }
-        - { path: ^/, role: IS_AUTHENTICATED_ANONYMOUSLY }
+#    access_control:
+#        - { path: ^/admin/, role: ROLE_ADMIN }
+#        - { path: ^/login$/, role: IS_AUTHENTICATED_ANONYMOUSLY }
+#        - { path: ^/, role: IS_AUTHENTICATED_ANONYMOUSLY }
