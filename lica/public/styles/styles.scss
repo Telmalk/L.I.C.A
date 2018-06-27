@@ -23,7 +23,6 @@
 
 // MIXINS
 @import 'components/reset';
-@import 'variables/variables';
 @import 'mixins/forsize';
 
 // COMPONENTS
@@ -37,6 +36,10 @@
 * {
   box-sizing: border-box;
   font-family: 'Oswald-Regular';
+}
+
+body {
+  overflow-x: hidden;
 }
 
 .back-to-top {
@@ -58,4 +61,11 @@
     width: 5.5rem;
     font-size: 4rem;
   }
+}
+
+.win {
+  color: $green;
+}
+.lose {
+  color: $red
 }
