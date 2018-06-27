@@ -15,16 +15,29 @@
                 <div class="header-nav-burger-item"></div>
             </div>
             <div id="burger" class="header-nav-modal inactive">
-                <img id="burger-close" class="header-nav-modal-cross" src="../assets/imgs/close.png" alt="Cross menu">
+                <div class="header-nav-modal-head">
+                    <p class="header-nav-modal-user">Se connecter/S'inscrire</p>
+                    <img id="burger-close" class="header-nav-modal-cross" src="../assets/imgs/close.png" alt="Cross menu">
+                </div>
                 <ul class="header-nav-list">
                     <li class="header-nav-list-item"><a class="header-nav-list-item-link" href="">Accueil</a></li>
+                    <li class="header-nav-list-item"><a class="header-nav-list-item-link" href="">Paris et Combats</a></li>
+                    <li class="header-nav-list-item"><a class="header-nav-list-item-link" href="">Adoptions</a></li>
                     <li class="header-nav-list-item"><a class="header-nav-list-item-link" href="">Règlements L.I.C.A</a></li>
-                    <li class="header-nav-list-item"><a class="header-nav-list-item-link" href="">Combats et Paris</a></li>
-                    <li class="header-nav-list-item"><a class="header-nav-list-item-link" href="">Le Bestiaire</a></li>
-                    <li class="header-nav-list-item"><a class="header-nav-list-item-link" href="">Ton Profil</a></li>
+                    <li class="header-nav-list-item"><a class="header-nav-list-item-connect" href="">Se connecter/S'inscrire</a></li>
                 </ul>
             </div>
         </nav>
+        <div class="header-connect">
+            <form class="header-connect-form" action="">
+                <label for="">Pseudo: <input class="header-connect-form-input" type="text"></label>
+                <label for="">Mot de passe: <input class="header-connect-form-input" type="text"></label>
+                <input class="header-connect-form-submit" type="submit" value="Se connecter">
+            </form>
+            <div class="header-connect-register">
+                <a class="header-connect-register-link" href="">S'inscrire</a>
+            </div>
+        </div>
     </header>
     <script src="scripts/burger.js"></script>
 </body>
