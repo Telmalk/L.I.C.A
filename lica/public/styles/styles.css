@@ -400,7 +400,7 @@ body {
       .combat-history-title {
         font-size: 3rem; } }
   .combat-history-overlay {
-    display: block;
+    display: none;
     width: 80%;
     margin: 0 auto;
     padding-top: 2.5rem;
@@ -1123,5 +1123,15 @@ body {
 
 .lose {
   color: #A83A3A; }
+
+.slide-open {
+  animation: slideopen 2s linear;
+  display: block; }
+
+@keyframes slideopen {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
 
 /*# sourceMappingURL=styles.css.map */
