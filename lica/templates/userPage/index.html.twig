@@ -91,36 +91,28 @@
         </div>
     </div>
 </section>
-
+{% if alienOfUser %}
 <section class="profile-aliens">
     <div>
         <h2 class="profile-aliens-title">Mes Aliens</h2>
     </div>
     <div class="profile-aliens-cards">
+        {% for alien in alienOfUser %}
         <div class="profile-aliens-alien-card">
             <div class="bestiaire-aliens-card">
                 <div class="bestiaire-aliens-card-img">
                     <img src="https://vignette.wikia.nocookie.net/halo/images/f/fb/Elite_de_Operaciones_Especiales_HR.png/revision/latest?cb=20160503120721&path-prefix=es" alt="">
                 </div>
                 <div class="bestiaire-aliens-card-details">
-                    <p>Race : <span>Alien</span></p>
-                    <p>Origine : <span>Krypton</span></p>
-                    <p>ELO : <span>42</span></p>
+                    <p>Race : <span>{{ alien.race }}</span></p>
+                    <p>Origine : <span>{{ alien.origin }}</span></p>
+                    <p>ELO : <span>{{ alien.rating }}</span></p>
                 </div>
             </div>
         </div>
-
-        <div class="profile-aliens-alien-card">
-            <div class="profile-aliens-alien-card-img">
-                <img src="https://vignette.wikia.nocookie.net/halo/images/9/9a/HReach_-_Mgalekgolo.png/revision/latest?cb=20120127031859" alt="">
-            </div>
-        </div>
-        <div class="profile-aliens-alien-card">
-            <div class="profile-aliens-alien-card-img">
-                <img src="https://vignette.wikia.nocookie.net/halo/images/9/9a/HReach_-_Mgalekgolo.png/revision/latest?cb=20120127031859" alt="">
-            </div>
-        </div>
+        {% endfor %}
     </div>
 </section>
+{% endif %}
 </div>
 {% endblock %}

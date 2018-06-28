@@ -11,6 +11,7 @@ namespace App\Controller;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use App\Entity\User;
+use App\Entity\Alien;
 
 class UserPageController extends Controller
 {
@@ -24,8 +25,16 @@ class UserPageController extends Controller
         $entityManager = $this->getDoctrine()->getManager();
         $user = $entityManager->getRepository(User::class)->find($userID);
 
-        //var_dump($user->getBirthdate()->format('Y-m-d'));exit;
-        //echo $user->getBirthdate()->format('Y-m-d');exit;
+        $entityManagerAlien = $this->getDoctrine()->getManager();
+        $alien = $entityManagerAlien->getRepository(Alien::class)->findAll();
+
+        //var_dump($alien[0]->getUser()->getId());exit;
+        $alienOfUser = [];
+        for ($i = 0; $i < count($alien); $i++) {
+            if ($alien[$i]->getUser()->getId() === $user->getId()) {
+                $alienOfUser[] = $alien[$i];
+            }
+        }
 
         return $this->render('userPage/index.html.twig', [
             'controller_name' => 'UserPageController',
@@ -37,7 +46,8 @@ class UserPageController extends Controller
             'userMail' => $user->getMail(),
             'userWin' => $user->getWin(),
             'userDefeat' => $user->getDefeat(),
-            'userDescription' => $user->getDescription()
+            'userDescription' => $user->getDescription(),
+            'alienOfUser' => $alienOfUser
         ]);
     }
 }
