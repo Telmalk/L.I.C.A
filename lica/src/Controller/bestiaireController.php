@@ -66,9 +66,7 @@ class bestiaireController extends Controller
         $alien->setUser($user);
         $alien->setAdopted(true);
         $em->flush();
-        return $this->render("/home/index.html.twig", [
-            "title" => "sucess"
-        ]);
+        return $this->redirect('/userPage');
     }
 
 }

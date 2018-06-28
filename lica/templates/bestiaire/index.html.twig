@@ -33,24 +33,22 @@
             </div>
             <div class="bestiaire-aliens-modal-content-infos">
                 <p class="bestiaire-aliens-modal-content-infos-race">
-                    Race: Alien
+                    Race: {{ alien.race }}
                 </p>
                 <p class="bestiaire-aliens-modal-content-infos-origin">
-                    Origine: Krypton
+                    Origine: {{ alien.origin }}
                 </p>
                 <p class="bestiaire-aliens-modal-content-infos-height">
-                    120kg
+                    {{ alien.weight }}kg
                 </p>
                 <p class="bestiaire-aliens-modal-content-infos-weight">
-                    248cm
+                    {{ alien.height }}cm
                 </p>
                 <p class="bestiaire-aliens-modal-content-infos-description">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                    Autem dolores enim odit placeat repudiandae. Alias, cumque
-                    delectus expedita, inventore iusto maiores minus perspiciatis
+                    {{ alien.descriptionCard }}
                 </p>
                 <p class="bestiaire-aliens-modal-content-infos-price">
-                    Prix: 666
+                    Prix: {{ alien.price }}
                 </p>
                 <a href="bestiaire/adopt/{{ alien.id }}/{{ alien.price }}" class="bestiaire-aliens-card-adopter">Adopter</a>
             </div>
