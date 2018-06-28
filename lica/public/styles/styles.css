@@ -1016,7 +1016,7 @@ body {
           width: 50%; }
           @media (min-width: 1200px) {
             .fight-content-planning-item-button {
-              width: 100%;
+              width: 50%;
               cursor: pointer; }
               .fight-content-planning-item-button:hover {
                 color: #fefefe;
