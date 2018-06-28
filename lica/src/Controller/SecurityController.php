@@ -33,23 +33,12 @@ class SecurityController extends Controller
     public function login(Request $request, AuthenticationUtils $authenticationUtils)
     {
 
-        $userID = $this->getUser();
-
         // get the login error if there is one
         $error = $authenticationUtils->getLastAuthenticationError();
 
         // last username entered by the user
         $lastUsername = $authenticationUtils->getLastUsername();
 
-        if ($userID) {
-            $entityManager = $this->getDoctrine()->getManager();
-            $user = $entityManager->getRepository(User::class)->find($userID);
-            return $this->render('security/loginUser.html.twig', array(
-                'last_username' => $lastUsername,
-                'error'         => $error,
-                'user' => $user->getPseudo()
-            ));
-        }
         return $this->render('security/loginUser.html.twig', array(
             'last_username' => $lastUsername,
             'error'         => $error

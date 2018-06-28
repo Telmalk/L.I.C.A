@@ -21,12 +21,6 @@
     </style>
 </head>
 <body>
-{% if is_granted('ROLE_USER') %}
-    <p>Connecté {{ user }}</p>
-{% else %}
-    <p>Pas connecté</p>
-{% endif %}
-
 {% if error %}
     <p>Mauvais pseudo ou mot de passe</p>
 {% endif %}
