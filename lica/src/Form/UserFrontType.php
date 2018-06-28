@@ -31,6 +31,7 @@ class UserFrontType extends AbstractType
             ))
             ->add('mail', EmailType::class)
             ->add('crediCode')
+            ->add('description', TextType::class)
         ;
     }
 

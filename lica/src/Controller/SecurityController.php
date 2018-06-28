@@ -6,6 +6,7 @@ use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Security\Http\Authentication\AuthenticationUtils;
+use App\Entity\User;
 
 class SecurityController extends Controller
 {
@@ -39,10 +40,19 @@ class SecurityController extends Controller
 
         // last username entered by the user
         $lastUsername = $authenticationUtils->getLastUsername();
+
+        if ($userID) {
+            $entityManager = $this->getDoctrine()->getManager();
+            $user = $entityManager->getRepository(User::class)->find($userID);
+            return $this->render('security/loginUser.html.twig', array(
+                'last_username' => $lastUsername,
+                'error'         => $error,
+                'user' => $user->getPseudo()
+            ));
+        }
         return $this->render('security/loginUser.html.twig', array(
             'last_username' => $lastUsername,
-            'error'         => $error,
-            'userID' => $userID
+            'error'         => $error
         ));
     }
 }

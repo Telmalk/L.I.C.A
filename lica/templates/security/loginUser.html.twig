@@ -22,7 +22,7 @@
 </head>
 <body>
 {% if is_granted('ROLE_USER') %}
-    <p>Connecté {{ userID }}</p>
+    <p>Connecté {{ user }}</p>
 {% else %}
     <p>Pas connecté</p>
 {% endif %}
