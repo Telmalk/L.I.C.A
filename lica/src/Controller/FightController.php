@@ -87,4 +87,6 @@ class FightController extends Controller
 
         return $this->redirectToRoute('fight_index');
     }
+
+    //public function show
 }

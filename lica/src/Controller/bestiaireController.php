@@ -45,9 +45,12 @@ class bestiaireController extends Controller
      * @Route("/adopt/{id}/{price}", methods="GET|POST" )
      * @return Response
      */
-    public function adopt(int $id, int $price): Response
+    public function adopt(int $id, int $price)
     {
         $userID = $this->getUser();
+        if ($userID === false) {
+            return $this->redirect("loginUser");
+        }
         $em = $this->getDoctrine()
             ->getManager();
         $alien = $em->getRepository(Alien::class)
