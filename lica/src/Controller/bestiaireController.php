@@ -8,6 +8,7 @@
 
 namespace App\Controller;
 
+use App\Entity\User;
 use App\Entity\Alien;
 use App\Form\AlienType;
 use App\Repository\AlienRepository;
@@ -16,10 +17,15 @@ use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 
+/**
+ * Class bestiaireController
+ * @package App\Controller
+ * @Route("bestiaire")
+ */
 class bestiaireController extends Controller
 {
     /**
-     * @Route("/bestiaire", name="bestiaire")
+     * @Route("", name="bestiaire_index")
      */
     public function index(AlienRepository $alienRepository): Response
     {
@@ -32,4 +38,37 @@ class bestiaireController extends Controller
             'userID' => $userID
         ]);
     }
+
+    /**
+     * @param $id
+     * @param $price
+     * @Route("/adopt/{id}/{price}", methods="GET|POST" )
+     * @return Response
+     */
+    public function adopt(int $id, int $price): Response
+    {
+        $userID = $this->getUser();
+        $em = $this->getDoctrine()
+            ->getManager();
+        $alien = $em->getRepository(Alien::class)
+            ->find($id);
+        $user = $em->getRepository(User::class)
+            ->find($userID);
+        $nbCreditUser = $user->getNbCredit();
+        if ($nbCreditUser < $price) {
+            return $this->render("/home/index.html.twig", [
+                "title" => "not enpught minerals",
+                "error" => "Vous n'avez pas assez de crédit"
+            ]);
+        } else {
+            $user->setNbCredit($nbCreditUser - $price);
+        }
+        $alien->setUser($user);
+        $alien->setAdopted(true);
+        $em->flush();
+        return $this->render("/home/index.html.twig", [
+            "title" => "sucess"
+        ]);
+    }
+
 }
