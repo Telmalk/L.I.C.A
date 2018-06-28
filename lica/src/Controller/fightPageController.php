@@ -8,6 +8,7 @@
 
 namespace App\Controller;
 
+use App\Entity\Fight;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 
@@ -18,9 +19,13 @@ class fightPageController extends Controller
      */
     public function index()
     {
+        $em = $this->getDoctrine()
+            ->getManager();
+
         return $this->render('fightPage/index.html.twig', [
             'controller_name' => 'FightPageController',
-            'title' => "Paris"
+            'title' => "Paris",
+            "figths" => $figths = $em->getRepository(Fight::class)->findAll()
         ]);
     }
 }

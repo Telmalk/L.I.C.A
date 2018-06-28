@@ -14,6 +14,7 @@
         <div class="fight-content-planning">
             <p class="fight-content-planning-date">LUNDI ../../..</p>
             <!-- Fight Card -->
+            {% for fight in fights %}
             <div class="fight-content-planning-item">
                 <div class="fight-content-planning-item-infos">
                     <p>Tchikito</p>
@@ -30,6 +31,7 @@
                     <p>8</p>
                     <p class="fight-content-planning-item-button">Miser</p>
                 </div>
+                {% endfor %}
             </div>
             <!-- End Fight Card -->
             <div class="fight-content-planning-item">
