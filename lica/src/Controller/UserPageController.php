@@ -36,7 +36,8 @@ class UserPageController extends Controller
             'userNbCredit' => $user->getNbCredit(),
             'userMail' => $user->getMail(),
             'userWin' => $user->getWin(),
-            'userDefeat' => $user->getDefeat()
+            'userDefeat' => $user->getDefeat(),
+            'userDescription' => $user->getDescription()
         ]);
     }
 }
