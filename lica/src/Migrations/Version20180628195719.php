@@ -13,7 +13,7 @@ final class Version20180628195719 extends AbstractMigration
     public function up(Schema $schema) : void
     {
         // this up() migration is auto-generated, please modify it to your needs
-        $this->abortIf($this->connection->getDatabasePlatform()->getName() !== 'mysql', 'Migration can only be executed safely on \'mysql\'.');
+             $this->abortIf($this->connection->getDatabasePlatform()->getName() !== 'mysql', 'Migration can only be executed safely on \'mysql\'.');
 
         $this->addSql('CREATE TABLE bet (id INT AUTO_INCREMENT NOT NULL, id_user_id INT NOT NULL, id_fight_id INT NOT NULL, bet_target INT NOT NULL, wager INT NOT NULL, INDEX IDX_FBF0EC9B79F37AE5 (id_user_id), INDEX IDX_FBF0EC9BFCBDBB71 (id_fight_id), PRIMARY KEY(id)) DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci ENGINE = InnoDB');
         $this->addSql('ALTER TABLE bet ADD CONSTRAINT FK_FBF0EC9B79F37AE5 FOREIGN KEY (id_user_id) REFERENCES user (id)');
