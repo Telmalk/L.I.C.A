@@ -1006,7 +1006,11 @@ body {
           margin: .5rem auto 0; }
         .fight-content-planning-item-input {
           width: 40%;
-          border-radius: 1%; }
+          border-radius: 1%;
+          border: 1px solid #3aa89c;
+          color: #3aa89c;
+          text-align: center;
+          background: none; }
         .fight-content-planning-item-button {
           color: #3aa89c;
           background: none;
