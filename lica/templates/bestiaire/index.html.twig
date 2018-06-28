@@ -50,7 +50,11 @@
                 <p class="bestiaire-aliens-modal-content-infos-price">
                     Prix: {{ alien.price }}
                 </p>
+                {% if is_granted('ROLE_USER') %}
                 <a href="bestiaire/adopt/{{ alien.id }}/{{ alien.price }}" class="bestiaire-aliens-card-adopter">Adopter</a>
+                {% else %}
+                <a href="loginUser" class="bestiaire-aliens-card-adopter">Adopter</a>
+                {% endif %}
             </div>
         </div>
     </div>

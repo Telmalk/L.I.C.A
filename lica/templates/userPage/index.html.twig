@@ -92,18 +92,17 @@
     </div>
     <div class="profile-aliens-cards">
         {% for alien in alienOfUser %}
-        <div class="profile-aliens-alien-card">
             <div class="bestiaire-aliens-card">
                 <div class="bestiaire-aliens-card-img">
                     <img src="https://vignette.wikia.nocookie.net/halo/images/f/fb/Elite_de_Operaciones_Especiales_HR.png/revision/latest?cb=20160503120721&path-prefix=es" alt="">
                 </div>
                 <div class="bestiaire-aliens-card-details">
+                    <p>Name : <span>{{ alien.name }}</span></p>
                     <p>Race : <span>{{ alien.race }}</span></p>
                     <p>Origine : <span>{{ alien.origin }}</span></p>
                     <p>ELO : <span>{{ alien.rating }}</span></p>
                 </div>
             </div>
-        </div>
         {% endfor %}
     </div>
 </section>

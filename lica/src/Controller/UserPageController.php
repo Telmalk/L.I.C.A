@@ -31,8 +31,10 @@ class UserPageController extends Controller
         //var_dump($alien[0]->getUser()->getId());exit;
         $alienOfUser = [];
         for ($i = 0; $i < count($alien); $i++) {
-            if ($alien[$i]->getUser()->getId() === $user->getId()) {
-                $alienOfUser[] = $alien[$i];
+            if ($alien[$i]->getUser()) {
+                if ($alien[$i]->getUser()->getId() === $user->getId()) {
+                    $alienOfUser[] = $alien[$i];
+                }
             }
         }
 
