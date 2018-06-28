@@ -106,7 +106,7 @@ class User implements UserInterface
     public function __construct()
     {
         $this->roles = array('ROLE_USER');
-        $this->nbCredit = 0;
+        $this->nbCredit = 1200;
         $this->win = 0;
         $this->defeat = 0;
         $this->pendingFight = false;
