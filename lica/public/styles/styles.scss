@@ -69,3 +69,20 @@ body {
 .lose {
   color: $red
 }
+
+.slide-open {
+  animation: slideopen 2s linear;
+  display: block;
+}
+
+
+@keyframes slideopen {
+  0% {
+    opacity: 0;
+  }
+  50% {
+  }
+  100% {
+  opacity: 1;
+  }
+}
