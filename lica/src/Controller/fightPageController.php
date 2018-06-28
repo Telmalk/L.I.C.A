@@ -8,9 +8,7 @@
 
 namespace App\Controller;
 
-use App\Entity\Alien;
 use App\Entity\Fight;
-use App\Entity\User;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 
@@ -40,12 +38,10 @@ class fightPageController extends Controller
             ];
             $i++;
       }
-       //dump($figths);
-        //exit;
-        return $this->render('fightPage/index.html.twig', [
-            'controller_name' => 'FightPageController',
-            'title' => "Paris",
-            "fights" => $figths,
+      return $this->render('fightPage/index.html.twig', [
+          'controller_name' => 'FightPageController',
+          'title' => "Paris",
+          "fights" => $figths,
         ]);
     }
 }

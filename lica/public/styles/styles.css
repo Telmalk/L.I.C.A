@@ -1205,3 +1205,26 @@ body {
   background: rgba(255, 255, 255, 0.2); }
 
 /*# sourceMappingURL=styles.css.map */
+
+.fight-content-planning-item-form {
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
+  margin: .5rem auto 0; }
+.fight-content-planning-item-input {
+  width: 40%;
+  border-radius: 1%; }
+.fight-content-planning-item-button {
+  color: #3aa89c;
+  background: none;
+  text-align: center;
+  border: 1px solid #3aa89c;
+  border-radius: 10rem;
+  width: 50%; }
+@media (min-width: 1200px) {
+  .fight-content-planning-item-button {
+    width: 50%;
+    cursor: pointer; }
+  .fight-content-planning-item-button:hover {
+    color: #fefefe;
+    background: #3aa89c; } }
