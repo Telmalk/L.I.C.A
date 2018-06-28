@@ -8,6 +8,7 @@
 
 namespace App\Controller;
 
+use App\Entity\User;
 use App\Entity\Alien;
 use App\Form\AlienType;
 use App\Repository\AlienRepository;
@@ -32,4 +33,35 @@ class bestiaireController extends Controller
             'userID' => $userID
         ]);
     }
+
+    /**
+     * @param $id
+     * @param $price
+     * @Route("/bestiaire/adopt/{$id}/{$price}", name="adopt")
+     */
+    public function adoptAction($id, $price): Response
+    {
+        $userID = $this->getUser();
+        $em = $this->getDoctrine()
+            ->getManager();
+        $alien = $em->getRepository(Alien::class)
+            ->find($id);
+        $user = $em->getRepository(User::class)
+            ->find($userID);
+        $nbCreditUser = $user->getNbCredit();
+        if ($nbCreditUser < $price) {
+            return $this->render("/", [
+                "title" => "home",
+                "error" => "Vous n'avez pas asser de crédit"
+            ]);
+        } else {
+            $user->setNbCredit($nbCreditUser - $price);
+        }
+        $alien->setUser($user);
+        $alien->setAdopted(true);
+        return $this->render("/", [
+            "title" => "sucess"
+        ]);
+    }
+
 }
