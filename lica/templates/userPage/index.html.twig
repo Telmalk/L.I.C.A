@@ -3,19 +3,20 @@
 {% block body %}
     {{ parent() }}
 <div class="userbackground">
-<section class="profile-info">
+<section class="profile-background">
+    <div class="profile-info">
     <div class="profile-info-picture">
         <img src="https://www.halopedia.org/images/thumb/8/8f/Halo4_Master-Chief-05.png/300px-Halo4_Master-Chief-05.png" alt="profile picture">
     </div>
 
     <div class="profile-info-information">
         <div class="profile-info-information-flex">
-            <h2 class="profile-info-information-username-h2">Masterchief</h2>
+            <h2 class="profile-info-information-username-h2">{{ userPseudo }}</h2>
             <a href="">
                 <img src="../assets/imgs/pencil-edit.png" alt="edit">
             </a>
         </div>
-        <p class="profile-info-information-date">JJ/MM/YY</p>
+        <p class="profile-info-information-date">{{ userBirthdate }}</p>
         <div class="profile-info-information-flex edit">
             <p class="profile-info-information-description">“Lorem ipsum dolor sit amet,  consectetur adipiscing elit.  Crasdfs dfsodfoijiejr nmsoi,uoi snurtlmis,ro sunomrituvsoirutn,ms irunt oiusoi,tu"</p>
             <a href="">
@@ -23,26 +24,27 @@
             </a>
         </div>
         <div class="profile-info-information-money">
-            <p class="profile-info-information-money-amount">150,000</p>
+            <p class="profile-info-information-money-amount">{{ userNbCredit }}</p>
             <img src="../assets/imgs/space-coin.png" alt="edit">
         </div>
         <p><a href="#" class="margin-fix link">recharger ses space coins</a></p>
         <div class="profile-info-information-flex edit">
-            <p class="profile-info-information-email">Email@mail.com</p>
+            <p class="profile-info-information-email">{{ userMail }}</p>
             <a href="#">
                 <img src="../assets/imgs/pencil-edit.png" alt="edit">
             </a>
         </div>
         <a href="#" class="margin-fix link">changer son mot de passe ?</a>
     </div>
+    </div>
 </section>
 
 <section class="battleswon">
     <div class="battleswon-wins">
-        <p><span>10</span> Wins</p>
+        <p><span>{{ userWin }}</span> Wins</p>
     </div>
     <div class="battleswon-loses">
-        <p><span>3</span> Defeats</p>
+        <p><span>{{ userDefeat }}</span> Defeats</p>
     </div>
 </section>
 
@@ -51,13 +53,42 @@
         <h2 class="combat-history-title">Historique des combats</h2>
         <i class="fas fa-caret-down"></i>
     </div>
-</section>
+    <div class="combat-history-overlay">
+        <div class="combat-history-overlay-result">
+            <div class="combat-history-overlay-result-title">
+                <h2>LE <span>25/05/18</span></h2>
+            </div>
+            <div class="combat-history-overlay-result-win-lose">
+                <div class="combat-history-overlay-result-win-lose-1">
+                    <p>Nom <span>Alien 1</span></p>
+                    <p>Stats <span>0pv / 100</span></p>
+                    <p>Nombre de paris : <span>6</span></p>
+                    <p class="lose">Perdu</p>
 
+                </div>
+                <div class="combat-history-overlay-result-win-lose-1">
+                    <p>Nom <span>Alien 1</span></p>
+                    <p>Stats <span>0pv / 100</span></p>
+                    <p>Nombre de paris : <span>6</span></p>
+                    <p class="win">Gagner</p>
+                </div>
+            </div>
+            <div class="combat-history-overlay-result-win-lose">
+                <div class="combat-history-overlay-result-win-lose-1">
+                    <p>Nom <span>Alien 1</span></p>
+                    <p>Stats <span>0pv / 100</span></p>
+                    <p>Nombre de paris : <span>6</span></p>
+                    <p class="lose">Perdu</p>
 
-<section class="combat-history history-payment">
-    <div class="combat-history-container">
-        <h2 class="combat-history-title">Historique des paiements</h2>
-        <i class="fas fa-caret-down"></i>
+                </div>
+                <div class="combat-history-overlay-result-win-lose-1">
+                    <p>Nom <span>Alien 1</span></p>
+                    <p>Stats <span>0pv / 100</span></p>
+                    <p>Nombre de paris : <span>6</span></p>
+                    <p class="win">Gagner</p>
+                </div>
+            </div>
+        </div>
     </div>
 </section>
 
@@ -65,16 +96,29 @@
     <div>
         <h2 class="profile-aliens-title">Mes Aliens</h2>
     </div>
-
-    <div class="profile-aliens-alien-card">
-        <div class="profile-aliens-alien-card-img">
-            <img src="https://vignette.wikia.nocookie.net/halo/images/9/9a/HReach_-_Mgalekgolo.png/revision/latest?cb=20120127031859" alt="">
+    <div class="profile-aliens-cards">
+        <div class="profile-aliens-alien-card">
+            <div class="bestiaire-aliens-card">
+                <div class="bestiaire-aliens-card-img">
+                    <img src="https://vignette.wikia.nocookie.net/halo/images/f/fb/Elite_de_Operaciones_Especiales_HR.png/revision/latest?cb=20160503120721&path-prefix=es" alt="">
+                </div>
+                <div class="bestiaire-aliens-card-details">
+                    <p>Race : <span>Alien</span></p>
+                    <p>Origine : <span>Krypton</span></p>
+                    <p>ELO : <span>42</span></p>
+                </div>
+            </div>
         </div>
-    </div>
 
-    <div class="profile-aliens-alien-card">
-        <div class="profile-aliens-alien-card-img">
-            <img src="https://vignette.wikia.nocookie.net/halo/images/9/9a/HReach_-_Mgalekgolo.png/revision/latest?cb=20120127031859" alt="">
+        <div class="profile-aliens-alien-card">
+            <div class="profile-aliens-alien-card-img">
+                <img src="https://vignette.wikia.nocookie.net/halo/images/9/9a/HReach_-_Mgalekgolo.png/revision/latest?cb=20120127031859" alt="">
+            </div>
+        </div>
+        <div class="profile-aliens-alien-card">
+            <div class="profile-aliens-alien-card-img">
+                <img src="https://vignette.wikia.nocookie.net/halo/images/9/9a/HReach_-_Mgalekgolo.png/revision/latest?cb=20120127031859" alt="">
+            </div>
         </div>
     </div>
 </section>
