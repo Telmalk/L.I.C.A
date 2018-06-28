@@ -24,6 +24,7 @@
       text-align: center;
       margin: 0 auto;
       font-family: 'BeautyAndTheBeast';
+      text-shadow: 1px 1px 5px #fefefe;
       @include for-size(desktop-up) {
         font-size: 6rem;
         line-height: 6.5rem;
@@ -208,6 +209,11 @@
               color: #3aa89c;
             }
           }
+        }
+        &-bet {
+          font-size: 1.8rem;
+          line-height: 2.5rem;
+          text-align: center;
         }
       }
     }

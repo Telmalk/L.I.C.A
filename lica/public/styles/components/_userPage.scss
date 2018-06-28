@@ -7,16 +7,20 @@
 .profile-info {
   width: 90%;
   margin: 0 auto;
-  padding-top: 10rem;
+  padding-top: 15rem;
   @include for-size(desktop-up) {
     display: flex;
-    justify-content: space-between;
+    width: 70%;
+    padding: 20rem 0 0 5%;
   }
   &-picture {
-    margin: 0 auto;
     height: 20rem;
     width: 20rem;
     box-shadow: 1px 1px 10px #3aa89c;
+    margin: 0 auto;
+    @include for-size(desktop-up) {
+      margin: 0;
+    }
     & img {
       height: 100%;
       width: 100%;
@@ -24,12 +28,13 @@
   }
   &-information {
     color: #FFF;
-    text-align: right;
     background: none;
     padding: 4rem 8rem 0;
+    @include for-size(desktop-up) {
+      padding: 0 0 0 5rem;
+    }
     &-flex {
       display: flex;
-      justify-content: flex-end;
     }
     & h2 {
       font-size: $largeTitle;
@@ -59,7 +64,6 @@
     }
     &-money {
       display: flex;
-      justify-content: flex-end;
       align-items: center;
       margin-right: 2rem;
       &-amount {
@@ -179,7 +183,6 @@
   margin-top: 3rem;
   &-title {
     font-size: $title;
-    text-transform: uppercase;
     text-align: center;
     color: #FFF;
     @include for-size(desktop-up) {
@@ -241,4 +244,5 @@
 
 .margin-fix {
   margin: 0 2.9rem 0 0;
+  line-height: 1.8rem;
 }

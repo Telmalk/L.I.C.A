@@ -4,8 +4,8 @@
     {{ parent() }}
 <div class="bestiaire-background">
 <section class="bestiaire-header">
-    <h2 class="bestiaire-header-title">les bestiaires</h2>
-    </section>
+    <h2 class="bestiaire-header-title">bestiaire</h2>
+</section>
 <section class="bestiaire-selection">
     <div class="bestiaire-selection-scrolldown">
         <div class="bestiaire-selection-scrolldown-title">
@@ -22,32 +22,62 @@
 </section>
 
 <section class="bestiaire-aliens">
-    <div class="bestiaire-aliens-cards">
-        {% for alien in aliens %}
+    <!-- Start Alien Modal Details --><div class="bestiaire-aliens-cards">
+    {% for alien in aliens %}
+    {% if alien.adopted == false %}
+    <div class="bestiaire-aliens-modal">
+        <div class="bestiaire-aliens-modal-content">
+            <img class="bestiaire-aliens-modal-content-cross" src="../assets/imgs/close.png" alt="L.I.C.A">
+            <div class="bestiaire-aliens-modal-content-img">
+                <img class="bestiaire-aliens-modal-content-img-item" src="https://vignette.wikia.nocookie.net/halo/images/f/fb/Elite_de_Operaciones_Especiales_HR.png/revision/latest?cb=20160503120721&path-prefix=es" alt="Aliens">
+            </div>
+            <div class="bestiaire-aliens-modal-content-infos">
+                <p class="bestiaire-aliens-modal-content-infos-race">
+                    Race: Alien
+                </p>
+                <p class="bestiaire-aliens-modal-content-infos-origin">
+                    Origine: Krypton
+                </p>
+                <p class="bestiaire-aliens-modal-content-infos-height">
+                    120kg
+                </p>
+                <p class="bestiaire-aliens-modal-content-infos-weight">
+                    248cm
+                </p>
+                <p class="bestiaire-aliens-modal-content-infos-description">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                    Autem dolores enim odit placeat repudiandae. Alias, cumque
+                    delectus expedita, inventore iusto maiores minus perspiciatis
+                </p>
+                <p class="bestiaire-aliens-modal-content-infos-price">
+                    Prix: 666
+                </p>
+                <a href="bestiaire/adopt/{{ alien.id }}/{{ alien.price }}" class="bestiaire-aliens-card-adopter">Adopter</a>
+            </div>
+        </div>
+    </div>
+    <!-- End Alien Modal Details -->
+
+        <!-- Start Alien Card -->
         <div class="bestiaire-aliens-card">
             <div class="bestiaire-aliens-card-img">
                 <img src="https://vignette.wikia.nocookie.net/halo/images/f/fb/Elite_de_Operaciones_Especiales_HR.png/revision/latest?cb=20160503120721&path-prefix=es" alt="">
             </div>
             <div class="bestiaire-aliens-card-details">
-                <p>Nom <span>{{ alien.name }}</span></p>
-                <p>Elo <span>{{ alien.rating }}</span></p>
-                <p>Prix <span>{{ alien.price }}</span></p>
+                <p>Race : <span>{{ alien.race }}</span></p>
+                <p>Origine : <span>{{ alien.origin }}</span></p>
+                <p>Prix : <span>{{ alien.price }}</span></p>
             </div>
-            <a href="bestiaire/adopt/{{ alien.id }}/{{ alien.price }}" class="bestiaire-aliens-card-adopter">Adopter ?</a>
+            <p class="bestiaire-aliens-card-button">Voir plus</p>
         </div>
+        {% endif %}
         {% endfor %}
-        <div class="bestiaire-aliens-card">
-            <div class="bestiaire-aliens-card-img">
-                <img src="https://vignette.wikia.nocookie.net/halo/images/f/fb/Elite_de_Operaciones_Especiales_HR.png/revision/latest?cb=20160503120721&path-prefix=es" alt="">
-            </div>
-            <div class="bestiaire-aliens-card-details">
-                <p>Nom <span>Alien</span></p>
-                <p>Elo <span>598</span></p>
-                <p>Prix <span>298</span></p>
-            </div>
-            <a href="" class="bestiaire-aliens-card-adopter">Adopter ?</a>
-        </div>
+        <!-- End Alien Card -->
     </div>
 </section>
 </div>
+    {% block javascripts %}
+        {{ parent() }}
+        <script src="{{ asset('/scripts/bestiaire.js') }}"></script>
+    {% endblock %}
 {% endblock %}
