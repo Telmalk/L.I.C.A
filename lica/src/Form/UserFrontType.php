@@ -18,19 +18,26 @@ class UserFrontType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-            ->add('name', TextType::class)
-            ->add('surname', TextType::class)
+            ->add('name', TextType::class, array(
+                'label' => 'Nom'
+            ))
+            ->add('surname', TextType::class, array(
+                'label' => 'Prénom'
+            ))
             ->add('plainPassword', RepeatedType::class, array(
                 'type' => PasswordType::class,
-                'first_options'  => array('label' => 'Password'),
-                'second_options' => array('label' => 'Repeat Password'),
+                'first_options'  => array('label' => 'Mot de passe'),
+                'second_options' => array('label' => 'Répéter le mot de passe'),
             ))
             ->add('pseudo', TextType::class)
             ->add('birthdate', DateType::class, array(
-                'years' => range(2421,2507)
+                'years' => range(2467,2507),
+                'label' => 'Date de naissance'
             ))
             ->add('mail', EmailType::class)
-            ->add('crediCode')
+            ->add('crediCode', TextType::class, array(
+                'label' => 'Code de crédit'
+            ))
             ->add('description', TextType::class)
         ;
     }

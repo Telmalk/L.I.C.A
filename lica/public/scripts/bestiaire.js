@@ -4,17 +4,18 @@ const sure = document.querySelectorAll('.bestiaire-aliens-card-button');
 const adopt = document.querySelector('.bestiaire-aliens-card-adopter');
 const aliens_details = document.querySelector('.bestiaire-aliens-modal');
 const validate = document.querySelector('.bestiaire-aliens-card-adopter-overlay');
-const exit_button = document.querySelector('.bestiaire-aliens-modal-content-cross');
+const exit_button = document.querySelectorAll('.bestiaire-aliens-modal-content-cross');
 
-
+let modalToOpen;
 
 selection.addEventListener('click', () => {
     scrolldown.classList.toggle('is-open');
 });
 
 for (let i = 0; i < sure.length; i++) {
-    sure[i].addEventListener('click', () => {
-        aliens_details.style.display = 'block';
+    sure[i].addEventListener('click', function() {
+        modalToOpen = this.parentNode.previousElementSibling;
+        modalToOpen.style.display = 'block';
     });
 }
 
@@ -22,6 +23,8 @@ adopt.addEventListener('click', () => {
     validate.classList.toggle('is-open');
 });
 
-exit_button.addEventListener('click', () => {
-    aliens_details.style.display = 'none';
-});
+for (let i = 0; i < exit_button.length; i++) {
+    exit_button[i].addEventListener('click', () => {
+        modalToOpen.style.display = 'none';
+    });
+}
