@@ -183,7 +183,6 @@
   margin-top: 3rem;
   &-title {
     font-size: $title;
-    text-transform: uppercase;
     text-align: center;
     color: #FFF;
     @include for-size(desktop-up) {
