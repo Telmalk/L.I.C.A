@@ -1133,4 +1133,75 @@ body {
 .lose {
   color: #A83A3A; }
 
+.signup-form {
+  height: 100vh;
+  width: 100vw;
+  background: url(../../assets/imgs/connexion.png);
+  background-position: top center;
+  background-size: 200%;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+@media (min-width: 1200px) {
+  .signup-form {
+    background-position: center;
+    background-size: 100%; } }
+.signup-form form {
+  background: #000;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 75%;
+  margin: 0 auto;
+  border-radius: 5%;
+  color: #FFF;
+  font-size: 2.4rem;
+  padding: 2rem 0; }
+@media (min-width: 1200px) {
+  .signup-form form {
+    font-size: 4.5rem;
+    width: 40%;
+    margin-top: 20rem; } }
+.signup-form form label {
+  text-align: center; }
+@media (min-width: 1200px) {
+  .signup-form form label {
+    text-align: left; } }
+.signup-form form div {
+  margin-bottom: .5rem;
+  display: flex;
+  flex-direction: column; }
+.signup-form form div:nth-child(3) {
+  width: 45%;
+  margin: 0 auto; }
+.signup-form form input {
+  margin-top: .5rem;
+  font-size: 1.2rem;
+  border-radius: 5%;
+  border: none;
+  outline: none;
+  padding: 0 .4rem; }
+@media (min-width: 1200px) {
+  .signup-form form input {
+    padding: 0 9.6rem 0  .4rem;
+    font-size: 2.4rem; } }
+.signup-form form button {
+  color: #FFF;
+  border: 2px solid #fff;
+  border-radius: 10%;
+  padding: 0 5rem;
+  background: #000000; }
+@media (min-width: 1200px) {
+  .signup-form form button {
+    margin-top: 3rem; } }
+
+#user_front_birthdate {
+  display: block; }
+
+#user_front_birthdate_month, #user_front_birthdate_day, #user_front_birthdate_year {
+  color: #FFF;
+  border: .1px solid black;
+  background: rgba(255, 255, 255, 0.2); }
+
 /*# sourceMappingURL=styles.css.map */
