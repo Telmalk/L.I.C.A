@@ -60,7 +60,8 @@ body {
   height: 5.5rem;
   width: 100%;
   padding: 2.5rem 1.5rem 0 1.5rem;
-  font-style: italic; }
+  font-style: italic;
+  z-index: 99999;}
   @media (min-width: 1200px) {
     .header {
       height: 10rem;
@@ -288,7 +289,8 @@ body {
 .userbackground {
   background: url("../../assets/imgs/background1.png") #0F0F0F;
   background-size: cover;
-  background-repeat: no-repeat; }
+  background-repeat: no-repeat;
+  padding-bottom: 60px;}
 
 .profile-info {
   width: 90%;
@@ -325,7 +327,8 @@ body {
         .profile-info-information h2 {
           font-size: 4.5rem; } }
     .profile-info-information a {
-      margin: .8rem 0 0 1rem; }
+      margin: .8rem 0 0 1rem;
+    display: none;}
     .profile-info-information-date {
       margin: 2.8rem 3.1rem 0 0;
       font-size: 2.4rem; }
@@ -446,13 +449,16 @@ body {
         font-size: 3rem; } }
   .profile-aliens-cards {
     display: flex;
-    flex-direction: column; }
+    flex-direction: column;
+    align-items: center;}
     @media (min-width: 1200px) {
       .profile-aliens-cards {
-        justify-content: flex-start;
+        justify-content: space-between;
+        align-items: flex-start;
         flex-direction: row;
         flex-wrap: wrap;
-        width: 100%; } }
+        width: 80%;
+        margin: 0 auto; } }
   .profile-aliens-alien-card {
     display: flex;
     justify-content: center;

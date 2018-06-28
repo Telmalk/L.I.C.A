@@ -56,10 +56,7 @@ class bestiaireController extends Controller
             ->find($userID);
         $nbCreditUser = $user->getNbCredit();
         if ($nbCreditUser < $price) {
-            return $this->render("/home/index.html.twig", [
-                "title" => "not enpught minerals",
-                "error" => "Vous n'avez pas assez de crédit"
-            ]);
+            return $this->redirect('/bestiaire');
         } else {
             $user->setNbCredit($nbCreditUser - $price);
         }
