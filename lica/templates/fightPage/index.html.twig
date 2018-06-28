@@ -2,90 +2,67 @@
 
 {% block body %}
     {{ parent() }}
-<section class="fight-home">
-        <h2 class="fight-home-title">COMBATS <span class="fight-home-title-span">et PARIS</span>
-        </h2>
+    <section class="fight-home">
+        <h2 class="fight-home-title">COMBATS <span class="fight-home-title-span">ET PARIS</span></h2>
     </section>
-
     <section class="fight-content">
-        <div class="fight-content-img">
-            <img class="fight-content-img-item" src="../assets/imgs/imgalien.png" alt="Aliens">
-        </div>
         <div class="fight-content-planning">
-            <p class="fight-content-planning-date">LUNDI ../../..</p>
+            <h4 class="fight-content-planning-title">PLANNING</h4>
             <!-- Fight Card -->
+            {% for fight in fights %}
             <div class="fight-content-planning-item">
-                <div class="fight-content-planning-item-infos">
-                    <p>Tchikito</p>
-                    <p>Alien</p>
-                    <p></p>
-                    <p>1.44</p>
-                    <p class="fight-content-planning-item-button">Miser</p>
+        <div class="fight-content-planning-item-infos">
+                    <div class="fight-content-planning-item-infos-img">
+                        <img src="" alt="Aliens">
+                    </div>
+            <div class="fight-content-planning-item-infos-text">
+                        <p>{{ fight.userName1 }}</p>
+                        <p>{{ fight.alienName1 }}</p>
+                        <p>Côte: {{ fight.alienOdd1 }}</p>
+                        <p class="fight-content-planning-item-button">Miser</p>
+                    </div>
                 </div>
-                <p class="fight-content-planning-item-vs">VS</p>
-                <   div class="fight-content-planning-item-infos">
-                    <p>Bob le PakPak</p>
-                    <p>Predator</p>
-                    <p></p>
-                    <p>8</p>
-                    <p class="fight-content-planning-item-button">Miser</p>
+                <div class="fight-content-planning-item-others">
+                    <p class="fight-content-planning-item-vs">VS</p>
+                    <p class="fight-content-planning-date">{{ fight.date }}</p>
+                </div>
+                <div class="fight-content-planning-item-infos fight-reverse">
+                    <div class="fight-content-planning-item-infos-img">
+                        <img src="" alt="Aliens">
+                    </div>
+                    <div class="fight-content-planning-item-infos-text">
+                        <p>{{ fight.userName2 }}</p>
+                        <p>{{ fight.alienName2 }}</p>
+                        <p>Côte: {{ fight.alienOdd2 }}</p>
+                        <p class="fight-content-planning-item-button">Miser</p>
+                    </div>
                 </div>
             </div>
+            {% endfor %}
             <!-- End Fight Card -->
-            <div class="fight-content-planning-item">
-                <div class="fight-content-planning-item-infos">
-                    <p>Tchikito</p>
-                    <p>Alien</p>
-                    <p></p>
-                    <p>1.44</p>
-                    <p class="fight-content-planning-item-button">Miser</p>
+            <div class="fight-content-planning-request">
+                <h4 class="fight-content-planning-request-title">EN ATTENTE</h4>
+                <!-- Request Card -->
+                <div class="fight-content-planning-request-item">
+                    <div class="fight-content-planning-request-item-infos">
+                        <div class="fight-content-planning-request-item-infos-img">
+                            <img src="" alt="Aliens">
+                        </div>
+                        <div class="fight-content-planning-request-item-infos-text">
+                            <p>Tchikito</p>
+                            <p>Alien</p>
+                            <p>ELO: 42</p>
+                        </div>
+                    </div>
+                    <div class="fight-content-planning-item-others">
+                        <p class="fight-content-planning-request-item-vs">VS</p>
+                        <p class="fight-content-planning-date">../../..</p>
+                    </div>
+                    <div class="fight-content-planning-request-item-infos">
+                        <p class="fight-content-planning-request-button">Joindre le combat</p>
+                    </div>
                 </div>
-                <p class="fight-content-planning-item-vs">VS</p>
-                <div class="fight-content-planning-item-infos">
-                    <p>Bob le PakPak</p>
-                    <p>Predator</p>
-                    <p></p>
-                    <p>8</p>
-                    <p class="fight-content-planning-item-button">Miser</p>
-                </div>
-            </div>
-
-            <p class="fight-content-planning-date">MARDI ../../..</p>
-            <!-- Fight Card -->
-            <div class="fight-content-planning-item">
-                <div class="fight-content-planning-item-infos">
-                    <p>Tchikito</p>
-                    <p>Alien</p>
-                    <p></p>
-                    <p>1.44</p>
-                    <p class="fight-content-planning-item-button">Miser</p>
-                </div>
-                <p class="fight-content-planning-item-vs">VS</p>
-                <div class="fight-content-planning-item-infos">
-                    <p>Bob le PakPak</p>
-                    <p>Predator</p>
-                    <p></p>
-                    <p>8</p>
-                    <p class="fight-content-planning-item-button">Miser</p>
-                </div>
-            </div>
-            <!-- End Fight Card -->
-            <div class="fight-content-planning-item">
-                <div class="fight-content-planning-item-infos">
-                    <p>Tchikito</p>
-                    <p>Alien</p>
-                    <p></p>
-                    <p>1.44</p>
-                    <p class="fight-content-planning-item-button">Miser</p>
-                </div>
-                <p class="fight-content-planning-item-vs">VS</p>
-                <div class="fight-content-planning-item-infos">
-                    <p>Bob le PakPak</p>
-                    <p>Predator</p>
-                    <p></p>
-                    <p>8</p>
-                    <p class="fight-content-planning-item-button">Miser</p>
-                </div>
+                <!-- End Request Card -->
             </div>
         </div>
     </section>
