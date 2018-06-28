@@ -293,27 +293,32 @@ body {
 .profile-info {
   width: 90%;
   margin: 0 auto;
-  padding-top: 10rem; }
+  padding-top: 15rem; }
   @media (min-width: 1200px) {
     .profile-info {
       display: flex;
-      justify-content: space-between; } }
+      width: 70%;
+      padding: 20rem 0 0 5%; } }
   .profile-info-picture {
-    margin: 0 auto;
     height: 20rem;
     width: 20rem;
-    box-shadow: 1px 1px 10px #3aa89c; }
+    box-shadow: 1px 1px 10px #3aa89c;
+    margin: 0 auto; }
+    @media (min-width: 1200px) {
+      .profile-info-picture {
+        margin: 0; } }
     .profile-info-picture img {
       height: 100%;
       width: 100%; }
   .profile-info-information {
     color: #FFF;
-    text-align: right;
     background: none;
     padding: 4rem 8rem 0; }
+    @media (min-width: 1200px) {
+      .profile-info-information {
+        padding: 0 0 0 5rem; } }
     .profile-info-information-flex {
-      display: flex;
-      justify-content: flex-end; }
+      display: flex; }
     .profile-info-information h2 {
       font-size: 3.2rem; }
       @media (min-width: 1200px) {
@@ -338,7 +343,6 @@ body {
           font-size: 2.4rem; } }
     .profile-info-information-money {
       display: flex;
-      justify-content: flex-end;
       align-items: center;
       margin-right: 2rem; }
       .profile-info-information-money-amount {
@@ -483,7 +487,8 @@ body {
   margin-top: 2rem; }
 
 .margin-fix {
-  margin: 0 2.9rem 0 0; }
+  margin: 0 2.9rem 0 0;
+  line-height: 1.8rem; }
 
 .homepage-background {
   background: #0F0F0F; }
@@ -666,6 +671,8 @@ body {
   align-items: center; }
   .bestiaire-header-title {
     font-size: 3.2rem;
+    letter-spacing: .8rem;
+    text-shadow: 1px 1px 5px #fefefe;
     color: #FFF;
     text-transform: uppercase; }
     @media (min-width: 1200px) {
@@ -731,32 +738,50 @@ body {
     z-index: 9;
     background: #0F0F0F; }
     .bestiaire-aliens-modal-content {
-      width: 80vw;
+      width: 60vw;
       height: 70vh;
-      margin: 15vh auto; }
+      margin: 15vh auto 0; }
+      @media (min-width: 1200px) {
+        .bestiaire-aliens-modal-content {
+          width: 60vw;
+          margin: 15vh auto 5rem; } }
       .bestiaire-aliens-modal-content-cross {
         width: 2.5rem;
-        height: 2.5rem; }
+        height: 2.5rem;
+        margin-bottom: 2rem; }
       .bestiaire-aliens-modal-content-img {
         height: 20rem;
         width: 15rem;
         margin: 0 auto 3rem; }
+        @media (min-width: 1200px) {
+          .bestiaire-aliens-modal-content-img {
+            height: 30rem;
+            width: 22.5rem; } }
         .bestiaire-aliens-modal-content-img-item {
           width: 100%;
           height: 100%; }
       .bestiaire-aliens-modal-content-infos {
         width: 100%;
         padding: 0 20%; }
+        @media (min-width: 1200px) {
+          .bestiaire-aliens-modal-content-infos {
+            padding: 0 30%; } }
         .bestiaire-aliens-modal-content-infos-race {
           font-size: 2.4rem;
           line-height: 3.6rem;
           border-bottom: 1px solid #fefefe;
           margin-bottom: 1rem; }
+          @media (min-width: 1200px) {
+            .bestiaire-aliens-modal-content-infos-race {
+              margin-bottom: 2rem; } }
         .bestiaire-aliens-modal-content-infos-origin {
           font-size: 1.6rem;
           line-height: 2.4rem;
           border-bottom: 1px solid #fefefe;
           margin-bottom: 1rem; }
+          @media (min-width: 1200px) {
+            .bestiaire-aliens-modal-content-infos-origin {
+              margin-bottom: 1.5rem; } }
         .bestiaire-aliens-modal-content-infos-height, .bestiaire-aliens-modal-content-infos-weight {
           font-size: 1.2rem;
           line-height: 1.8rem; }
@@ -765,11 +790,17 @@ body {
           line-height: 1.8rem;
           border-top: 1px solid #fefefe;
           margin-top: 1rem; }
+          @media (min-width: 1200px) {
+            .bestiaire-aliens-modal-content-infos-description {
+              margin-top: 1.5rem; } }
         .bestiaire-aliens-modal-content-infos-price {
           font-size: 1.8rem;
           line-height: 2.7rem;
           border-top: 1px solid #fefefe;
           margin-top: 1rem; }
+          @media (min-width: 1200px) {
+            .bestiaire-aliens-modal-content-infos-price {
+              margin: 2rem 0 4rem; } }
   .bestiaire-aliens-cards {
     display: flex;
     justify-content: center;
@@ -890,7 +921,8 @@ body {
       color: #fefefe;
       text-align: center;
       margin: 0 auto;
-      font-family: 'BeautyAndTheBeast'; }
+      font-family: 'BeautyAndTheBeast';
+      text-shadow: 1px 1px 5px #fefefe; }
       @media (min-width: 1200px) {
         .fight-home-title {
           font-size: 6rem;
