@@ -40,5 +40,6 @@ easy_admin:
         class: App\Entity\Alien
       Fight:
         class: App\Entity\Fight
-
+      Bet:
+        class: App\Entity\Bet
 
