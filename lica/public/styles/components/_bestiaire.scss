@@ -13,6 +13,8 @@
   align-items: center;
   &-title {
     font-size: $largeTitle;
+    letter-spacing: .8rem;
+    text-shadow: 1px 1px 5px #fefefe;
     color: #FFF;
     text-transform: uppercase;
     @include for-size(desktop-up) {
@@ -90,17 +92,26 @@
     z-index: 9;
     background: #0F0F0F;
     &-content {
-      width: 80vw;
+      width: 60vw;
       height: 70vh;
-      margin: 15vh auto;
+      margin: 15vh auto 0;
+      @include for-size(desktop-up) {
+        width: 60vw;
+        margin: 15vh auto 5rem;
+      }
       &-cross {
         width: 2.5rem;
         height: 2.5rem;
+        margin-bottom: 2rem;
       }
       &-img {
         height: 20rem;
         width: 15rem;
         margin: 0 auto 3rem;
+        @include for-size(desktop-up) {
+          height: 30rem;
+          width: 22.5rem;
+        }
         &-item {
           width: 100%;
           height: 100%;
@@ -109,17 +120,26 @@
       &-infos {
         width: 100%;
         padding: 0 20%;
+        @include for-size(desktop-up) {
+          padding: 0 30%;
+        }
         &-race {
           font-size: $title;
           line-height: 3.6rem;
           border-bottom: 1px solid #fefefe;
           margin-bottom: 1rem;
+          @include for-size(desktop-up) {
+            margin-bottom: 2rem;
+          }
         }
         &-origin {
           font-size: 1.6rem;
           line-height: 2.4rem;
           border-bottom: 1px solid #fefefe;
           margin-bottom: 1rem;
+          @include for-size(desktop-up) {
+            margin-bottom: 1.5rem;
+          }
         }
         &-height, &-weight {
           font-size: $details;
@@ -130,12 +150,18 @@
           line-height: 1.8rem;
           border-top: 1px solid #fefefe;
           margin-top: 1rem;
+          @include for-size(desktop-up) {
+            margin-top: 1.5rem;
+          }
         }
         &-price {
           font-size: 1.8rem;
           line-height: 2.7rem;
           border-top: 1px solid #fefefe;
           margin-top: 1rem;
+          @include for-size(desktop-up) {
+            margin: 2rem 0 4rem;
+          }
         }
       }
     }
