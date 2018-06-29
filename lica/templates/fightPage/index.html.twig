@@ -19,10 +19,17 @@
                         <p>{{ fight.userName1 }}</p>
                         <p>{{ fight.alienName1 }}</p>
                         <p>Côte: {{ fight.alienOdd1 }}</p>
-                <form class="fight-content-planning-item-form" action="/bet/addbet/1/{{ fight.target }}" method="post">
-                    <input class="fight-content-planning-item-input" name="wager" type="text" placeholder="">
-                    <input class="fight-content-planning-item-button" type="submit" value="Miser">
-                </form>
+                {% if is_granted('ROLE_USER') %}
+                    <form class="fight-content-planning-item-form" action="/bet/addbet/1/{{ fight.target }}" method="post">
+                        <input class="fight-content-planning-item-input" name="wager" type="text" placeholder="">
+                        <input class="fight-content-planning-item-button" type="submit" value="Miser">
+                    </form>
+                    {% else %}
+                        <form class="fight-content-planning-item-form" action="/loginUser">
+                            <input class="fight-content-planning-item-input" name="wager" type="text" placeholder="">
+                            <input class="fight-content-planning-item-button" type="submit" value="Miser">
+                        </form>
+                        {% endif %}
                     </div>
                 </div>
                 <div class="fight-content-planning-item-others">
@@ -38,10 +45,17 @@
                         <p>{{ fight.alienName2 }}</p>
                         <p>Côte: {{ fight.alienOdd2 }}</p>
                        <!-- <p class="fight-content-planning-item-button">Miser</p> -->
-                        <form class="fight-content-planning-item-form" action="/bet/addbet/2/{{ fight.target }}" method="post">
-                            <input class="fight-content-planning-item-input" name="wager" type="text" placeholder="">
-                            <input class="fight-content-planning-item-button" type="submit" value="Miser">
-                        </form>
+                        {% if is_granted('ROLE_USER') %}
+                            <form class="fight-content-planning-item-form" action="/bet/addbet/1/{{ fight.target }}" method="post">
+                                <input class="fight-content-planning-item-input" name="wager" type="text" placeholder="">
+                                <input class="fight-content-planning-item-button" type="submit" value="Miser">
+                            </form>
+                        {% else %}
+                            <form class="fight-content-planning-item-form" action="/loginUser">
+                                <input class="fight-content-planning-item-input" name="wager" type="text" placeholder="">
+                                <input class="fight-content-planning-item-button" type="submit" value="Miser">
+                            </form>
+                        {% endif %}
                     </div>
                 </div>
             </div>
@@ -50,25 +64,27 @@
             <div class="fight-content-planning-request">
                 <h4 class="fight-content-planning-request-title">EN ATTENTE</h4>
                 <!-- Request Card -->
+                {% for wait in waitFight %}
                 <div class="fight-content-planning-request-item">
                     <div class="fight-content-planning-request-item-infos">
                         <div class="fight-content-planning-request-item-infos-img">
                             <img src="" alt="Aliens">
                         </div>
                         <div class="fight-content-planning-request-item-infos-text">
-                            <p>Tchikito</p>
-                            <p>Alien</p>
-                            <p>ELO: 42</p>
+                            <p>{{ wait.userName1 }}</p>
+                            <p>{{ wait.alienName1 }}</p>
+                            <p>Côte: {{ wait.alienOdd1 }}</p>
                         </div>
                     </div>
                     <div class="fight-content-planning-item-others">
                         <p class="fight-content-planning-request-item-vs">VS</p>
-                        <p class="fight-content-planning-date">../../..</p>
+                        <p class="fight-content-planning-date">{{ wait.date }}</p>
                     </div>
                     <div class="fight-content-planning-request-item-infos">
                         <p class="fight-content-planning-request-button">Joindre le combat</p>
                     </div>
                 </div>
+                    {% endfor %}
                 <!-- End Request Card -->
             </div>
         </div>
