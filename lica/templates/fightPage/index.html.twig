@@ -64,6 +64,7 @@
             <div class="fight-content-planning-request">
                 <h4 class="fight-content-planning-request-title">EN ATTENTE</h4>
                 <!-- Request Card -->
+                {% if waitFight != null %}
                 {% for wait in waitFight %}
                 <div class="fight-content-planning-request-item">
                     <div class="fight-content-planning-request-item-infos">
@@ -85,6 +86,7 @@
                     </div>
                 </div>
                     {% endfor %}
+                    {% endif %}
                 <!-- End Request Card -->
             </div>
         </div>

@@ -25,6 +25,7 @@ class fightPageController extends Controller
             ->findAll();
 
         $figths = [];
+        $waitFights = [];
         $i = 0;
         while($i < sizeof($test)) {
             if ($test[$i]->getUser2() !== null && $test[$i]->getAlien2() != null) {
