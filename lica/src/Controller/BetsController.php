@@ -33,7 +33,9 @@ class BetsController extends Controller
     {
         $bet = new Bet();
         $wager = $request->request->getInt("wager");
-        dump($wager);
+        if ($wager <= 0) {
+            return $this->redirect("/fightPage");
+        }
         $userId = $this->getUser();
         $em = $this->getDoctrine()
             ->getManager();
