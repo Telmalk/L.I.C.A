@@ -1,5 +1,3 @@
-CREATE DATABASE  IF NOT EXISTS `lica` /*!40100 DEFAULT CHARACTER SET utf8 */;
-USE `lica`;
 -- MySQL dump 10.13  Distrib 5.7.17, for Win64 (x86_64)
 --
 -- Host: 127.0.0.1    Database: lica
@@ -76,7 +74,7 @@ CREATE TABLE `alien` (
   PRIMARY KEY (`id`),
   KEY `IDX_E606C249A76ED395` (`user_id`),
   CONSTRAINT `FK_E606C249A76ED395` FOREIGN KEY (`user_id`) REFERENCES `user` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -85,7 +83,7 @@ CREATE TABLE `alien` (
 
 LOCK TABLES `alien` WRITE;
 /*!40000 ALTER TABLE `alien` DISABLE KEYS */;
-INSERT INTO `alien` VALUES (3,NULL,'Titi',1,1,'f','f','f',1,1,1,1,'sdffds','fd',1,1,'fine',0,1,1000,'toto','titi'),(4,24,'llk',1,1,'f','f','f',2,2,2,2,'d','f',1,1,'fine',1,1,500,'toto','popo'),(5,24,'kl',1,1,'f','fd','df',1,1,1,1,'fd','fd',1,1,'ddf',1,1,1,'fsdfs/fsdf/fds.jpg','df');
+INSERT INTO `alien` VALUES (3,NULL,'Titi',1,1,'f','f','f',1,1,1,1,'sdffds','fd',1,1,'fine',0,1,1000,'assets/imgs/alien/alien1.gif','titi'),(4,24,'llk',1,1,'f','f','f',2,2,2,2,'d','f',1,1,'fine',1,1,500,'assets/imgs/alien/alien2.png','popo'),(5,24,'kl',1,1,'f','fd','df',1,1,1,1,'fd','fd',1,1,'ddf',1,1,1,'assets/imgs/alien/alien3.png','df'),(6,NULL,'sfgsdfsdf',1,1,'f','fds','fsd',1,1,1,1,'fd','fd',1,1,'fie n',0,1,1,'assets/imgs/alien/alien2.png','rzefd');
 /*!40000 ALTER TABLE `alien` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -107,7 +105,7 @@ CREATE TABLE `bet` (
   KEY `IDX_FBF0EC9BFCBDBB71` (`id_fight_id`),
   CONSTRAINT `FK_FBF0EC9B79F37AE5` FOREIGN KEY (`id_user_id`) REFERENCES `user` (`id`),
   CONSTRAINT `FK_FBF0EC9BFCBDBB71` FOREIGN KEY (`id_fight_id`) REFERENCES `fight` (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=18 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -116,6 +114,7 @@ CREATE TABLE `bet` (
 
 LOCK TABLES `bet` WRITE;
 /*!40000 ALTER TABLE `bet` DISABLE KEYS */;
+INSERT INTO `bet` VALUES (7,24,2,1,334),(10,24,2,1,343),(11,24,3,2,432),(12,24,2,1,13412),(13,24,2,1,4342),(14,24,2,1,5000),(15,24,3,1,2),(16,24,2,1,434),(17,24,2,1,1);
 /*!40000 ALTER TABLE `bet` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -146,7 +145,7 @@ CREATE TABLE `fight` (
   CONSTRAINT `FK_21AA445656AE248B` FOREIGN KEY (`user1_id`) REFERENCES `user` (`id`),
   CONSTRAINT `FK_21AA445689624646` FOREIGN KEY (`alien2_id`) REFERENCES `alien` (`id`),
   CONSTRAINT `FK_21AA44569BD7E9A8` FOREIGN KEY (`alien1_id`) REFERENCES `alien` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -155,7 +154,7 @@ CREATE TABLE `fight` (
 
 LOCK TABLES `fight` WRITE;
 /*!40000 ALTER TABLE `fight` DISABLE KEYS */;
-INSERT INTO `fight` VALUES (2,24,25,3,5,423,23,22,'2013-01-01 00:00:00',1),(3,25,24,4,3,534520,423,43,'2013-01-01 00:00:00',1);
+INSERT INTO `fight` VALUES (2,24,25,3,5,423,23,22,'2013-01-01 00:00:00',1),(3,25,24,4,3,534520,423,43,'2013-01-01 00:00:00',1),(7,24,NULL,3,NULL,1,1,1,'2478-01-01 00:00:00',0);
 /*!40000 ALTER TABLE `fight` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -217,7 +216,7 @@ CREATE TABLE `user` (
 
 LOCK TABLES `user` WRITE;
 /*!40000 ALTER TABLE `user` DISABLE KEYS */;
-INSERT INTO `user` VALUES (24,'Wesh','oui','$2y$13$CkMYdP5wBoUZzzPjCM2v/u0PGc5KJqqIY7CaBX8qvNtb4URX6zU.m','JUL','2478-01-01','oui@oui','non',5499,0,0,0,0,NULL,'a:1:{i:0;s:9:\"ROLE_USER\";}','Wesh alors ? Wesh alors ! Wesh alors.'),(25,'Mael','Mael','$2y$13$/YsyHVda9tyFeRDXfeQHsOpVvhU61HjXHfREAZcUr2DA1dUUbtNmK','Mael','2421-01-01','Mael@ho.fr',NULL,1200,0,0,0,0,NULL,'a:1:{i:0;s:9:\"ROLE_USER\";}','Aime Le Gros Chibre de Telmalk ! <======8');
+INSERT INTO `user` VALUES (24,'Wesh','oui','$2y$13$CkMYdP5wBoUZzzPjCM2v/u0PGc5KJqqIY7CaBX8qvNtb4URX6zU.m','JUL','2478-01-01','oui@oui','non',62,0,0,0,0,NULL,'a:1:{i:0;s:9:\"ROLE_USER\";}','Wesh alors ? Wesh alors ! Wesh alors.'),(25,'Mael','Mael','$2y$13$/YsyHVda9tyFeRDXfeQHsOpVvhU61HjXHfREAZcUr2DA1dUUbtNmK','Mael','2421-01-01','Mael@ho.fr',NULL,1200,0,0,0,0,NULL,'a:1:{i:0;s:9:\"ROLE_USER\";}','Aime Le Gros Chibre de Telmalk ! <======8');
 /*!40000 ALTER TABLE `user` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -230,4 +229,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2018-06-28 22:12:02
+-- Dump completed on 2018-06-29 11:32:38
