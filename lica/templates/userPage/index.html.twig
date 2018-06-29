@@ -106,7 +106,7 @@
         {% for alien in alienOfUser %}
             <div class="bestiaire-aliens-card">
                 <div class="bestiaire-aliens-card-img">
-                    <img src="https://vignette.wikia.nocookie.net/halo/images/f/fb/Elite_de_Operaciones_Especiales_HR.png/revision/latest?cb=20160503120721&path-prefix=es" alt="">
+                    <img src="{{ alien.img }}" alt="">
                 </div>
                 <div class="bestiaire-aliens-card-details">
                     <p>Name : <span>{{ alien.name }}</span></p>
