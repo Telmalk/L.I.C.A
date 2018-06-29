@@ -48,11 +48,13 @@
     </div>
 </section>
 
+{% if betOfUser %}
 <section class="combat-history">
     <div class="combat-history-container">
         <h2 class="combat-history-title">Mes paris en cours</h2>
     </div>
     <div class="combat-history-overlay">
+        {% for bet in betOfUser %}
         <div class="combat-history-overlay-result">
             <div class="fight-content-planning-item">
                 <div class="fight-content-planning-item-infos">
@@ -60,31 +62,41 @@
                         <img src="" alt="Aliens">
                     </div>
                     <div class="fight-content-planning-item-infos-text">
-                        <p>Tchikito</p>
-                        <p>Alien</p>
-                        <p>Côte: 1.44</p>
-                        <p class="fight-content-planning-item-bet">Mise: 82</p>
+                        <p>{{ bet.userPseudo1 }}</p>
+                        <p>{{ bet.alienName1 }}</p>
+                        <p>{{ bet.oddFighter1 }}</p>
+                        {% if bet.betTarget is same as(1) %}
+                        <p class="fight-content-planning-item-bet">Mise: {{ bet.wager }}</p>
+                        {% else %}
+                        <p class="fight-content-planning-item-bet"></p>
+                        {% endif %}
                     </div>
                 </div>
                 <div class="fight-content-planning-item-others">
                     <p class="fight-content-planning-item-vs">VS</p>
-                    <p class="fight-content-planning-date">../../..</p>
+                    <p class="fight-content-planning-date">{{ bet.date }}</p>
                 </div>
                 <div class="fight-content-planning-item-infos fight-reverse">
                     <div class="fight-content-planning-item-infos-img">
                         <img src="" alt="Aliens">
                     </div>
                     <div class="fight-content-planning-item-infos-text">
-                        <p>Bob le PakPak</p>
-                        <p>Predator</p>
-                        <p>Côte: 8</p>
+                        <p>{{ bet.userPseudo2 }}</p>
+                        <p>{{ bet.alienName2 }}</p>
+                        <p>{{ bet.oddFighter2 }}</p>
+                        {% if bet.betTarget is same as(2) %}
+                        <p class="fight-content-planning-item-bet">Mise: {{ bet.wager }}</p>
+                        {% else %}
                         <p class="fight-content-planning-item-bet"></p>
+                        {% endif %}
                     </div>
                 </div>
             </div>
         </div>
+        {% endfor %}
     </div>
 </section>
+{% endif %}
 {% if alienOfUser %}
 <section class="profile-aliens">
     <div>
