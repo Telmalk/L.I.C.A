@@ -46,7 +46,7 @@
                         <p>Côte: {{ fight.alienOdd2 }}</p>
                        <!-- <p class="fight-content-planning-item-button">Miser</p> -->
                         {% if is_granted('ROLE_USER') %}
-                            <form class="fight-content-planning-item-form" action="/bet/addbet/1/{{ fight.target }}" method="post">
+                            <form class="fight-content-planning-item-form" action="/bet/addbet/2/{{ fight.target }}" method="post">
                                 <input class="fight-content-planning-item-input" name="wager" type="text" placeholder="">
                                 <input class="fight-content-planning-item-button" type="submit" value="Miser">
                             </form>
