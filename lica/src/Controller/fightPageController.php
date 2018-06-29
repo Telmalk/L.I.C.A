@@ -37,6 +37,7 @@ class fightPageController extends Controller
                     "alienOdd1" => $test[$i]->getOddFighter1(),
                     "alienOdd2" => $test[$i]->getOddFighter2(),
                     "imgAlien1" => $test[$i]->getAlien1()->getImg(),
+                    "imgAlien2" => $test[$i]->getAlien2()->getImg(),
                     "date" => $test[$i]->getDate()->format("d/n/Y"),
                     "target" => $test[$i]->getId()
                 ];
