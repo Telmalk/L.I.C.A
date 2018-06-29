@@ -54,9 +54,11 @@ class UserPageController extends Controller
                     $betOfUser[] = [
                       "userPseudo1" => $fight->getUser1()->getPseudo(),
                       "alienName1" => $fight->getAlien1()->getName(),
+                      "alienImg1" => $fight->getAlien1()->getImg(),
                       "oddFighter1" => $fight->getOddFighter1(),
                       "userPseudo2" => $fight->getUser2()->getPseudo(),
                       "alienName2" => $fight->getAlien2()->getName(),
+                      "alienImg2" => $fight->getAlien2()->getImg(),
                       "oddFighter2" => $fight->getOddFighter2(),
                       "date" => $fight->getDate()->format('d/m/Y'),
                       "betTarget" => $bet[$i]->getBetTarget(),

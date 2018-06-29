@@ -59,14 +59,14 @@
             <div class="fight-content-planning-item">
                 <div class="fight-content-planning-item-infos">
                     <div class="fight-content-planning-item-infos-img">
-                        <img src="" alt="Aliens">
+                        <img style="width: 100%; height: 100%;" src="{{ bet.alienImg1 }}" alt="Aliens">
                     </div>
                     <div class="fight-content-planning-item-infos-text">
                         <p>{{ bet.userPseudo1 }}</p>
                         <p>{{ bet.alienName1 }}</p>
                         <p>{{ bet.oddFighter1 }}</p>
                         {% if bet.betTarget is same as(1) %}
-                        <p class="fight-content-planning-item-bet">Mise: {{ bet.wager }}</p>
+                        <p style="color:#3EB8AB;" class="fight-content-planning-item-bet">Mise: {{ bet.wager }}</p>
                         {% else %}
                         <p class="fight-content-planning-item-bet"></p>
                         {% endif %}
@@ -78,14 +78,14 @@
                 </div>
                 <div class="fight-content-planning-item-infos fight-reverse">
                     <div class="fight-content-planning-item-infos-img">
-                        <img src="" alt="Aliens">
+                        <img style="width: 100%; height: 100%;" src="{{ bet.alienImg2 }}" alt="Aliens">
                     </div>
                     <div class="fight-content-planning-item-infos-text">
                         <p>{{ bet.userPseudo2 }}</p>
                         <p>{{ bet.alienName2 }}</p>
                         <p>{{ bet.oddFighter2 }}</p>
                         {% if bet.betTarget is same as(2) %}
-                        <p class="fight-content-planning-item-bet">Mise: {{ bet.wager }}</p>
+                        <p style="color:#3EB8AB; class="fight-content-planning-item-bet">Mise: {{ bet.wager }}</p>
                         {% else %}
                         <p class="fight-content-planning-item-bet"></p>
                         {% endif %}
